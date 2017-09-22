@@ -1,0 +1,23 @@
+{
+    "version": "0.0.1",
+    "name": "wan-homesite",
+    "private": true,
+    "scripts": {
+        "postinstall": "",
+        "heroku-postbuild": "gulp build:release",
+        "start": "node dist/main.js",
+        "monitor": "nodemon dist/main.js"
+    },
+    "dependencies": {
+        "dotenv": "^4.0.0",
+        "express": "^4.15.4"
+    },
+    "devDependencies": {
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "typescript": "^2.5.2"
+    },
+    "engines": {
+        "node": "^6.11.3"
+    }
+}
