@@ -1,0 +1,27 @@
+header {
+    text-align: center;
+
+    button {
+        margin: 10px;
+        padding: 5px 20px;
+        background-color: #FFF;
+        border: 1px solid #000;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &.lofi {
+        button {
+            background-color: #FFF;
+        }
+    }
+
+    &.hifi {
+        button {
+            background-color: #44f;
+        }
+    }
+}

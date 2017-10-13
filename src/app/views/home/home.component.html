@@ -1,0 +1,19 @@
+<main class="container" [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
+    <section>
+        <h2>Who are you?</h2>
+
+        <div class="col-12">
+            <div class="radio-group row" ngbRadioGroup [(ngModel)]="whoAreYou">
+                <label ngbButtonLabel class="col-12 col-sm-4">
+                    <input ngbButton type="radio" [value]="1"><span class="dot"></span><span class="text">Wan Li</span>
+                </label>
+                <label ngbButtonLabel class="col-12 col-sm-4">
+                    <input ngbButton type="radio" [value]="2"><span class="dot"></span><span class="text">Mike Jerred</span>
+                </label>
+                <label ngbButtonLabel class="col-12 col-sm-4">
+                    <input ngbButton type="radio" [value]="3"><span class="dot"></span><span class="text">卷毛狗</span>
+                </label>
+            </div>
+        </div>
+    </section>
+</main>

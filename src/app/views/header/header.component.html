@@ -1,0 +1,4 @@
+<header [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
+    <button (click)="isLofi$.next(true)">Lo-Fi</button>
+    <button (click)="isLofi$.next(false)">Hi-Fi</button>
+</header>
