@@ -1,17 +1,21 @@
 main {
-    section {
+    .question {
+        height: 100vh;
+
         h2 {
             margin: 10px 0;
+            font-size: 72px;
+            font-weight: bold;
         }
     }
 
     &.lofi {
         .radio-group {
             label {
-                border: 1px solid #000;
-                padding: 50px;
-                vertical-align: middle;
+                text-align: left;
+                display: block;
                 cursor: pointer;
+                font-size: 36px;
 
                 $dot-size: 26px;
 

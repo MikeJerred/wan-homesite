@@ -1,17 +1,37 @@
+<header>
+    <div class="logo"></div>
+</header>
 <main class="container" [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
-    <section>
-        <h2>Who are you?</h2>
+    <section class="question row" id="question1" #question1>
+        <div class="col align-self-center">
+            <h2>What are you?</h2>
 
-        <div class="col-12">
-            <div class="radio-group row" ngbRadioGroup [(ngModel)]="whoAreYou">
-                <label ngbButtonLabel class="col-12 col-sm-4">
+            <div class="radio-group" ngbRadioGroup [(ngModel)]="whoAreYou" (click)="scrollToQuestion2()">
+                <label ngbButtonLabel>
                     <input ngbButton type="radio" [value]="1"><span class="dot"></span><span class="text">Wan Li</span>
                 </label>
-                <label ngbButtonLabel class="col-12 col-sm-4">
+                <label ngbButtonLabel>
                     <input ngbButton type="radio" [value]="2"><span class="dot"></span><span class="text">Mike Jerred</span>
                 </label>
-                <label ngbButtonLabel class="col-12 col-sm-4">
+                <label ngbButtonLabel>
                     <input ngbButton type="radio" [value]="3"><span class="dot"></span><span class="text">卷毛狗</span>
+                </label>
+            </div>
+        </div>
+    </section>
+    <section class="question row" id="question2" #question2>
+        <div class="col align-self-center">
+            <h2>Why are you here?</h2>
+
+            <div class="radio-group" ngbRadioGroup [(ngModel)]="whyAreYouHere">
+                <label ngbButtonLabel>
+                    <input ngbButton type="radio" [value]="1"><span class="dot"></span><span class="text">Dunno</span>
+                </label>
+                <label ngbButtonLabel>
+                    <input ngbButton type="radio" [value]="2"><span class="dot"></span><span class="text">Hmmm</span>
+                </label>
+                <label ngbButtonLabel>
+                    <input ngbButton type="radio" [value]="3"><span class="dot"></span><span class="text">For Food</span>
                 </label>
             </div>
         </div>

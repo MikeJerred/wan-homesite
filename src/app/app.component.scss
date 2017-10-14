@@ -1,0 +1,11 @@
+main {
+    &.lofi {
+        background-image: url('/assets/lofi-background.png');
+        background-repeat: repeat repeat;
+        background-attachment: scroll;
+    }
+
+    &.hifi {
+
+    }
+}
