@@ -1,4 +1,12 @@
-<header [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
-    <button (click)="isLofi$.next(true)">Lo-Fi</button>
-    <button (click)="isLofi$.next(false)">Hi-Fi</button>
+<header class="container-fluid" ngClass="isLofi$.value ? 'lofi' : 'hifi'">
+    <div class="row">
+        <div class="logo">Logo</div>
+        <div class="menu ml-auto">
+            <svg class="icon" width="40" height="40" viewBox="0 0 1618 1000">
+                <rect class="line1" x="50" y="50" width="1518" height="100" />
+                <rect class="line2" x="50" y="450" width="1518" height="100" />
+                <rect class="line3" x="50" y="850" width="1518" height="100" />
+            </svg>
+        </div>
+    </div>
 </header>

@@ -1,0 +1,32 @@
+<router-outlet name="header"></router-outlet>
+
+<main class="parallax" [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
+    <div class="parallax-group">
+        <div class="parallax-background"></div>
+        <div class="container">
+            <a class="parallax-layer parallax-layer-1" routerLink="/portfolio/1">
+                Optimise user journey for personalised beauty ecommerce
+            </a>
+            <a class="parallax-layer parallax-layer-2" routerLink="/portfolio/2">2</a>
+            <a class="parallax-layer parallax-layer-3" routerLink="/portfolio/3">3</a>
+            <a class="parallax-layer parallax-layer-4" routerLink="/portfolio/4">4</a>
+        </div>
+    </div>
+
+
+    <!-- <div class="parallax-group"> -->
+        <!-- <a class="parallax-layer parallax-layer-1" routerLink="/portfolio/1">1</a>
+        <a class="parallax-layer parallax-layer-2" routerLink="/portfolio/2">2</a>
+        <a class="parallax-layer parallax-layer-3" routerLink="/portfolio/3">3</a>
+        <a class="parallax-layer parallax-layer-4" routerLink="/portfolio/4">4</a> -->
+    <!-- </div> -->
+    <!-- <div class="parallax-group">
+        <a class="parallax-layer parallax-layer-2" routerLink="/portfolio/2">2</a>
+    </div>
+    <div class="parallax-group">
+        <a class="parallax-layer parallax-layer-3" routerLink="/portfolio/3">3</a>
+    </div>
+    <div class="parallax-group">
+        <a class="parallax-layer parallax-layer-4" routerLink="/portfolio/4">4</a>
+    </div> -->
+</main>

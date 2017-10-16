@@ -1,4 +1,8 @@
+@import 'variables';
+
 main {
+    //overflow-y: scroll;
+
     .question {
         height: 100vh;
 
@@ -17,12 +21,14 @@ main {
                 cursor: pointer;
                 font-size: 36px;
 
+                &:focus, &.focus { outline: none; box-shadow: none; }
+
                 $dot-size: 26px;
 
                 .dot {
                     position: relative;
                     display: inline-block;
-                    border: 1px solid #000;
+                    border: 2px solid #000;
                     border-radius: 50%;
                     width: $dot-size;
                     height: $dot-size;
@@ -42,8 +48,8 @@ main {
                         width: $dot-size - 10px;
                         height: $dot-size - 10px;
                         border-radius: 50%;
-                        left: 4px;
-                        top: 4px;
+                        left: 3px;
+                        top: 3px;
                     }
                 }
             }
@@ -51,6 +57,13 @@ main {
     }
 
     &.hifi {
+        .question {
+            font-family: $font-family-hifi;
+
+            h2 {
+                font-family: $font-family-hifi-sans;
+            }
+        }
 
     }
 }

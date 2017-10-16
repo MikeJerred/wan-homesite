@@ -14,8 +14,8 @@ import { FidelityService } from '../../services/fidelity.service';
 })
 export class HomeComponent {
     isLofi$: BehaviorSubject<boolean>;
-    whoAreYou: string;
-    whyAreYouHere: string;
+    whatAreYou: string = null;
+    whyAreYouHere: string = null;
     lastScrollPos = 0;
     scrollTicking = false;
 
@@ -38,15 +38,15 @@ export class HomeComponent {
             pageScrollFinishListener: listener
         });
 
-        this.pageScrollService.start(pageScrollInstance);
+        setTimeout(() => this.pageScrollService.start(pageScrollInstance), 1);
     }
 
     scrollTick(scrollY: number) {
-        if (this.isLofi$.value) {
-            $('#question1').css('opacity', 1);
-            $('#question2').css('opacity', 1);
-            return;
-        }
+        // if (this.isLofi$.value) {
+        //     $('#question1').css('opacity', 1);
+        //     $('#question2').css('opacity', 1);
+        //     return;
+        // }
 
         const halfScreenHeight = window.innerHeight / 2;
         const viewportCenter = scrollY + halfScreenHeight;

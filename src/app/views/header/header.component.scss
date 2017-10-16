@@ -1,30 +1,29 @@
 header {
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
+    position: absolute;
 
-    button {
-        margin: 10px;
-        padding: 5px 20px;
-        background-color: #FFF;
-        border: 1px solid #000;
-        cursor: pointer;
-
-        &:focus {
-            outline: none;
-        }
+    .logo {
+        margin: 20px;
+        background-color: #fff;
+        border: 1px solid #bbb;
+        width: 103px;
+        height: 51px;
+        line-height: 50px;
+        text-align: center;
     }
 
-    &.lofi {
-        button {
-            background-color: #FFF;
-        }
-    }
+    .menu {
+        text-align: right;
+        margin: 12px 20px;
 
-    &.hifi {
-        button {
-            background-color: #44f;
+        .icon {
+            .line1, .line2, .line3 {
+                transition: all ease-in-out 0.3s;
+                fill: #000;
+            }
+
+            .line1 { transform-origin: 100px 100px; }
+            .line2 { transform-origin: (1618px / 2) 500px; }
+            .line3 { transform-origin: 100px 900px; }
         }
     }
 }
