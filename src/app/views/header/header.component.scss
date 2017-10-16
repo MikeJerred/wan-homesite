@@ -1,5 +1,6 @@
 header {
     position: absolute;
+    z-index: 1;
 
     .logo {
         margin: 20px;
@@ -24,6 +25,16 @@ header {
             .line1 { transform-origin: 100px 100px; }
             .line2 { transform-origin: (1618px / 2) 500px; }
             .line3 { transform-origin: 100px 900px; }
+        }
+    }
+
+    &.hifi {
+        .menu {
+            .icon {
+                .line1, .line2, .line3 {
+                    fill: #0277BD;
+                }
+            }
         }
     }
 }

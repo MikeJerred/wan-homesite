@@ -1,6 +1,6 @@
 <router-outlet name="header"></router-outlet>
 
-<main class="container" [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
+<main class="container-fluid" [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
     <section class="question row" id="question1" #question1>
         <div class="col align-self-center">
             <h2>What are you?</h2>

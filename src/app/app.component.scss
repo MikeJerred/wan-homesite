@@ -1,11 +1,10 @@
 main {
+    background-image: url('/assets/lofi-background.png');
+    background-repeat: repeat repeat;
+
     &.lofi {
-        background-image: url('/assets/lofi-background.png');
-        background-repeat: repeat repeat;
-        //overflow-y: scroll;
     }
 
     &.hifi {
-
     }
 }
