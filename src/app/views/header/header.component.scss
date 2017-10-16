@@ -1,3 +1,5 @@
+@import 'variables';
+
 header {
     position: absolute;
     z-index: 1;
@@ -13,18 +15,41 @@ header {
     }
 
     .menu {
-        text-align: right;
-        margin: 12px 20px;
+        text-align: center;
+        margin: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
 
         .icon {
+            margin-top: 10px;
+
             .line1, .line2, .line3 {
                 transition: all ease-in-out 0.3s;
-                fill: #000;
+                fill: $dark-blue;
             }
 
-            .line1 { transform-origin: 100px 100px; }
+            .line1 { transform-origin: 200px 100px; }
             .line2 { transform-origin: (1618px / 2) 500px; }
-            .line3 { transform-origin: 100px 900px; }
+            .line3 { transform-origin: 200px 900px; }
+        }
+
+        &.open {
+            $width: 1318px;
+            $height: 900px;
+            $scaleX: (sqrt(2)*($height - 100px) + 100px) / $width;
+            $translateX: ($width - $height)/2;
+
+            .icon {
+                .line1 { transform: translateX($translateX) rotate(45deg) scaleX($scaleX); }
+                .line2 { transform: scaleX(0.001); }
+                .line3 { transform: translateX($translateX) rotate(-45deg) scaleX($scaleX); }
+            }
+        }
+
+        &.closed {
         }
     }
 

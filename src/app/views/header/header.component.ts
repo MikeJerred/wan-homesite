@@ -9,6 +9,7 @@ import { FidelityService } from '../../services/fidelity.service';
 })
 export class HeaderComponent {
     isLofi$: BehaviorSubject<boolean>;
+    isOpen = false;
 
     constructor(private fidelityService: FidelityService) {
         this.isLofi$ = this.fidelityService.isLofi$;

@@ -20,7 +20,7 @@ const routeConfig: Routes = [
         path: 'portfolios',
         component: PortfoliosComponent,
         children: [
-            { path: '', component: EmptyComponent, outlet: 'header' }
+            { path: '', component: HeaderComponent, outlet: 'header' }
         ]
     },
     { path: 'portfolio/:id', component: PortfolioComponent },
