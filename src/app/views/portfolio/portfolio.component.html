@@ -1,4 +1,6 @@
 <main [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
+    <router-outlet name="header"></router-outlet>
+
     <article class="container">
         <div class="row justify-content-center">
             <div class="col-10">
@@ -51,6 +53,7 @@
             </div>
         </div>
     </article>
+
     <section class="contact container">
         <div class="row justify-content-center">
             <div class="col-10">

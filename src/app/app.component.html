@@ -1,5 +1,6 @@
-<main [ngClass]="isLofi$.value ? 'lofi' : 'hifi'">
+<header>
+    <app-site-header></app-site-header>
+</header>
+<main>
     <router-outlet></router-outlet>
 </main>
-
-<router-outlet name="switch"></router-outlet>

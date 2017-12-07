@@ -11,7 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { EmptyComponent } from './views/empty/empty.component';
 import { HeaderComponent } from './views/header/header.component';
 import { HomeComponent } from './views/home/home.component';
-import { SwitchComponent } from './views/switch/switch.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { PortfoliosComponent } from './views/portfolios/portfolios.component';
 
@@ -21,7 +20,6 @@ import { PortfoliosComponent } from './views/portfolios/portfolios.component';
         EmptyComponent,
         HeaderComponent,
         HomeComponent,
-        SwitchComponent,
         PortfolioComponent,
         PortfoliosComponent
     ],

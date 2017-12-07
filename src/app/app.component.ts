@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { FidelityService } from './services/fidelity.service';
+
+import { SiteHeaderComponent } from './components/site-header/site-header.component';
 
 @Component({
     selector: 'app-root',
-    providers: [FidelityService],
+    providers: [SiteHeaderComponent],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    isLofi$: BehaviorSubject<boolean>;
-
-    constructor(private fidelityService: FidelityService) {
-        this.isLofi$ = this.fidelityService.isLofi$;
+    constructor() {
     }
 }

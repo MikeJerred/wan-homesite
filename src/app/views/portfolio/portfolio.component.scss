@@ -1,5 +1,11 @@
 @import 'variables';
 
+router-outlet[name="header"] {
+    header {
+        position: fixed;
+    }
+}
+
 main {
     background-image: linear-gradient(#CCCCCC, #A7FFEB, #CCCCCC);
     padding: 20px;
@@ -38,7 +44,6 @@ main {
             font-family: $font-family-hifi-sans;
             font-size: 20px;
             bottom: -125px;
-            box-shadow: 2px 2px 20px #555;
             cursor: pointer;
 
             .arrow {
@@ -69,6 +74,8 @@ main {
             }
 
             &:hover {
+                box-shadow: 2px 2px 20px #555;
+
                 .arrow {
                     background-color: #fff;
 

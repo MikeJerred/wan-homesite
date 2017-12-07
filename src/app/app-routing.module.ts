@@ -4,27 +4,22 @@ import { RouterModule } from '@angular/router';
 import { EmptyComponent } from './views/empty/empty.component';
 import { HeaderComponent } from './views/header/header.component';
 import { HomeComponent } from './views/home/home.component';
-import { SwitchComponent } from './views/switch/switch.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { PortfoliosComponent } from './views/portfolios/portfolios.component';
 
 const routeConfig: Routes = [
     {
         path: 'home',
-        component: HomeComponent,
-        children: [
-            { path: '', component: HeaderComponent, outlet: 'header' }
-        ]
+        component: HomeComponent
     },
     {
         path: 'portfolios',
-        component: PortfoliosComponent,
-        children: [
-            { path: '', component: HeaderComponent, outlet: 'header' }
-        ]
+        component: PortfoliosComponent
     },
-    { path: 'portfolio/:id', component: PortfolioComponent },
-    { path: '', component: SwitchComponent, outlet: 'switch' },
+    {
+        path: 'portfolio/:id',
+        component: PortfolioComponent
+    },
     { path: '', redirectTo: '/home', pathMatch: 'full' }
     //{ path: '**', component: PageNotFoundComponent }
 ];
