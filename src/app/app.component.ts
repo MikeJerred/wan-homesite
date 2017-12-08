@@ -5,7 +5,7 @@ import { SiteHeaderComponent } from './components/site-header/site-header.compon
 
 @Component({
     selector: 'app-root',
-    providers: [SiteHeaderComponent],
+    providers: [],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })

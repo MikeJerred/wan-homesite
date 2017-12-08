@@ -9,19 +9,19 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EmptyComponent } from './views/empty/empty.component';
-import { HeaderComponent } from './views/header/header.component';
 import { HomeComponent } from './views/home/home.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { PortfoliosComponent } from './views/portfolios/portfolios.component';
+import { SiteHeaderComponent } from './components/site-header/site-header.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         EmptyComponent,
-        HeaderComponent,
         HomeComponent,
         PortfolioComponent,
-        PortfoliosComponent
+        PortfoliosComponent,
+        SiteHeaderComponent
     ],
     imports: [
         BrowserModule,
