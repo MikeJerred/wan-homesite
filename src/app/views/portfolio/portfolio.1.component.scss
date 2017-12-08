@@ -1,0 +1,92 @@
+:host {
+    display: block;
+    background-color: #f2f2f2;
+    padding-top: 300px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 72px;
+    margin-bottom: 80px;
+    color: #333;
+}
+
+.intro {
+    h4 {
+        color: #333;
+        border-bottom: 1px solid #333;
+        padding-bottom: 40px;
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
+
+.content {
+    margin-top: 50px;
+
+    .navbar {
+        padding-bottom: 0;
+
+        .nav-item {
+            font-size: 20px;
+            height: 60px;
+            line-height: 44px;
+            width: 200px;
+            margin-left: 6px;
+            margin-right: 6px;
+            text-align: center;
+            color: #333;
+            background-color: #fff;
+            box-shadow: -4px -3px 20px -7px #333;
+
+            &.active {
+                color: #fff;
+                background-color: #333;
+            }
+        }
+    }
+
+    .tab {
+        background-color: #333;
+
+        &.discovery {
+
+        }
+    }
+}
+
+.photography {
+    height: 300px;
+    background-image: url(/assets/water.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    position: relative;
+
+    .shape {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 500px;
+        height: 230px;
+        background-image: url(/assets/snippet.svg);
+        padding-top: 80px;
+        padding-left: 145px;
+
+        .text {
+            color: #fff;
+            font-size: 48px;
+        }
+    }
+}
+
+footer {
+    background-color: #00ffcc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #333;
+}

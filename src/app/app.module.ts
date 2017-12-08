@@ -2,15 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TabsModule } from 'ngx-bootstrap';
 import { LocalStorageModule } from 'angular-2-local-storage';
-import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EmptyComponent } from './views/empty/empty.component';
 import { HomeComponent } from './views/home/home.component';
-import { PortfolioComponent } from './views/portfolio/portfolio.component';
+import { Portfolio1Component } from './views/portfolio/portfolio.1.component';
 import { PortfoliosComponent } from './views/portfolios/portfolios.component';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
 
@@ -19,7 +18,7 @@ import { SiteHeaderComponent } from './components/site-header/site-header.compon
         AppComponent,
         EmptyComponent,
         HomeComponent,
-        PortfolioComponent,
+        Portfolio1Component,
         PortfoliosComponent,
         SiteHeaderComponent
     ],
@@ -27,7 +26,7 @@ import { SiteHeaderComponent } from './components/site-header/site-header.compon
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
-        NgbModule.forRoot(),
+        TabsModule.forRoot(),
         LocalStorageModule.withConfig({
             prefix: 'app',
             storageType: 'localStorage',
@@ -35,7 +34,6 @@ import { SiteHeaderComponent } from './components/site-header/site-header.compon
                 setItem: true
             }
         }),
-        Ng2PageScrollModule,
         AppRoutingModule
     ],
     providers: [],
