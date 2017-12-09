@@ -10,6 +10,4 @@ import { SiteHeaderComponent } from './components/site-header/site-header.compon
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    constructor() {
-    }
 }

@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EmptyComponent } from './views/empty/empty.component';
 import { HomeComponent } from './views/home/home.component';
-import { Portfolio1Component } from './views/portfolio/portfolio.1.component';
-import { PortfoliosComponent } from './views/portfolios/portfolios.component';
+import { Design1Component } from './views/design/individual/design.1.component';
+import { DesignPortfolioComponent } from './views/design/portfolio/design-portfolio.component';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
 
 @NgModule({
@@ -18,8 +18,8 @@ import { SiteHeaderComponent } from './components/site-header/site-header.compon
         AppComponent,
         EmptyComponent,
         HomeComponent,
-        Portfolio1Component,
-        PortfoliosComponent,
+        Design1Component,
+        DesignPortfolioComponent,
         SiteHeaderComponent
     ],
     imports: [

@@ -2,17 +2,35 @@
 @import 'mixins';
 
 :host > main {
-    position: relative;
-    background-image: url(/assets/home-background.svg);
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    overflow: hidden;
+    .bg-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .bg-left {
+        background-image: url(/assets/home-background-left.svg);
+    }
+
+    .bg-right {
+        background-image: url(/assets/home-background-right.svg);
+    }
+
+    $text-height: 48px;
+    $left-text-width: 154px;
+    $right-text-width: 264px;
+    $left-horiz-adjust: -80px;
+    $right-horiz-adjust: 40px;
 
     h1 {
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         cursor: pointer;
+        margin: 0;
         transition: all 0.3s ease-in-out;
 
         .symbol {
@@ -32,8 +50,8 @@
         }
 
         &.left {
-            top: 50%;
-            left: calc(25% - 154px/2);
+            top: calc(50% - #{$text-height/2});
+            left: calc(25% - #{$left-text-width/2});
             color: #333;
 
             .symbol > line {
@@ -42,8 +60,8 @@
         }
 
         &.right {
-            top: 50%;
-            right: calc(25% - 264px/2);
+            top: calc(50% - #{$text-height/2});
+            left: calc(75% - #{$right-text-width/2});
             color: #fff;
 
             .symbol > line {
@@ -52,9 +70,9 @@
         }
 
         &.expanded {
-            top: 25%;
-
             &.left {
+                top: 25%;
+                left: calc(25% + #{-$left-text-width/2 + $left-horiz-adjust});
                 color: #fff;
 
                 .symbol > line {
@@ -63,6 +81,8 @@
             }
 
             &.right {
+                top: 25%;
+                left: calc(75% + #{-$right-text-width/2 + $right-horiz-adjust});
                 color: #333;
 
                 .symbol > line {
@@ -110,18 +130,23 @@
 
     .list {
         position: absolute;
+        z-index: 1;
         opacity: 0;
         font-size: 20px;
-        top: 25%;
         transition: all 0.3s ease-in-out;
 
+        $list-indent: 50px;
+        $list-vert-indent: 80px;
+
         &.left {
-            left: 10%;
+            top: 25%;
+            left: calc(25vw + #{-$left-text-width/2 + $left-horiz-adjust + $list-indent});
             color: #fff;
         }
 
         &.right {
-            left: calc(100vw - 10% - 264px);
+            top: 25%;
+            left: calc(75vw + #{-$right-text-width/2 + $right-horiz-adjust + $list-indent});
             color: #333;
         }
 
@@ -129,64 +154,82 @@
             opacity: 1;
 
             &.left {
-                top: calc(25% + 80px);
+                top: calc(25vh + #{$list-vert-indent});
             }
 
             &.right {
-                top: calc(25% + 80px);
+                top: calc(25vh + #{$list-vert-indent});
             }
         }
     }
 
     @include media-breakpoint-down(sm) {
         background-image: none;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
 
-        &:before {
-            position: absolute;
-            top: -15vh;
-            left: 0;
-            display: block;
-            content: '';
-            width: 100vw;
-            height: 130vh;
-            background-image: url(/assets/home-background.mobile.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
+        .bg-shape:before {
             transition: all 0.3s ease-in-out;
         }
 
-        &.left-expanded:before {
+        .bg-left {
+            background-image: none;
+        }
+
+        .bg-right {
+            background-image: none;
+            position: absolute;
+            height: 100vh;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -15vh;
+                left: 0;
+                width: 100%;
+                height: 130vh;
+                background-image: url(/assets/home-background-bottom.mobile.svg);
+                background-size: cover;
+            }
+        }
+
+        &.left-expanded .bg-right:before {
             top: 0;
         }
 
-        &.right-expanded:before {
+        &.right-expanded .bg-right:before {
             top: -30vh;
         }
 
+        $left-text-width: 107px;
+        $right-text-width: 184px;
+
         h1 {
-            font-size: 20px;
+            font-size: 28px;
 
             .symbol {
-                width: 10px;
-                height: 10px;
+                width: 13px;
+                height: 13px;
             }
 
             &.left {
                 top: 20%;
-                left: calc(50% - 155px/2);
+                left: calc(50% - #{$left-text-width/2});
             }
 
             &.right {
                 top: auto;
+                right: auto;
                 bottom: 20%;
-                right: calc(50% - 270px/2);
+                left: calc(50% - #{$right-text-width/2});
             }
 
             &.expanded {
                 &.left {
-                    top: 7%;
-                    left: 10%;
+                    top: 20%;
+                    left: calc(50% - #{$left-text-width/2});
                     color: #333;
 
                     .symbol > line {
@@ -195,8 +238,10 @@
                 }
 
                 &.right {
-                    bottom: 7%;
-                    right: 10%;
+                    top: auto;
+                    right: auto;
+                    bottom: 20%;
+                    left: calc(50% - #{$right-text-width/2});
                     color: #fff;
 
                     .symbol > line {
@@ -206,10 +251,35 @@
             }
         }
 
-        .shape {
-            &.expanded {
-                opacity: 0;
+        .list {
+            &.left {
+                top: 20%;
+                left: calc(50% - #{$left-text-width/2});
+                color: #333;
             }
+
+            &.right {
+                top: auto;
+                left: calc(50% - #{$right-text-width/2});
+                bottom: 20%;
+                color: #fff;
+            }
+
+            &.expanded {
+                &.left {
+                    top: calc(20% + 60px);
+                }
+
+                &.right {
+                    top: auto;
+                    left: calc(50% - #{$right-text-width/2});
+                    bottom: calc(20% + 60px);
+                }
+            }
+        }
+
+        .shape {
+            display: none;
         }
     }
 }

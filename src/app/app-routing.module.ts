@@ -3,8 +3,8 @@ import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { EmptyComponent } from './views/empty/empty.component';
 import { HomeComponent } from './views/home/home.component';
-import { Portfolio1Component } from './views/portfolio/portfolio.1.component';
-import { PortfoliosComponent } from './views/portfolios/portfolios.component';
+import { Design1Component } from './views/design/individual/design.1.component';
+import { DesignPortfolioComponent } from './views/design/portfolio/design-portfolio.component';
 
 const routeConfig: Routes = [
     {
@@ -12,12 +12,12 @@ const routeConfig: Routes = [
         component: HomeComponent
     },
     {
-        path: 'portfolios',
-        component: PortfoliosComponent
+        path: 'designs',
+        component: DesignPortfolioComponent
     },
     {
-        path: 'portfolio/1',
-        component: Portfolio1Component
+        path: 'design/1',
+        component: Design1Component
     },
     { path: '', redirectTo: '/home', pathMatch: 'full' }
     //{ path: '**', component: PageNotFoundComponent }
