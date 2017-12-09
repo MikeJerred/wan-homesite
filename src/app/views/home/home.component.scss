@@ -90,7 +90,7 @@
         transition: opacity 0.3s ease-in-out;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        //background-position: center center;
+        pointer-events: none;
         opacity: 0;
 
         &.left {

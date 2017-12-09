@@ -7,6 +7,12 @@ object {
     width: 350px;
     top: 20px;
     left: calc(50vw - (50vh * 3 / 8) - 85px);
+    transition: all 0.3s ease-in-out;
+
+    &.scrolled {
+        width: 100px;
+        left: calc(50% - 100px/2);
+    }
 
     @include media-breakpoint-down(sm) {
         width: 100px;

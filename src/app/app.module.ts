@@ -36,7 +36,9 @@ import { SiteHeaderComponent } from './components/site-header/site-header.compon
         }),
         AppRoutingModule
     ],
-    providers: [],
+    providers: [
+        { provide: 'Window', useValue: window }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

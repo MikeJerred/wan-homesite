@@ -1,17 +1,17 @@
-:host {
-    display: block;
+.intro {
+    position: relative;
+    z-index: 1;
     background-color: #f2f2f2;
     padding-top: 300px;
-}
+    padding-bottom: 50px;
 
-h1 {
-    text-align: center;
-    font-size: 72px;
-    margin-bottom: 80px;
-    color: #333;
-}
+    h1 {
+        text-align: center;
+        font-size: 72px;
+        margin-bottom: 80px;
+        color: #333;
+    }
 
-.intro {
     h4 {
         color: #333;
         border-bottom: 1px solid #333;
@@ -25,7 +25,10 @@ h1 {
 }
 
 .content {
-    margin-top: 50px;
+    margin-bottom: 453px;
+    background-color: #f2f2f2;
+    position: relative;
+    z-index: 1;
 
     .navbar {
         padding-bottom: 0;
@@ -40,23 +43,44 @@ h1 {
             text-align: center;
             color: #333;
             background-color: #fff;
-            box-shadow: -4px -3px 20px -7px #333;
 
             &.active {
                 color: #fff;
                 background-color: #333;
+                box-shadow: -4px -3px 20px -4px #333;
             }
         }
     }
 
     .tab {
         background-color: #333;
+        color: #fff;
 
         &.discovery {
+            text-align: center;
+            padding-top: 40px;
 
+            img {
+                margin-top: 40px;
+                border: 10px solid #fff;
+                width: 100%;
+            }
+
+            h4 {
+                margin: 20px 0;
+            }
         }
     }
 }
+
+
+.parallax {
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
 
 .photography {
     height: 300px;
@@ -89,4 +113,14 @@ footer {
     padding: 20px 0;
     font-size: 12px;
     color: #333;
+
+    a {
+        display: inline-block;
+    }
+
+    .logo {
+        width: 50px;
+        margin: 20px 10px;
+        pointer-events: none;
+    }
 }

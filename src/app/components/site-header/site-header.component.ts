@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Inject } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Component({
@@ -8,6 +8,13 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
     styleUrls: ['./site-header.component.scss']
 })
 export class SiteHeaderComponent {
-    constructor() {
+    constructor(@Inject('Window') private window: Window) {
+    }
+
+    isScrolled = false;
+
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+        this.isScrolled = this.window.scrollY > 0;
     }
 }
