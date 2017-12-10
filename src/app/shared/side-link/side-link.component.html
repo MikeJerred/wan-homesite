@@ -1,0 +1,12 @@
+<a class="sidebar" [ngClass]="left ? 'left' : 'right'" [routerLink]="routerLink">
+    <object class="arrow" type="image/svg+xml" data="/assets/arrow.svg"></object>
+    <span class="text">{{name}}</span>
+
+    <div class="sidebar-border"></div>
+    <svg *ngIf="left" class="sidebar-bg" viewBox="0 0 24 52">
+        <polyline points="0,1 22,1 0,52" stroke-width="2"></polyline>
+    </svg>
+    <svg *ngIf="!left" class="sidebar-bg" viewBox="0 0 24 52">
+        <polyline points="24,1 2,1 24,52" stroke-width="2"></polyline>
+    </svg>
+</a>

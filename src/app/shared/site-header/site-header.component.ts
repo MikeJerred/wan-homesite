@@ -1,5 +1,5 @@
 import { Component, HostListener, Inject } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-site-header',
@@ -8,7 +8,9 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
     styleUrls: ['./site-header.component.scss']
 })
 export class SiteHeaderComponent {
-    constructor(@Inject('Window') private window: Window) {
+    constructor(
+        @Inject('Window') private window: Window,
+        private router: Router) {
     }
 
     isScrolled = false;
