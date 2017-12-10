@@ -25,7 +25,6 @@
 }
 
 .content {
-    margin-bottom: 453px;
     background-color: #f2f2f2;
     position: relative;
     z-index: 1;
@@ -55,22 +54,16 @@
     .tab {
         background-color: #333;
         color: #fff;
-
-        &.discovery {
-            // text-align: center;
-            // padding-top: 40px;
-
-            // img {
-            //     margin-top: 40px;
-            //     border: 10px solid #fff;
-            //     width: 100%;
-            // }
-
-            // h4 {
-            //     margin: 20px 0;
-            // }
-        }
     }
+}
+
+.visit-site {
+    background-color: #f2f2f2;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 80px 0;
+    margin-bottom: 453px;
 }
 
 
@@ -80,7 +73,6 @@
     width: 100%;
     bottom: 0;
 }
-
 
 .photography {
     height: 300px;
