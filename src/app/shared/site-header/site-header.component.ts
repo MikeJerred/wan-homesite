@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class SiteHeaderComponent {
     constructor(
         @Inject('Window') private window: Window,
-        private router: Router) {
+        public router: Router) {
     }
 
     isScrolled = false;
