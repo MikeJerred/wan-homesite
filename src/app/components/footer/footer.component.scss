@@ -1,0 +1,17 @@
+footer {
+    background-color: #00ffcc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #333;
+
+    a {
+        display: inline-block;
+    }
+
+    .logo {
+        width: 50px;
+        margin: 20px 10px;
+        pointer-events: none;
+    }
+}

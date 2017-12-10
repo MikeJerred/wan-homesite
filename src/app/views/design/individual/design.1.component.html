@@ -33,16 +33,16 @@
 <div class="content">
     <div class="navbar">
         <ul class="nav mx-auto">
-            <li class="nav-item" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
+            <li class="nav-item clickable" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
                 <a class="nav-link">Discovery</a>
             </li>
-            <li class="nav-item" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
+            <li class="nav-item clickable" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
                 <a class="nav-link">Wireframe</a>
             </li>
-            <li class="nav-item" [ngClass]="selectedTab === 2 ? 'active' : ''" (click)="selectedTab = 2">
+            <li class="nav-item clickable" [ngClass]="selectedTab === 2 ? 'active' : ''" (click)="selectedTab = 2">
                 <a class="nav-link">Testing</a>
             </li>
-            <li class="nav-item" [ngClass]="selectedTab === 3 ? 'active' : ''" (click)="selectedTab = 3">
+            <li class="nav-item clickable" [ngClass]="selectedTab === 3 ? 'active' : ''" (click)="selectedTab = 3">
                 <a class="nav-link">Design</a>
             </li>
         </ul>
@@ -106,18 +106,12 @@
 
 <div class="parallax">
     <div class="photography clearfix">
-        <a>
+        <a [routerLink]="['/photographs']">
             <div class="shape">
                 <span class="text">Photography</span>
             </div>
         </a>
     </div>
 
-    <footer>
-        <div>
-            <a href="https://www.linkedin.com/in/wan-li-7897a153/" target="_blank"><object class="logo" type="image/svg+xml" data="/assets/linkedin.svg"></object></a>
-            <a href="" target="_blank"><object class="logo" type="image/svg+xml" data="/assets/instagram.svg"></object></a>
-        </div>
-        &#169; Wan Li All Rights Reserved 2017
-    </footer>
+    <app-footer></app-footer>
 </div>

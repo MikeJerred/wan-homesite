@@ -7,5 +7,4 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
     styleUrls: ['./photography-portfolio.component.scss']
 })
 export class PhotographyPortfolioComponent {
-    @Input() id: number;
 }

@@ -11,7 +11,9 @@ import { EmptyComponent } from './views/empty/empty.component';
 import { HomeComponent } from './views/home/home.component';
 import { Design1Component } from './views/design/individual/design.1.component';
 import { DesignPortfolioComponent } from './views/design/portfolio/design-portfolio.component';
+import { PhotographyPortfolioComponent } from './views/photography/portfolio/photography-portfolio.component';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +22,9 @@ import { SiteHeaderComponent } from './components/site-header/site-header.compon
         HomeComponent,
         Design1Component,
         DesignPortfolioComponent,
-        SiteHeaderComponent
+        PhotographyPortfolioComponent,
+        SiteHeaderComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
