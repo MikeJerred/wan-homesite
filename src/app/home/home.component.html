@@ -26,8 +26,8 @@
         </h1>
         <div class="shape right" [ngClass]="isRightExpanded ? 'expanded' : ''"></div>
         <ul class="list right" [ngClass]="isRightExpanded ? 'expanded' : ''">
-            <li><a>Street</a></li>
-            <li><a [routerLink]="['/photographs']">Architecture</a></li>
+            <li><a [routerLink]="['/photography', 'architecture']">Architecture</a></li>
+            <li><a [routerLink]="['/photography', 'street']">Street</a></li>
         </ul>
     </div>
 </main>

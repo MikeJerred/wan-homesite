@@ -17,7 +17,6 @@ const routeAnimation: AnimationEntryMetadata =
     ]);
 
 @Component({
-    providers: [],
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
     animations: [ routeAnimation ]
