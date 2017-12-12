@@ -9,21 +9,21 @@ a {
     transition: left 0.3s ease-in-out;
 
     object {
-        width: 350px;
+        width: 400px;
         top: 20px;
         transition: width 0.3s ease-in-out;
         pointer-events: none;
     }
 
     &.is-home {
-        left: calc(50vw - (50vh * 3 / 8) - 92px);
+        left: calc(50vw - (50vh * 3 / 8) - 108px);
     }
 
     &.scrolled {
-        left: calc(50% - 100px/2);
+        left: calc(50% - 150px/2);
 
         object {
-            width: 100px;
+            width: 150px;
         }
     }
 
@@ -32,6 +32,10 @@ a {
 
         object {
             width: 100px;
+        }
+
+        &.is-home {
+            left: calc(50% - 100px/2);
         }
     }
 }

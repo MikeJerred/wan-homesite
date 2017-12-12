@@ -1,0 +1,7 @@
+<div class="photography clearfix" [ngClass]="{ left: left, right: right, zoomed: zoomed } ">
+    <a [routerLink]="['/photography']">
+        <div class="shape" (mouseenter)="zoomed = true" (mouseleave)="zoomed = false">
+            <span class="text">{{name}}</span>
+        </div>
+    </a>
+</div>

@@ -20,9 +20,9 @@
         background-image: url(/assets/home-background-right.svg);
     }
 
-    $text-height: 48px;
-    $left-text-width: 154px;
-    $right-text-width: 264px;
+    $text-height: 72px;
+    $left-text-width: 228px;
+    $right-text-width: 395px;
     $left-horiz-adjust: -80px;
     $right-horiz-adjust: 40px;
 
@@ -31,11 +31,12 @@
         z-index: 2;
         cursor: pointer;
         margin: 0;
+        font-size: 60px;
         transition: all 0.3s ease-in-out;
 
         .symbol {
-            width: 20px;
-            height: 20px;
+            width: 35px;
+            height: 35px;
             vertical-align: middle;
 
             line {
@@ -132,12 +133,13 @@
         position: absolute;
         z-index: 1;
         opacity: 0;
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 300;
         pointer-events: none;
         transition: all 0.3s ease-in-out;
 
         $list-indent: 50px;
-        $list-vert-indent: 80px;
+        $list-vert-indent: 100px;
 
         &.left {
             top: 25%;

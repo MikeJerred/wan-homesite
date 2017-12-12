@@ -1,5 +1,5 @@
 <app-side-link name="Button & Wilde" [routerLink]="['/design', 1]" [extend]="180" left></app-side-link>
-<app-side-link name="MJerred" [routerLink]="['/design', 3]" right></app-side-link>
+<app-side-link name="Evicore" [routerLink]="['/design', 3]" right></app-side-link>
 
 <div class="intro">
     <h1>M Jerred</h1>
@@ -9,57 +9,28 @@
             <div class="col-sm">
                 <h4>Background</h4>
                 <p>
-                    The client has a B2C ecommerce platform which sells personalised beauty products. After the initial launch the site had a very high bounce rate and low conversion rate, so improving these was the main focus of the project. Also the stakeholders wanted to restructure the way the company sells online.
+                    This project was in collaboration with the specialist .NET and Angular developer Mike Jerred to create his portfolio website.
                 </p>
             </div>
             <div class="col-sm">
-                <h4>My Role</h4>
+                <h4>Challenge</h4>
                 <p>
-                    I proposed and lead the redesign process. My main task was to improve the layout of the homepage so the product concept is clearly communicated. The second challenge was to simplify the user journey of the existing product customisation feature.
+                    I was in collaboration with the developer Mike Jerred to create his portfolio website. I worked closely with the developer on the page transition animations.
                 </p>
             </div>
             <div class="col-sm">
-                <h4>Methods used</h4>
-                <p>
-                    Initially, I conducted stakeholder interviews and a design studio to gather business requirements and facilitate team collaboration. I created different versions of wireframes and prototypes based on personas and user stories. I also organised both Guerrilla user testing sessions and remote testing sessions using usertesting.com to validate the designs.
-                </p>
+                <h4>Service</h4>
+                <ul>
+                    <li>UX Design</li>
+                    <li>UI Design</li>
+                    <li>Photography </li>
+                </ul>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="content">
-    <div class="navbar">
-        <ul class="nav mx-auto">
-            <li class="nav-item clickable" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
-                <a class="nav-link">Discovery</a>
-            </li>
-            <li class="nav-item clickable" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
-                <a class="nav-link">Wireframe</a>
-            </li>
-            <li class="nav-item clickable" [ngClass]="selectedTab === 2 ? 'active' : ''" (click)="selectedTab = 2">
-                <a class="nav-link">Testing</a>
-            </li>
-            <li class="nav-item clickable" [ngClass]="selectedTab === 3 ? 'active' : ''" (click)="selectedTab = 3">
-                <a class="nav-link">Design</a>
-            </li>
-        </ul>
-    </div>
-
-    <div *ngIf="selectedTab === 0" class="tab">
-        <!-- <app-design-tab-discovery></app-design-tab-discovery> -->
-    </div>
-
-    <div *ngIf="selectedTab === 1" class="tab">
-        <!-- <app-design-tab-wireframe></app-design-tab-wireframe> -->
-    </div>
-
-    <div *ngIf="selectedTab === 2" class="tab">
-        <!-- <app-design-tab-testing></app-design-tab-testing> -->
-    </div>
-
-    <div *ngIf="selectedTab === 3" class="tab">
-        <!-- <app-design-tab-design></app-design-tab-design> -->
+        <div class="row">
+            <div class="col-sm-6"><img src="/assets/design/2/screenshot-1.jpg"></div>
+            <div class="col-sm-6"><img src="/assets/design/2/screenshot-2.jpg"></div>
+        </div>
     </div>
 </div>
 
@@ -68,13 +39,6 @@
 </div>
 
 <div class="parallax">
-    <div class="photography clearfix">
-        <a [routerLink]="['/photography']">
-            <div class="shape">
-                <span class="text">Photography</span>
-            </div>
-        </a>
-    </div>
-
+    <app-banner-link name="Photography" [routerLink]="['/photography']" right></app-banner-link>
     <app-footer></app-footer>
 </div>

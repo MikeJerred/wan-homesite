@@ -3,16 +3,16 @@
         <h1 class="left" [ngClass]="isLeftExpanded ? 'expanded' : ''" (click)="toggleLeft()">
             Design
             <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
-                <line x1="0" y1="50" x2="100" y2="50" stroke-width="20"></line>
-                <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="20"></line>
+                <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
+                <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="10"></line>
             </svg>
         </h1>
         <div class="shape left" [ngClass]="isLeftExpanded ? 'expanded' : ''"></div>
         <ul class="list left" [ngClass]="isLeftExpanded ? 'expanded' : ''">
             <li><a [routerLink]="['/design', 1]">Button &amp; Wilde</a></li>
-            <li><a>MJerred</a></li>
-            <li><a>Evicore</a></li>
-            <li><a>Blackhawk Intelligence</a></li>
+            <li><a [routerLink]="['/design', 2]">MJerred</a></li>
+            <li><a [routerLink]="['/design', 3]">Evicore</a></li>
+            <li><a [routerLink]="['/design', 4]">Blackhawk Intelligence</a></li>
         </ul>
     </div>
 
@@ -20,8 +20,8 @@
         <h1 class="right" [ngClass]="isRightExpanded ? 'expanded' : ''" (click)="toggleRight()">
             Photography
             <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
-                <line x1="0" y1="50" x2="100" y2="50" stroke-width="20"></line>
-                <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="20"></line>
+                <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
+                <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="10"></line>
             </svg>
         </h1>
         <div class="shape right" [ngClass]="isRightExpanded ? 'expanded' : ''"></div>

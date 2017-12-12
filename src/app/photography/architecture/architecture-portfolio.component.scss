@@ -33,29 +33,3 @@ main {
     width: 100%;
     bottom: 0;
 }
-
-
-.design {
-    height: 300px;
-    background-image: url(/assets/water.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: bottom;
-    position: relative;
-
-    .shape {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 500px;
-        height: 230px;
-        background-image: url(/assets/snippet-left.svg);
-        padding-top: 80px;
-        padding-left: 145px;
-
-        .text {
-            color: #333;
-            font-size: 48px;
-        }
-    }
-}

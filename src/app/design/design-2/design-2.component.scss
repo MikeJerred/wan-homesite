@@ -18,42 +18,9 @@
         padding-bottom: 40px;
     }
 
-    p {
+    p, ul {
         margin-top: 20px;
         font-size: 20px;
-    }
-}
-
-.content {
-    background-color: #f2f2f2;
-    position: relative;
-    z-index: 1;
-
-    .navbar {
-        padding-bottom: 0;
-
-        .nav-item {
-            font-size: 20px;
-            height: 60px;
-            line-height: 44px;
-            width: 200px;
-            margin-left: 6px;
-            margin-right: 6px;
-            text-align: center;
-            color: #333;
-            background-color: #fff;
-
-            &.active {
-                color: #fff;
-                background-color: #333;
-                box-shadow: -4px -3px 20px -4px #333;
-            }
-        }
-    }
-
-    .tab {
-        background-color: #333;
-        color: #fff;
     }
 }
 
@@ -87,29 +54,4 @@
     position: fixed;
     width: 100%;
     bottom: 0;
-}
-
-.photography {
-    height: 300px;
-    background-image: url(/assets/blue.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: bottom;
-    position: relative;
-
-    .shape {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 500px;
-        height: 230px;
-        background-image: url(/assets/snippet-right.svg);
-        padding-top: 80px;
-        padding-left: 145px;
-
-        .text {
-            color: #fff;
-            font-size: 48px;
-        }
-    }
 }
