@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="column col-sm-6 col-xs-12">
-                <img src="/assets/photographs/architecture/1.jpg">
+                <img src="/assets/photographs/architecture/1.jpg" class="clickable" (click)="staticModal.show()">
                 <img src="/assets/photographs/architecture/2.jpg">
             </div>
             <div class="column col-sm-6 col-xs-12">
@@ -10,8 +10,21 @@
                 <img src="/assets/photographs/architecture/4.jpg">
             </div>
         </div>
+        <!-- <div class="row">
+            <div class="col-12">
+                <app-gallery></app-gallery>
+            </div>
+        </div> -->
     </div>
+
 </main>
+
+<div class="modal" bsModal #staticModal="bs-modal">
+    <div class="close" (click)="staticModal.hide()">X</div>
+    <div class="container">
+        <app-gallery></app-gallery>
+    </div>
+</div>
 
 <div class="parallax">
     <app-banner-link name="Design" [routerLink]="['/design']" left></app-banner-link>

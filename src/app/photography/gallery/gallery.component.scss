@@ -1,0 +1,29 @@
+main {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    .image {
+        position: absolute;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }
+
+    .arrow {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+
+        &.prev {
+            left: 0;
+        }
+
+        &.next {
+            right: 0;
+        }
+    }
+}
