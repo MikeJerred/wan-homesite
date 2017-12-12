@@ -17,7 +17,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 })
 export class GalleryComponent {
     //@Input('images') images: string[];
-    private images = [
+    public images = [
         '/assets/photographs/architecture/1.jpg',
         '/assets/photographs/architecture/2.jpg',
         '/assets/photographs/architecture/3.jpg',
