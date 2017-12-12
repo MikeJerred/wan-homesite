@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { animate, animateChild, group, query, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
     selector: 'app-side-link',
@@ -8,8 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SideLinkComponent implements OnInit {
     @Input('name') name: string;
     @Input('routerLink') routerLink: any[] | string;
+    @Input('extend') extend: number;
     @Input('left') left: boolean;
     @Input('right') right: boolean;
+
+    expanded = false;
 
     ngOnInit() {
         if (<any>this.left === '')
@@ -23,5 +27,8 @@ export class SideLinkComponent implements OnInit {
 
         if (!this.left && !this.right)
             throw new Error('Side Link must specify either \'left\' or \'right\'');
+
+        if (!this.extend)
+            this.extend = 130;
     }
 }

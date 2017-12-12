@@ -1,8 +1,14 @@
-<a class="sidebar" [ngClass]="left ? 'left' : 'right'" [routerLink]="routerLink">
+<a class="sidebar"
+    [ngClass]="left ? 'left' : 'right'"
+    [routerLink]="routerLink"
+    [style.width]="expanded ? (104 + extend) + 'px' : '104px'"
+    (mouseenter)="expanded = true"
+    (mouseleave)="expanded = false">
+
     <object class="arrow" type="image/svg+xml" data="/assets/arrow.svg"></object>
     <span class="text">{{name}}</span>
 
-    <div class="sidebar-border"></div>
+    <div class="sidebar-border" [style.width]="expanded ? (81 + extend) + 'px' : '81px'"></div>
     <svg *ngIf="left" class="sidebar-bg" viewBox="0 0 24 52">
         <polyline points="0,1 22,1 0,52" stroke-width="2"></polyline>
     </svg>

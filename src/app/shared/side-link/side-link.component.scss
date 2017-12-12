@@ -51,7 +51,7 @@
     }
 
     &:hover {
-        width: 104px + $hover-extend;
+        //width: 104px + $hover-extend;
 
         .text {
             opacity: 1;
@@ -59,7 +59,7 @@
 
         .sidebar-border {
             background-color: #00ffcc;
-            width: 81px + $hover-extend;
+            //width: 81px + $hover-extend;
         }
 
         .sidebar-bg {
