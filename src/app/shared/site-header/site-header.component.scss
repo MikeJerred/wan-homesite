@@ -20,7 +20,7 @@ a {
     }
 
     &.scrolled {
-        left: calc(50% - 150px/2);
+        left: calc(50vw - 150px/2);
 
         object {
             width: 150px;
@@ -28,14 +28,14 @@ a {
     }
 
     @include media-breakpoint-down(sm) {
-        left: calc(50% - 100px/2);
+        left: calc(50vw - 100px/2);
 
         object {
             width: 100px;
         }
 
         &.is-home {
-            left: calc(50% - 100px/2);
+            left: calc(50vw - 100px/2);
         }
     }
 }

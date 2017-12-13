@@ -1,4 +1,4 @@
-<main>
+<main (window:keydown)="keyPressed($event)">
     <ng-container *ngFor="let image of images; index as i">
         <div *ngIf="getImageState(i) != 'void'"
              class="image"

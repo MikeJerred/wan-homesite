@@ -10,8 +10,8 @@ const routeAnimation: AnimationEntryMetadata =
             query('.bg-right', style({ transform: 'translateX(0)', 'z-index': 100 })),
             query('.bg-left', style({ transform: 'translateX(0)', 'z-index': 100 })),
             group([
-                query('.bg-right', animate('0.5s ease-in-out', style({ transform: 'translateX(100vw)' }))),
-                query('.bg-left', animate('0.5s ease-in-out', style({ transform: 'translateX(-100vw)' })))
+                query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(100vw)' }))),
+                query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(-100vw)' })))
             ])
         ]),
         transition(':enter', [
@@ -19,8 +19,8 @@ const routeAnimation: AnimationEntryMetadata =
             query('.bg-right', style({ transform: 'translateX(100vw)', 'z-index': 100 })),
             query('.bg-left', style({ transform: 'translateX(-100vw)', 'z-index': 100 })),
             group([
-                query('.bg-right', animate('0.5s ease-in-out', style({ transform: 'translateX(0)' }))),
-                query('.bg-left', animate('0.5s ease-in-out', style({ transform: 'translateX(0)' })))
+                query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
+                query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(0)' })))
             ])
         ])
     ]);

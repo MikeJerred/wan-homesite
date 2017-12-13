@@ -11,6 +11,7 @@ export class SideLinkComponent implements OnInit {
     @Input('extend') extend: number;
     @Input('left') left: boolean;
     @Input('right') right: boolean;
+    @Input('invert') invert: boolean;
 
     expanded = false;
 
@@ -20,6 +21,9 @@ export class SideLinkComponent implements OnInit {
 
         if (<any>this.right === '')
             this.right = true;
+
+        if (<any>this.invert === '')
+            this.invert = true;
 
         if (this.left && this.right)
             throw new Error('Side Link cannot be both \'left\' and \'right\'');

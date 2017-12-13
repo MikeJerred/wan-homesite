@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
@@ -24,7 +24,26 @@ export class GalleryComponent {
         '/assets/photographs/architecture/4.jpg'
     ];
 
+    @Output() close = new EventEmitter<boolean>();
+
     public currentIndex = 0;
+
+    public keyPressed($event: KeyboardEvent) {
+        switch ($event.key) {
+            case 'ArrowLeft':
+                this.previous();
+                $event.preventDefault();
+                break;
+            case 'ArrowRight':
+            case ' ':
+                this.next();
+                $event.preventDefault();
+                break;
+            case 'Escape':
+                this.close.next(true);
+                break;
+        }
+    }
 
     public previous(): void {
         if (this.currentIndex === 0)

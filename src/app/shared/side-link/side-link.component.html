@@ -1,11 +1,11 @@
 <a class="sidebar"
-    [ngClass]="left ? 'left' : 'right'"
+    [ngClass]="{ 'left': left, 'right': right, 'invert': invert }"
     [routerLink]="routerLink"
     [style.width]="expanded ? (104 + extend) + 'px' : '104px'"
     (mouseenter)="expanded = true"
     (mouseleave)="expanded = false">
 
-    <object class="arrow" type="image/svg+xml" data="/assets/arrow.svg"></object>
+    <div class="arrow" inlineSVG="/assets/arrow.svg"></div>
     <span class="text">{{name}}</span>
 
     <div class="sidebar-border" [style.width]="expanded ? (81 + extend) + 'px' : '81px'"></div>

@@ -28,10 +28,14 @@ main {
 }
 
 .modal {
+    background-color: #333;
+
     .close {
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: 30px;
+        top: 30px;
+        font-size: 28px;
+        color: #fff;
     }
 }
 

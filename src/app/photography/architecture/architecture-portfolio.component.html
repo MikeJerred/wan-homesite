@@ -1,8 +1,10 @@
+<app-side-link name="Street" [routerLink]="['/photography', 'street']" [extend]="100" right invert></app-side-link>
+
 <main class="clearfix">
     <div class="container">
         <div class="row">
             <div class="column col-sm-6 col-xs-12">
-                <img src="/assets/photographs/architecture/1.jpg" class="clickable" (click)="staticModal.show()">
+                <img src="/assets/photographs/architecture/1.jpg" class="clickable" (click)="imageModal.show()">
                 <img src="/assets/photographs/architecture/2.jpg">
             </div>
             <div class="column col-sm-6 col-xs-12">
@@ -10,19 +12,13 @@
                 <img src="/assets/photographs/architecture/4.jpg">
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="col-12">
-                <app-gallery></app-gallery>
-            </div>
-        </div> -->
     </div>
-
 </main>
 
-<div class="modal" bsModal #staticModal="bs-modal">
-    <div class="close" (click)="staticModal.hide()">X</div>
+<div class="modal fade" bsModal #imageModal="bs-modal">
+    <div class="close clickable" (click)="imageModal.hide()">&times;</div>
     <div class="container">
-        <app-gallery></app-gallery>
+        <app-gallery (close)="imageModal.hide()"></app-gallery>
     </div>
 </div>
 
