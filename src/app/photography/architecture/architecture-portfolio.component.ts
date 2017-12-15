@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
     templateUrl: './architecture-portfolio.component.html',
     styleUrls: ['./architecture-portfolio.component.scss']
 })
 export class ArchitecturePortfolioComponent {
-    public currentIndex = 0;
+    public currentIndex = new Subject<number>();
 
     public images = [
         '/assets/photographs/architecture/1.jpg',

@@ -42,6 +42,43 @@ a {
 
 .menu-btn {
     position: fixed;
-    right: 0;
+    top: 20px;
+    right: 20px;
     z-index: 500;
+    cursor: pointer;
+
+    > svg {
+        width: 45px;
+        stroke: #333;
+        vertical-align: middle;
+        transition: stroke 1s ease-in-out;
+
+        .line-1, .line-2 {
+            transition: transform 1s ease-in-out;
+        }
+
+        .line-1 {
+            transform-origin: 86px 4px;
+        }
+
+        .line-2 {
+            transform-origin: 86px 26px;
+        }
+    }
+
+    &.open {
+        > svg {
+            stroke: #f2f2f2;
+
+            $scale: sqrt(2 * 56*56) / 82;
+
+            .line-1 {
+                transform: rotate(-45deg) scaleX($scale);
+            }
+
+            .line-2 {
+                transform: translateY(34px) rotate(45deg) scaleX($scale);
+            }
+        }
+    }
 }

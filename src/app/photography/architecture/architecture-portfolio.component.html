@@ -4,21 +4,24 @@
     <div class="container">
         <div class="row">
             <div class="column col-sm-6 col-xs-12">
-                <img src="/assets/photographs/architecture/1.jpg" class="clickable" (click)="currentIndex = 0; imageModal.show()">
-                <img src="/assets/photographs/architecture/2.jpg" class="clickable" (click)="currentIndex = 1; imageModal.show()">
+                <img src="/assets/photographs/architecture/1.jpg" class="clickable" (click)="currentIndex.next(0); imageModal.show()">
+                <img src="/assets/photographs/architecture/2.jpg" class="clickable" (click)="currentIndex.next(1); imageModal.show()">
             </div>
             <div class="column col-sm-6 col-xs-12">
-                <img src="/assets/photographs/architecture/3.jpg" class="clickable" (click)="currentIndex = 2; imageModal.show()">
-                <img src="/assets/photographs/architecture/4.jpg" class="clickable" (click)="currentIndex = 3; imageModal.show()">
+                <img src="/assets/photographs/architecture/3.jpg" class="clickable" (click)="currentIndex.next(2); imageModal.show()">
+                <img src="/assets/photographs/architecture/4.jpg" class="clickable" (click)="currentIndex.next(3); imageModal.show()">
             </div>
         </div>
+    </div>
+    <div class="load-more">
+        <span class="clickable">Load more</span>
     </div>
 </main>
 
 <div class="modal fade" bsModal #imageModal="bs-modal">
     <div class="close clickable" (click)="imageModal.hide()">&times;</div>
     <div class="container">
-        <app-gallery (close)="imageModal.hide()" [images]="images" [currentIndex]="currentIndex"></app-gallery>
+        <app-gallery (close)="imageModal.hide()" [images]="images" [setIndex]="currentIndex"></app-gallery>
     </div>
 </div>
 

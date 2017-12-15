@@ -1,9 +1,8 @@
 <main (window:keydown)="keyPressed($event)">
     <ng-container *ngFor="let image of images; index as i">
-        <div *ngIf="getImageState(i) != 'void'"
+        <div *ngIf="getImageState(i) != 'reset'"
              class="image"
              [@image]="getImageState(i)"
-             [ngClass]="getImageState(i)"
              [style.background-image]="'url('+image+')'">
         </div>
     </ng-container>

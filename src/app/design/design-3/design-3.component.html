@@ -1,0 +1,58 @@
+<app-side-link name="MJerred" [routerLink]="['/design', 2]" left></app-side-link>
+<app-side-link name="Blackhawk Intelligence" [routerLink]="['/design', 4]" [extend]="220" right></app-side-link>
+
+<div class="intro">
+    <h1>Evicore</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h4>Background</h4>
+                <p>
+                    The client is a US healthcare management firm specialised in providing solutions and resources to patients, providers and plans. Amongst these targets, the providers constitutes 70% of their website traffic thus their needs have to be prioritised over others.
+                </p>
+            </div>
+            <div class="col-sm">
+                <h4>Challenge</h4>
+                <p>
+                    I created a dedicated area on the homepage as well as navigation to make sure the key pages and features for providers are highlighted and easily accessible throughout the site. I also reorganised the information architecture to be more focused on the providers.
+                </p>
+            </div>
+            <div class="col-sm">
+                <h4>I worked on</h4>
+                <ul>
+                    <li>Card Sorting</li>
+                    <li>Information Architecture</li>
+                    <li>Wireframing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="navbar">
+        <ul class="nav mx-auto">
+            <li class="nav-item clickable" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
+                <a class="nav-link">Discovery</a>
+            </li>
+            <li class="nav-item clickable" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
+                <a class="nav-link">Wireframe</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab">
+        <app-design-tab-discovery *ngIf="selectedTab === 0"></app-design-tab-discovery>
+        <app-design-tab-wireframe *ngIf="selectedTab === 1"></app-design-tab-wireframe>
+    </div>
+</div>
+
+<div class="visit-site">
+    <span class="coming-soon">Coming soon</span>
+</div>
+
+<div class="parallax">
+    <app-banner-link name="Photography" [routerLink]="['/photography']" right></app-banner-link>
+    <app-footer></app-footer>
+</div>

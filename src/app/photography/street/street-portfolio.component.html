@@ -1,0 +1,31 @@
+<app-side-link name="Architecture" [routerLink]="['/photography', 'architecture']" [extend]="150" left invert></app-side-link>
+
+<main class="clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="column col-sm-6 col-xs-12">
+                <img src="/assets/photographs/street/1.jpg" class="clickable" (click)="currentIndex.next(0); imageModal.show()">
+                <img src="/assets/photographs/street/2.jpg" class="clickable" (click)="currentIndex.next(1); imageModal.show()">
+            </div>
+            <div class="column col-sm-6 col-xs-12">
+                <img src="/assets/photographs/street/3.jpg" class="clickable" (click)="currentIndex.next(2); imageModal.show()">
+                <img src="/assets/photographs/street/4.jpg" class="clickable" (click)="currentIndex.next(3); imageModal.show()">
+            </div>
+        </div>
+    </div>
+    <div class="load-more">
+        <span class="clickable">Load more</span>
+    </div>
+</main>
+
+<div class="modal fade" bsModal #imageModal="bs-modal">
+    <div class="close clickable" (click)="imageModal.hide()">&times;</div>
+    <div class="container">
+        <app-gallery (close)="imageModal.hide()" [images]="images" [setIndex]="currentIndex"></app-gallery>
+    </div>
+</div>
+
+<div class="parallax">
+    <app-banner-link name="Design" [routerLink]="['/design']" left></app-banner-link>
+    <app-footer></app-footer>
+</div>

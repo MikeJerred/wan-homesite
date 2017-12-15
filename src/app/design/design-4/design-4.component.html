@@ -1,0 +1,57 @@
+<app-side-link name="Evicore" [routerLink]="['/design', 3]" left></app-side-link>
+
+<div class="intro">
+    <h1>Blackhawk Intelligence</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h4>Background</h4>
+                <p>
+                    The client is a leading full-service bespoke corporate investigations agency based in London. The company had a very comprehensive offering of services which the old site struggle to present the them in a structured way.
+                </p>
+            </div>
+            <div class="col-sm">
+                <h4>Challenge</h4>
+                <p>
+                    I created a new hierarchical structure to reorganise the content and made service related content more visually distinctive using different colour to represent each main service category. I also allowed contextual content on each service page to help users navigate.
+                </p>
+            </div>
+            <div class="col-sm">
+                <h4>I worked on</h4>
+                <ul>
+                    <li>UX Design</li>
+                    <li>UI Design</li>
+                    <li>Project Management</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="navbar">
+        <ul class="nav mx-auto">
+            <li class="nav-item clickable" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
+                <a class="nav-link">Discovery</a>
+            </li>
+            <li class="nav-item clickable" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
+                <a class="nav-link">Design</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab">
+        <app-design-tab-discovery *ngIf="selectedTab === 0"></app-design-tab-discovery>
+        <app-design-tab-design *ngIf="selectedTab === 1"></app-design-tab-design>
+    </div>
+</div>
+
+<div class="visit-site">
+    <a href="http://www.blackhawkintelligence.com/" target="_blank">Visit Site</a>
+</div>
+
+<div class="parallax">
+    <app-banner-link name="Photography" [routerLink]="['/photography']" right></app-banner-link>
+    <app-footer></app-footer>
+</div>

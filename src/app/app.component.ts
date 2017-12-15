@@ -8,15 +8,15 @@ const homeSplit: AnimationEntryMetadata = [
     query('.bg-right', style({ transform: 'translateX(0)' })),
     query('.bg-left', style({ transform: 'translateX(0)' })),
     group([
-        query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(100vw)' }))),
-        query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(-100vw)' })))
+        query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(65vw)' }))),
+        query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(-65vw)' })))
     ])
 ];
 const homeJoin: AnimationEntryMetadata = [
     query(':leave', style({ position: 'absolute', top: 0, left: 0, right: 0 }), { optional: true }),
     query(':enter', style({ position: 'fixed', top: 0, left: 0, right: 0, 'z-index': 100 })),
-    query('.bg-right', style({ transform: 'translateX(100vw)' })),
-    query('.bg-left', style({ transform: 'translateX(-100vw)' })),
+    query('.bg-right', style({ transform: 'translateX(65vw)' })),
+    query('.bg-left', style({ transform: 'translateX(-65vw)' })),
     group([
         query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
         query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(0)' })))

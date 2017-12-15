@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'app-gallery',
@@ -15,11 +16,29 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
         ])
     ]
 })
-export class GalleryComponent {
+export class GalleryComponent implements OnInit {
     @Output() close = new EventEmitter<boolean>();
 
     @Input() public images: string[];
-    @Input() public currentIndex = 0;
+    @Input() public setIndex: Observable<number>;
+
+    public currentIndex = 0;
+    private reset = {
+        previous: false,
+        current: false,
+        next: false
+    };
+
+    ngOnInit() {
+        this.setIndex.subscribe(value => {
+            this.reset = {
+                previous: true,
+                current: true,
+                next: true
+            };
+            this.currentIndex = value;
+        });
+    }
 
     public keyPressed($event: KeyboardEvent) {
         switch ($event.key) {
@@ -53,21 +72,36 @@ export class GalleryComponent {
     }
 
     public getImageState(index: number): string {
-        if (index === this.currentIndex)
+        if (index === this.currentIndex) {
+            if (this.reset.current) {
+                this.reset.current = false;
+                return 'reset';
+            }
             return 'current';
+        }
 
         const previousIndex = this.currentIndex === 0
             ? this.images.length - 1
             : this.currentIndex - 1;
-        if (index === previousIndex)
+        if (index === previousIndex) {
+            if (this.reset.previous) {
+                this.reset.previous = false;
+                return 'reset';
+            }
             return 'previous';
+        }
 
         const nextIndex = this.currentIndex >= this.images.length - 1
             ? 0
             : this.currentIndex + 1;
-        if (index === nextIndex)
+        if (index === nextIndex) {
+            if (this.reset.next) {
+                this.reset.next = false;
+                return 'reset';
+            }
             return 'next';
+        }
 
-        return 'void';
+        return 'reset';
     }
 }

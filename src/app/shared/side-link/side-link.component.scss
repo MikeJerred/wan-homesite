@@ -28,9 +28,8 @@
         z-index: 5;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
+        white-space: nowrap;
     }
-
-    $hover-extend: 130px;
 
     .sidebar-border {
         position: absolute;
