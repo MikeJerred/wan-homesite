@@ -2,6 +2,10 @@
 @import 'mixins';
 @import '~bootstrap/scss/bootstrap';
 
+body {
+    overflow-x: hidden;
+}
+
 :focus { outline: none; }
 
 ul {

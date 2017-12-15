@@ -1,3 +1,11 @@
 <a [routerLink]="['/home']" [ngClass]="{ 'scrolled': isScrolled, 'is-home': router.url === '/home' }">
     <object type="image/svg+xml" data="/assets/w.svg"></object>
 </a>
+
+<div class="menu-btn" (click)="menuOpen = !menuOpen">
+    <svg viewBox="">
+
+    </svg>
+</div>
+
+<app-menu *ngIf="menuOpen"></app-menu>

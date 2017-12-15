@@ -1,6 +1,11 @@
 @import 'variables';
 @import 'mixins';
 
+:host {
+    position: fixed;
+    z-index: 300;
+}
+
 :host > main {
     .bg-shape {
         position: absolute;
@@ -29,40 +34,17 @@
     h1 {
         position: absolute;
         z-index: 2;
-        cursor: pointer;
         margin: 0;
         font-size: 60px;
         transition: all 0.3s ease-in-out;
 
         .symbol {
-            width: 35px;
-            height: 35px;
-            vertical-align: middle;
-
-            line {
-                transition: all 0.3s ease-in-out;
-                transform-origin: center;
-                transform: rotate(-90deg);
-
-                &.vertical {
-                    transform: rotate(-90deg) scale(1);
-                }
-            }
+            display: none;
         }
 
         &.left {
-            top: calc(50% - #{$text-height/2});
-            left: calc(25% - #{$left-text-width/2});
-            color: #333;
-
-            .symbol > line {
-                stroke: #333;
-            }
-        }
-
-        &.right {
-            top: calc(50% - #{$text-height/2});
-            left: calc(75% - #{$right-text-width/2});
+            top: 25%;
+            left: calc(25% + #{-$left-text-width/2 + $left-horiz-adjust});
             color: #f2f2f2;
 
             .symbol > line {
@@ -70,35 +52,13 @@
             }
         }
 
-        &.expanded {
-            &.left {
-                top: 25%;
-                left: calc(25% + #{-$left-text-width/2 + $left-horiz-adjust});
-                color: #f2f2f2;
+        &.right {
+            top: 25%;
+            left: calc(75% + #{-$right-text-width/2 + $right-horiz-adjust});
+            color: #333;
 
-                .symbol > line {
-                    stroke: #f2f2f2;
-                }
-            }
-
-            &.right {
-                top: 25%;
-                left: calc(75% + #{-$right-text-width/2 + $right-horiz-adjust});
-                color: #333;
-
-                .symbol > line {
-                    stroke: #333;
-                }
-            }
-
-            .symbol {
-                line {
-                    transform: rotate(0);
-
-                    &.vertical {
-                        transform: rotate(90deg) scale(1);
-                    }
-                }
+            .symbol > line {
+                stroke: #333;
             }
         }
     }
@@ -112,7 +72,6 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
         pointer-events: none;
-        opacity: 0;
 
         &.left {
             left: 0;
@@ -123,47 +82,28 @@
             right: 0;
             background-image: url(/assets/home-background-shape-right.svg);
         }
-
-        &.expanded {
-            opacity: 1;
-        }
     }
 
     .list {
         position: absolute;
         z-index: 1;
-        opacity: 0;
         font-size: 24px;
         font-weight: 300;
-        pointer-events: none;
         transition: all 0.3s ease-in-out;
 
         $list-indent: 50px;
         $list-vert-indent: 100px;
 
         &.left {
-            top: 25%;
+            top: calc(25vh + #{$list-vert-indent});
             left: calc(25vw + #{-$left-text-width/2 + $left-horiz-adjust + $list-indent});
             color: #f2f2f2;
         }
 
         &.right {
-            top: 25%;
+            top: calc(25vh + #{$list-vert-indent});
             left: calc(75vw + #{-$right-text-width/2 + $right-horiz-adjust + $list-indent});
             color: #333;
-        }
-
-        &.expanded {
-            opacity: 1;
-            pointer-events: auto;
-
-            &.left {
-                top: calc(25vh + #{$list-vert-indent});
-            }
-
-            &.right {
-                top: calc(25vh + #{$list-vert-indent});
-            }
         }
     }
 
@@ -225,8 +165,10 @@
 
         h1 {
             font-size: 28px;
+            cursor: pointer;
 
             .symbol {
+                display: block;
                 width: 13px;
                 height: 13px;
             }

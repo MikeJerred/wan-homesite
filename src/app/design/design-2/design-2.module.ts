@@ -9,7 +9,7 @@ import { Design2Component } from './design-2.component';
 // import { DesignTabDesignComponent } from './tab-design/tab-design.component';
 
 const routes: Routes = [
-    { path: '2', component: Design2Component }
+    { path: '2', component: Design2Component, data: { animation: 'design-2' } }
 ];
 
 @NgModule({

@@ -7,6 +7,7 @@ import { InlineSVGModule } from 'ng-inline-svg';
 
 import { BannerLinkComponent } from './banner-link/banner-link.component';
 import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
 import { SideLinkComponent } from './side-link/side-link.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
 
@@ -15,12 +16,14 @@ import { SiteHeaderComponent } from './site-header/site-header.component';
     declarations: [
         BannerLinkComponent,
         FooterComponent,
+        MenuComponent,
         SideLinkComponent,
         SiteHeaderComponent
     ],
     exports: [
         BannerLinkComponent,
         FooterComponent,
+        MenuComponent,
         SideLinkComponent,
         SiteHeaderComponent,
         CommonModule,

@@ -8,7 +8,7 @@ import { Design2Module } from './design-2/design-2.module';
 import { DesignPortfolioComponent } from './portfolio/design-portfolio.component';
 
 const routes: Routes = [
-    { path: '', component: DesignPortfolioComponent }
+    { path: '', component: DesignPortfolioComponent, data: { animation: 'design-portfolio' } }
 ];
 
 @NgModule({

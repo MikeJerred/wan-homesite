@@ -6,8 +6,8 @@ import { StreetPortfolioComponent } from './street/street-portfolio.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'architecture' },
-    { path: 'architecture', component: ArchitecturePortfolioComponent },
-    { path: 'street', component: StreetPortfolioComponent }
+    { path: 'architecture', component: ArchitecturePortfolioComponent, data: { animation: 'photography-architecture' } },
+    { path: 'street', component: StreetPortfolioComponent, data: { animation: 'photography-street' } }
 ];
 
 @NgModule({

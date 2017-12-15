@@ -9,7 +9,7 @@ import { DesignTabTestingComponent } from './tab-testing/tab-testing.component';
 import { DesignTabDesignComponent } from './tab-design/tab-design.component';
 
 const routes: Routes = [
-    { path: '1', component: Design1Component }
+    { path: '1', component: Design1Component, data: { animation: 'design-1' } }
 ];
 
 @NgModule({

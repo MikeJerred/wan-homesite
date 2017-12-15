@@ -10,7 +10,7 @@ const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'design', loadChildren: 'design/design.module#DesignModule' },
     { path: 'photography', loadChildren: 'photography/photography.module#PhotographyModule' },
-    { path: '**', component: PageNotFoundComponent }
+    { path: '**', component: PageNotFoundComponent, data: { animation: 'page-not-found' } }
 ];
 
 @NgModule({

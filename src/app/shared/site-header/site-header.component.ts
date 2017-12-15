@@ -13,7 +13,8 @@ export class SiteHeaderComponent {
         public router: Router) {
     }
 
-    isScrolled = false;
+    public isScrolled = false;
+    public menuOpen = false;
 
     @HostListener('window:scroll', [])
     onWindowScroll() {

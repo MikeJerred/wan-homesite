@@ -50,7 +50,6 @@
         height: 50px;
         fill: #f2f2f2;
         stroke: #00ffcc;
-        transition: fill 0.3s ease-in-out;
     }
 
     &.invert {
@@ -70,19 +69,8 @@
     }
 
     &:hover {
-        //width: 104px + $hover-extend;
-
         .text {
             opacity: 1;
-        }
-
-        .sidebar-border {
-            background-color: #00ffcc;
-            //width: 81px + $hover-extend;
-        }
-
-        .sidebar-bg {
-            fill: #00ffcc;
         }
     }
 

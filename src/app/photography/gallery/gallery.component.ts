@@ -16,17 +16,10 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     ]
 })
 export class GalleryComponent {
-    //@Input('images') images: string[];
-    public images = [
-        '/assets/photographs/architecture/1.jpg',
-        '/assets/photographs/architecture/2.jpg',
-        '/assets/photographs/architecture/3.jpg',
-        '/assets/photographs/architecture/4.jpg'
-    ];
-
     @Output() close = new EventEmitter<boolean>();
 
-    public currentIndex = 0;
+    @Input() public images: string[];
+    @Input() public currentIndex = 0;
 
     public keyPressed($event: KeyboardEvent) {
         switch ($event.key) {

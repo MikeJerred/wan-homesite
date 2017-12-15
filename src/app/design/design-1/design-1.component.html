@@ -49,20 +49,11 @@
         </ul>
     </div>
 
-    <div *ngIf="selectedTab === 0" class="tab">
-        <app-design-tab-discovery></app-design-tab-discovery>
-    </div>
-
-    <div *ngIf="selectedTab === 1" class="tab">
-        <app-design-tab-wireframe></app-design-tab-wireframe>
-    </div>
-
-    <div *ngIf="selectedTab === 2" class="tab">
-        <app-design-tab-testing></app-design-tab-testing>
-    </div>
-
-    <div *ngIf="selectedTab === 3" class="tab">
-        <app-design-tab-design></app-design-tab-design>
+    <div class="tab">
+        <app-design-tab-discovery *ngIf="selectedTab === 0"></app-design-tab-discovery>
+        <app-design-tab-wireframe *ngIf="selectedTab === 1"></app-design-tab-wireframe>
+        <app-design-tab-testing *ngIf="selectedTab === 2"></app-design-tab-testing>
+        <app-design-tab-design *ngIf="selectedTab === 3"></app-design-tab-design>
     </div>
 </div>
 
