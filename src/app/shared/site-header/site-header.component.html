@@ -2,7 +2,7 @@
     <object type="image/svg+xml" data="/assets/w.svg"></object>
 </a>
 
-<div class="menu-btn" (click)="menuOpen = !menuOpen" [ngClass]="{ 'open': menuOpen }">
+<div class="menu-btn" (click)="menuOpen = !menuOpen" [ngClass]="{ 'open': menuOpen, 'invert': getInvert() }">
     <svg viewBox="0 0 90 64">
         <line class="line-1" x1="4" y1="4" x2="86" y2="4" stroke-width="8" stroke-linecap="round"></line>
         <line class="line-2" x1="4" y1="26" x2="86" y2="26" stroke-width="8" stroke-linecap="round"></line>

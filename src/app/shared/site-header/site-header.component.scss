@@ -81,4 +81,10 @@ a {
             }
         }
     }
+
+    &.invert {
+        > svg {
+            stroke: #f2f2f2;
+        }
+    }
 }
