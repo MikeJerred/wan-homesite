@@ -1,3 +1,12 @@
+@import 'mixins';
+
+:host {
+    @include media-breakpoint-down(sm) {
+        display: block;
+        height: 50px;
+    }
+}
+
 .sidebar {
     position: fixed;
     display: block;
@@ -68,6 +77,15 @@
     }
 
     &:hover {
+        .text {
+            opacity: 1;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        position: absolute;
+        margin-top: 0;
+
         .text {
             opacity: 1;
         }

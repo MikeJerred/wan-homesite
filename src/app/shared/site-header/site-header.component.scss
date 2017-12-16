@@ -37,6 +37,14 @@ a {
         &.is-home {
             left: calc(50vw - 100px/2);
         }
+
+        &.scrolled {
+            left: calc(50vw - 100px/2);
+
+            object {
+                width: 100px;
+            }
+        }
     }
 }
 

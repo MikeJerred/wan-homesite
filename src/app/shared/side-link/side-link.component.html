@@ -3,7 +3,7 @@
     [routerLink]="routerLink"
     [style.width]="expanded ? (104 + extend) + 'px' : '104px'"
     (mouseenter)="expanded = true"
-    (mouseleave)="expanded = false">
+    (mouseleave)="expanded = isMobile || false">
 
     <div class="arrow" inlineSVG="/assets/arrow.svg"></div>
     <span class="text">{{name}}</span>

@@ -1,4 +1,4 @@
-<app-side-link name="MJerred" [routerLink]="['/design', 2]" right></app-side-link>
+<app-side-link *ngIf="!isMobile" name="MJerred" [routerLink]="['/design', 2]" right></app-side-link>
 
 <div class="intro">
     <h1>Button &amp; Wilde</h1>
@@ -59,6 +59,8 @@
 
 <div class="visit-site">
     <a href="https://www.buttonandwilde.com/" target="_blank">Visit Site</a>
+
+    <app-side-link *ngIf="isMobile" name="MJerred" [routerLink]="['/design', 2]" right></app-side-link>
 </div>
 
 <div class="parallax">

@@ -90,6 +90,9 @@
     margin-bottom: 453px;
 
     a {
+        display: block;
+        margin: 0 auto;
+        width: 190px;
         color: #333;
         border: 1px solid #333;
         background-color: #f2f2f2;
@@ -106,6 +109,20 @@
 
     @include media-breakpoint-up(xs) {
         margin-bottom: 333px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 60px 0;
+
+        a {
+            margin-bottom: 40px;
+            width: 160px;
+            padding: 15px 40px;
+        }
+
+        app-side-link {
+            margin-top: 20px;
+        }
     }
 }
 

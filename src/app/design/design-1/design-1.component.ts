@@ -1,6 +1,8 @@
 import { AnimationEntryMetadata, Component } from '@angular/core';
 import { animate, group, query, style, transition, trigger } from '@angular/animations';
 
+import { LayoutService } from 'shared/layout.service';
+
 export const tabAnimations: AnimationEntryMetadata = [
     transition(':leave', [
         style({ position: 'absolute', top: 0, left: 0, right: 0, opacity: 1 }),
@@ -13,10 +15,16 @@ export const tabAnimations: AnimationEntryMetadata = [
 ];
 
 @Component({
-    providers: [],
     templateUrl: './design-1.component.html',
     styleUrls: ['./design-1.component.scss']
 })
 export class Design1Component {
     public selectedTab = 0;
+    public isMobile = false;
+
+    constructor(layoutService: LayoutService) {
+        layoutService.getLayout$().subscribe(layout => {
+            this.isMobile = layout.layout === 'xs';
+        });
+    }
 }

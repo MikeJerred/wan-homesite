@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { LayoutService } from 'shared/layout.service';
+
 @Component({
     selector: 'app-side-link',
     templateUrl: './side-link.component.html',
@@ -13,7 +15,15 @@ export class SideLinkComponent implements OnInit {
     @Input('right') right: boolean;
     @Input('invert') invert: boolean;
 
-    expanded = false;
+    public expanded = false;
+    public isMobile = false;
+
+    constructor(layoutService: LayoutService) {
+        layoutService.getLayout$().subscribe(layout => {
+            this.isMobile = layout.layout === 'xs';
+            this.expanded = this.isMobile;
+        });
+    }
 
     ngOnInit() {
         if (<any>this.left === '')
