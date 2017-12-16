@@ -1,6 +1,6 @@
 <main>
     <div class="bg-shape" [ngClass]="isMobile ? 'bg-top' : 'bg-left'">
-        <h1 class="left" (click)="toggleLeft()">
+        <h1 class="left">
             Design
             <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
                 <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
@@ -17,7 +17,7 @@
     </div>
 
     <div class="bg-shape" [ngClass]="isMobile ? 'bg-bottom' : 'bg-right'">
-        <h1 class="right" (click)="toggleRight()">
+        <h1 class="right">
             Photography
             <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
                 <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
