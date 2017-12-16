@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<div class="content">
+<div class="content" *ngIf="!isMobile">
     <div class="navbar" id ="tabs-navbar">
         <ul class="nav mx-auto">
             <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
@@ -55,6 +55,35 @@
         <app-design-tab-testing *ngIf="selectedTab === 2"></app-design-tab-testing>
         <app-design-tab-design *ngIf="selectedTab === 3"></app-design-tab-design>
     </div>
+</div>
+
+<div class="content" *ngIf="isMobile">
+    <accordion [closeOthers]="true">
+        <accordion-group>
+            <div accordion-heading>
+                Discovery
+            </div>
+            <app-design-tab-discovery></app-design-tab-discovery>
+        </accordion-group>
+        <accordion-group>
+            <div accordion-heading>
+                Wireframe
+            </div>
+            <app-design-tab-wireframe></app-design-tab-wireframe>
+        </accordion-group>
+        <accordion-group>
+            <div accordion-heading>
+                Testing
+            </div>
+            <app-design-tab-testing></app-design-tab-testing>
+        </accordion-group>
+        <accordion-group>
+            <div accordion-heading>
+                Design
+            </div>
+            <app-design-tab-design></app-design-tab-design>
+        </accordion-group>
+    </accordion>
 </div>
 
 <div class="visit-site">

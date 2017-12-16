@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { SharedModule } from 'shared/shared.module';
@@ -17,6 +18,7 @@ const routes: Routes = [
     imports: [
         SharedModule,
         RouterModule.forChild(routes),
+        AccordionModule,
         NgxPageScrollModule
     ],
     declarations: [

@@ -1,5 +1,6 @@
 import { Component, HostListener, Inject } from '@angular/core';
 import { ActivationStart, Router } from '@angular/router';
+import 'rxjs/add/operator/filter';
 
 @Component({
     selector: 'app-site-header',

@@ -79,6 +79,38 @@
         position: relative;
         overflow: hidden;
     }
+
+    accordion /deep/ {
+        accordion-group {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .panel {
+            background-color: transparent;
+            border: none;
+        }
+
+        .panel-heading {
+            background-color: #fff;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .panel-collapse {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .panel-open {
+            .panel-heading {
+                background-color: #333;
+                color: #fff;
+            }
+        }
+    }
 }
 
 .visit-site {

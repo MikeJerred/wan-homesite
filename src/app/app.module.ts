@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import { TabsModule } from 'ngx-bootstrap';
 
 import { SharedModule } from 'shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +11,6 @@ import { PageNotFoundComponent } from './page-not-found.component';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        //TabsModule.forRoot(),
 
         SharedModule,
         AppRoutingModule
