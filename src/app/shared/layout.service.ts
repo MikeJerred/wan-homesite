@@ -23,9 +23,9 @@ export class LayoutService {
 
     private getWindowSize(): ILayout {
         const size = window.innerWidth < 576 ? 'xs'
-            : window.innerWidth < 768 ? 'sm'
+            : window.innerWidth < 820 ? 'sm'
             : window.innerWidth < 992 ? 'md'
-            : window.innerWidth < 1200 ? 'lg'
+            : window.innerWidth < 1230 ? 'lg'
             : 'xl';
 
         return {

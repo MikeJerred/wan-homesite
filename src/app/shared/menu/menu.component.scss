@@ -26,8 +26,8 @@
     }
 
     $text-height: 72px;
-    $left-text-width: 228px;
-    $right-text-width: 395px;
+    $left-text-width: 180px;
+    $right-text-width: 348px;
     $left-horiz-adjust: -80px;
     $right-horiz-adjust: 0px;
 
@@ -107,7 +107,76 @@
         }
     }
 
-    @media (max-width: breakpoint-max(sm)), (orientation: portrait) {
+
+    @include media-breakpoint-down(lg) {
+        $left-text-width: 144px;
+        $right-text-width: 278px;
+        $left-horiz-adjust: -80px;
+        $right-horiz-adjust: 0px;
+
+        h1 {
+            font-size: 48px;
+
+            &.left {
+                left: calc(25% + #{-$left-text-width/2 + $left-horiz-adjust});
+            }
+
+            &.right {
+                left: calc(75% + #{-$right-text-width/2 + $right-horiz-adjust});
+            }
+
+            .symbol {
+                width: 25px;
+            }
+        }
+
+        .list {
+            &.left {
+                left: calc(25vw + #{-$left-text-width/2 + $left-horiz-adjust + 30px});
+            }
+
+            &.right {
+                left: calc(75vw + #{$right-text-width/2 + $right-horiz-adjust - 200px});
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        $left-text-width: 108px;
+        $right-text-width: 209px;
+        $left-horiz-adjust: -55px;
+        $right-horiz-adjust: 0px;
+
+        h1 {
+            font-size: 36px;
+
+            &.left {
+                left: calc(25% + #{-$left-text-width/2 + $left-horiz-adjust});
+            }
+
+            &.right {
+                left: calc(75% + #{-$right-text-width/2 + $right-horiz-adjust});
+            }
+
+            .symbol {
+                width: 25px;
+            }
+        }
+
+        .list {
+            font-size: 20px;
+
+            &.left {
+                left: calc(25vw + #{-$left-text-width/2 + $left-horiz-adjust + 30px});
+            }
+
+            &.right {
+                left: calc(75vw + #{$right-text-width/2 + $right-horiz-adjust - 180px});
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -151,51 +220,89 @@
             }
         }
 
-        $left-text-width: 107px;
-        $right-text-width: 184px;
+        $left-text-width: 139px;
+        $right-text-width: 239px;
+        $adjust: 80px;
 
         h1 {
-            font-size: 28px;
-            cursor: pointer;
+            font-size: 36px;
 
             .symbol {
-                display: block;
-                width: 13px;
-                height: 13px;
+                width: 20px;
+                height: 20px;
             }
 
             &.left {
-                top: 10%;
-                left: calc(50% + #{-$left-text-width/2 - 60px});
+                top: 15%;
+                left: calc(50% + #{-$adjust});
                 color: #333;
             }
 
             &.right {
                 top: auto;
                 right: auto;
-                bottom: 10%;
-                left: calc(50% + #{-$right-text-width/2});
+                bottom: 15%;
+                left: calc(50% + #{-$adjust});
                 color: #f2f2f2;
             }
         }
 
         .list {
+            font-size: 20px;
+
             &.left {
-                top: 20%;
-                left: calc(50% + #{-$left-text-width/2 - 60px});
+                top: calc(15% + 60px);
+                left: calc(50% + #{-$adjust});
                 color: #333;
             }
 
             &.right {
                 top: auto;
-                left: calc(50% + #{-$right-text-width/2});
-                bottom: 20%;
+                left: calc(50% + #{-$adjust});
+                bottom: calc(15% + 60px);
                 color: #f2f2f2;
             }
         }
 
         .shape {
             display: none;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+    //@media (max-width: breakpoint-max(sm)), (orientation: portrait) {
+
+        $left-text-width: 106px;
+        $right-text-width: 184px;
+        $adjust: 80px;
+
+        h1 {
+            font-size: 28px;
+
+            .symbol {
+                width: 13px;
+                height: 13px;
+            }
+
+            &.left {
+                left: calc(50% + #{-$adjust});
+            }
+
+            &.right {
+                left: calc(50% + #{-$adjust});
+            }
+        }
+
+        .list {
+            font-size: 16px;
+
+            &.left {
+                left: calc(50% + #{-$adjust});
+            }
+
+            &.right {
+                left: calc(50% + #{-$adjust});
+            }
         }
     }
 }

@@ -6,12 +6,12 @@ import { TabComponent } from './tab.component';
 
 export const tabAnimation: AnimationEntryMetadata = [
     transition(':leave', [
-        style({ position: 'absolute', top: 0, left: 0, right: 0, opacity: 1 }),
-        animate('1s ease-in-out', style({ opacity: 0 }))
+        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
+        animate('1s ease-in-out', style({ transform: 'translateX(60vw)' }))
     ]),
     transition(':enter', [
-        style({ opacity: 0 }),
-        animate('1s ease-in-out', style({ opacity: 1 }))
+        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(-100vw)', 'z-index': 1 }),
+        animate('1s ease-in-out', style({ transform: 'translateX(0)' }))
     ])
 ];
 
@@ -20,7 +20,7 @@ export const tabAnimation: AnimationEntryMetadata = [
     templateUrl: './tabs.component.html',
     styleUrls: ['./tabs.component.scss'],
     animations: [
-        trigger('tabAnimation', tabAnimation)
+        //trigger('tabAnimation', tabAnimation)
     ]
 })
 export class TabsComponent implements AfterContentInit {

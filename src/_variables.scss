@@ -8,4 +8,12 @@ $font-family-serif: 'Marcellus', serif;
 $font-weight-light: 200;
 $font-weight-base: $font-weight-light;
 
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 820px,
+    lg: 992px,
+    xl: 1230px
+);
+
 $dark-blue: #0277BD;

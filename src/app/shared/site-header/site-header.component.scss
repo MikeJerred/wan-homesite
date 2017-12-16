@@ -27,6 +27,18 @@ a {
         }
     }
 
+    @include media-breakpoint-down(lg) {
+        left: calc(50vw - 300px/2);
+
+        object {
+            width: 300px;
+        }
+
+        &.is-home {
+            left: calc(50vw - (50vh * 3 / 8) - 80px);
+        }
+    }
+
     @include media-breakpoint-down(sm) {
         left: calc(50vw - 100px/2);
 

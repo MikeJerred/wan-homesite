@@ -36,7 +36,6 @@
 
         .symbol {
             width: 35px;
-            height: 35px;
             vertical-align: middle;
 
             line {
@@ -167,7 +166,95 @@
         }
     }
 
-    @media (max-width: breakpoint-max(sm)), (orientation: portrait) {
+    @include media-breakpoint-down(lg) {
+        $left-text-width: 194px;
+        $right-text-width: 327px;
+        $left-horiz-adjust: -50px;
+        $right-horiz-adjust: 0px;
+
+        h1 {
+            font-size: 48px;
+
+            &.left {
+                left: calc(25% - #{$left-text-width/2});
+            }
+
+            &.right {
+                left: calc(75% - #{$right-text-width/2});
+            }
+
+            .symbol {
+                width: 25px;
+            }
+
+            &.expanded {
+                &.left {
+                    left: calc(25% + #{-$left-text-width/2 + $left-horiz-adjust});
+                }
+
+                &.right {
+                    left: calc(75% + #{-$right-text-width/2 + $right-horiz-adjust});
+                }
+            }
+        }
+
+        .list {
+            &.left {
+                left: calc(25vw + #{-$left-text-width/2 + $left-horiz-adjust + 30px});
+            }
+
+            &.right {
+                left: calc(75vw + #{$right-text-width/2 + $right-horiz-adjust - 200px});
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        $left-text-width: 144px;
+        $right-text-width: 244px;
+        $left-horiz-adjust: -55px;
+        $right-horiz-adjust: 0px;
+
+        h1 {
+            font-size: 36px;
+
+            &.left {
+                left: calc(25% - #{$left-text-width/2});
+            }
+
+            &.right {
+                left: calc(75% - #{$right-text-width/2});
+            }
+
+            .symbol {
+                width: 25px;
+            }
+
+            &.expanded {
+                &.left {
+                    left: calc(25% + #{-$left-text-width/2 + $left-horiz-adjust});
+                }
+
+                &.right {
+                    left: calc(75% + #{-$right-text-width/2 + $right-horiz-adjust});
+                }
+            }
+        }
+
+        .list {
+            font-size: 20px;
+
+            &.left {
+                left: calc(25vw + #{-$left-text-width/2 + $left-horiz-adjust + 30px});
+            }
+
+            &.right {
+                left: calc(75vw + #{$right-text-width/2 + $right-horiz-adjust - 180px});
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -225,15 +312,16 @@
             top: -25vh;
         }
 
-        $left-text-width: 107px;
-        $right-text-width: 184px;
+        $left-text-width: 139px;
+        $right-text-width: 239px;
+        $adjust: 80px;
 
         h1 {
-            font-size: 28px;
+            font-size: 36px;
 
             .symbol {
-                width: 13px;
-                height: 13px;
+                width: 20px;
+                height: 20px;
             }
 
             &.left {
@@ -251,7 +339,7 @@
             &.expanded {
                 &.left {
                     top: 20%;
-                    left: calc(50% + #{-$left-text-width/2 - 60px});
+                    left: calc(50% - #{$adjust});
                     color: #333;
 
                     .symbol > line {
@@ -263,7 +351,7 @@
                     top: auto;
                     right: auto;
                     bottom: 20%;
-                    left: calc(50% + #{-$right-text-width/2});
+                    left: calc(50% - #{$adjust});
                     color: #f2f2f2;
 
                     .symbol > line {
@@ -274,6 +362,8 @@
         }
 
         .list {
+            font-size: 20px;
+
             &.left {
                 top: 20%;
                 left: calc(50% + #{-$left-text-width/2 - 60px});
@@ -290,11 +380,12 @@
             &.expanded {
                 &.left {
                     top: calc(20% + 60px);
+                    left: calc(50% - #{$adjust});
                 }
 
                 &.right {
                     top: auto;
-                    left: calc(50% + #{-$right-text-width/2});
+                    left: calc(50% - #{$adjust});
                     bottom: calc(20% + 60px);
                 }
             }
@@ -302,6 +393,63 @@
 
         .shape {
             display: none;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+    //@media (max-width: breakpoint-max(sm)), (orientation: portrait) {
+
+        $left-text-width: 106px;
+        $right-text-width: 184px;
+        $adjust: 80px;
+
+        h1 {
+            font-size: 28px;
+
+            .symbol {
+                width: 13px;
+                height: 13px;
+            }
+
+            &.left {
+                left: calc(50% + #{-$left-text-width/2});
+            }
+
+            &.right {
+                left: calc(50% + #{-$right-text-width/2});
+            }
+
+            &.expanded {
+                &.left {
+                    left: calc(50% - #{$adjust});
+                }
+
+                &.right {
+                    left: calc(50% - #{$adjust});
+                }
+            }
+        }
+
+        .list {
+            font-size: 16px;
+
+            &.left {
+                left: calc(50% + #{-$left-text-width/2 - 60px});
+            }
+
+            &.right {
+                left: calc(50% + #{-$right-text-width/2});
+            }
+
+            &.expanded {
+                &.left {
+                    left: calc(50% - #{$adjust});
+                }
+
+                &.right {
+                    left: calc(50% - #{$adjust});
+                }
+            }
         }
     }
 }
