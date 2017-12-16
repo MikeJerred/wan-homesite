@@ -45,7 +45,7 @@
         }
     }
 
-    @include media-breakpoint-up(xs) {
+    @include media-breakpoint-down(sm) {
         height: 180px;
 
         .shape {

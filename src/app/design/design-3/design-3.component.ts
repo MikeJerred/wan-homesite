@@ -24,8 +24,8 @@ export class Design3Component {
     public isMobile = false;
 
     constructor(layoutService: LayoutService) {
-        layoutService.getLayout$().subscribe(layout => {
-            this.isMobile = layout.layout === 'xs';
+        layoutService.isMobile$().subscribe(value => {
+            this.isMobile = value;
         });
     }
 }

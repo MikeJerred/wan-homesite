@@ -43,4 +43,8 @@ export class LayoutService {
     public getLayout$(): Observable<ILayout> {
         return this.layout$;
     }
+
+    public isMobile$(): Observable<boolean> {
+        return this.layout$.map(layout => layout.layout === 'xs' || layout.layout === 'sm');
+    }
 }

@@ -19,9 +19,9 @@ export class SideLinkComponent implements OnInit {
     public isMobile = false;
 
     constructor(layoutService: LayoutService) {
-        layoutService.getLayout$().subscribe(layout => {
-            this.isMobile = layout.layout === 'xs';
-            this.expanded = this.isMobile;
+        layoutService.isMobile$().subscribe(value => {
+            this.isMobile = value;
+            this.expanded = value;
         });
     }
 

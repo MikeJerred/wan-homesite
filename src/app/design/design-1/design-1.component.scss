@@ -26,7 +26,7 @@
         font-size: 20px;
     }
 
-    @include media-breakpoint-up(xs) {
+    @include media-breakpoint-down(sm) {
         padding-top: 100px;
 
         h1 {
@@ -107,11 +107,8 @@
         }
     }
 
-    @include media-breakpoint-up(xs) {
-        margin-bottom: 333px;
-    }
-
     @include media-breakpoint-down(sm) {
+        margin-bottom: 318px;
         padding: 60px 0;
 
         a {
