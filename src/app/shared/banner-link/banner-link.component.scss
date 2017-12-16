@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 .parallax {
     z-index: 0;
@@ -7,7 +8,7 @@
     bottom: 0;
 }
 
-.photography {
+.banner {
     position: relative;
     height: 300px;
 
@@ -41,6 +42,21 @@
         .text {
             font-family: $font-family-serif;
             font-size: 48px;
+        }
+    }
+
+    @include media-breakpoint-up(xs) {
+        height: 180px;
+
+        .shape {
+            width: 280px;
+            height: 100px;
+            padding-top: 30px;
+            padding-left: 85px;
+
+            .text {
+                font-size: 28px;
+            }
         }
     }
 

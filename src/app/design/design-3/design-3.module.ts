@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { SharedModule } from 'shared/shared.module';
 import { Design3Component } from './design-3.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
 @NgModule({
     imports: [
         SharedModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        NgxPageScrollModule
     ],
     declarations: [
         Design3Component,

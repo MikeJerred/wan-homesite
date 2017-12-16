@@ -12,11 +12,11 @@ export class SiteHeaderComponent {
         @Inject('Window') private window: Window,
         public router: Router) {
 
-        router.events.subscribe(x => {
-            if (x instanceof ActivationStart) {
+        router.events
+            .filter(evt => evt instanceof ActivationStart)
+            .subscribe(evt => {
                 this.menuOpen = false;
-            }
-        });
+            });
     }
 
     public isScrolled = false;

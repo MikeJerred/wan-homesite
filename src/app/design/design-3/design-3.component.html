@@ -31,12 +31,12 @@
 </div>
 
 <div class="content">
-    <div class="navbar">
+    <div class="navbar" id ="tabs-navbar">
         <ul class="nav mx-auto">
-            <li class="nav-item clickable" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
+            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
                 <a class="nav-link">Discovery</a>
             </li>
-            <li class="nav-item clickable" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
+            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
                 <a class="nav-link">Wireframe</a>
             </li>
         </ul>

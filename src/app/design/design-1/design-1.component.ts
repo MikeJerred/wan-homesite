@@ -18,5 +18,5 @@ export const tabAnimations: AnimationEntryMetadata = [
     styleUrls: ['./design-1.component.scss']
 })
 export class Design1Component {
-    selectedTab = 0;
+    public selectedTab = 0;
 }

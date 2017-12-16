@@ -32,18 +32,18 @@
 </div>
 
 <div class="content">
-    <div class="navbar">
+    <div class="navbar" id ="tabs-navbar">
         <ul class="nav mx-auto">
-            <li class="nav-item clickable" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
+            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
                 <a class="nav-link">Discovery</a>
             </li>
-            <li class="nav-item clickable" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
+            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
                 <a class="nav-link">Wireframe</a>
             </li>
-            <li class="nav-item clickable" [ngClass]="selectedTab === 2 ? 'active' : ''" (click)="selectedTab = 2">
+            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 2 ? 'active' : ''" (click)="selectedTab = 2">
                 <a class="nav-link">Testing</a>
             </li>
-            <li class="nav-item clickable" [ngClass]="selectedTab === 3 ? 'active' : ''" (click)="selectedTab = 3">
+            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 3 ? 'active' : ''" (click)="selectedTab = 3">
                 <a class="nav-link">Design</a>
             </li>
         </ul>

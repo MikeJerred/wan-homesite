@@ -1,5 +1,6 @@
-import { AnimationEntryMetadata, Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AnimationEntryMetadata, Component, OnInit } from '@angular/core';
+import { Location, PopStateEvent } from '@angular/common';
+import { NavigationStart, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
 
 const homeSplit: AnimationEntryMetadata = [
@@ -35,7 +36,37 @@ const homeJoin: AnimationEntryMetadata = [
         ])
     ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+    private lastPoppedUrl: string;
+    private yScrollStack: number[] = [];
+
+    constructor(private router: Router, private location: Location) {}
+
+    ngOnInit(): void {
+        this.location.subscribe(evt => {
+            this.lastPoppedUrl = evt.url;
+        });
+
+        this.router.events
+            .filter(evt => evt instanceof NavigationStart)
+            .filter((evt: NavigationStart) => evt.url !== this.lastPoppedUrl)
+            .subscribe(evt => {
+                this.yScrollStack.push(window.scrollY);
+            });
+
+        this.router.events
+            .filter(evt => evt instanceof NavigationEnd)
+            .subscribe((evt: NavigationEnd) => {
+                if (evt.url === this.lastPoppedUrl) {
+                    this.lastPoppedUrl = undefined;
+                    window.scrollTo(0, this.yScrollStack.pop());
+                } else if (evt.url !== '/home') {
+                    window.scrollTo(0, 0);
+                }
+            });
+    }
+
     public getRouteTransition(outlet: RouterOutlet) {
         return outlet.activatedRouteData['animation'] || 'null';
     }
