@@ -1,5 +1,5 @@
-<main [ngClass]="isLeftExpanded ? 'left-expanded' : isRightExpanded ? 'right-expanded' : ''">
-    <div class="bg-shape bg-left">
+<main>
+    <div class="bg-shape" [ngClass]="isMobile ? 'bg-top' : 'bg-left'">
         <h1 class="left" (click)="toggleLeft()">
             Design
             <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
@@ -16,7 +16,7 @@
         </ul>
     </div>
 
-    <div class="bg-shape bg-right">
+    <div class="bg-shape" [ngClass]="isMobile ? 'bg-bottom' : 'bg-right'">
         <h1 class="right" (click)="toggleRight()">
             Photography
             <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">

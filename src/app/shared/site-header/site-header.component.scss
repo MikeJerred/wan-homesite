@@ -92,5 +92,11 @@ a {
         > svg {
             stroke: #f2f2f2;
         }
+
+        &.open > svg {
+            @include media-breakpoint-down(sm) {
+                stroke: #333;
+            }
+        }
     }
 }

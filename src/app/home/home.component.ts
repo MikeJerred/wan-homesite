@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
 
+import { LayoutService } from 'shared/layout.service';
+
 @Component({
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-    isLeftExpanded = false;
-    isRightExpanded = false;
+    public isLeftExpanded = false;
+    public isRightExpanded = false;
+    public isMobile = false;
+
+    constructor(layoutService: LayoutService) {
+        layoutService.getLayout$().subscribe(layout => {
+            this.isMobile = layout.layout === 'xs';
+        });
+    }
 
     public toggleLeft(): void {
         this.isLeftExpanded = !this.isLeftExpanded;

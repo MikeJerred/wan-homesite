@@ -6,21 +6,29 @@ import { animate, group, query, state, style, transition, trigger } from '@angul
 const homeSplit: AnimationEntryMetadata = [
     query(':leave', style({ position: 'fixed', top: 0, left: 0, right: 0, 'z-index': 100 }), { optional: true }),
     query(':enter', style({ position: 'absolute', top: 0, left: 0, right: 0 })),
-    query('.bg-right', style({ transform: 'translateX(0)' })),
-    query('.bg-left', style({ transform: 'translateX(0)' })),
+    query('.bg-left', style({ transform: 'translateX(0)' }), { optional: true }),
+    query('.bg-right', style({ transform: 'translateX(0)' }), { optional: true }),
+    query('.bg-top', style({ transform: 'translateY(0)' }), { optional: true }),
+    query('.bg-bottom', style({ transform: 'translateY(0)' }), { optional: true }),
     group([
-        query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(65vw)' }))),
-        query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(-65vw)' })))
+        query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(-65vw)' })), { optional: true }),
+        query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(65vw)' })), { optional: true }),
+        query('.bg-top', animate('1s ease-in-out', style({ transform: 'translateY(-65vh)' })), { optional: true }),
+        query('.bg-bottom', animate('1s ease-in-out', style({ transform: 'translateY(65vh)' })), { optional: true })
     ])
 ];
 const homeJoin: AnimationEntryMetadata = [
     query(':leave', style({ position: 'absolute', top: 0, left: 0, right: 0 }), { optional: true }),
     query(':enter', style({ position: 'fixed', top: 0, left: 0, right: 0, 'z-index': 100 })),
-    query('.bg-right', style({ transform: 'translateX(65vw)' })),
-    query('.bg-left', style({ transform: 'translateX(-65vw)' })),
+    query('.bg-left', style({ transform: 'translateX(-65vw)' }), { optional: true }),
+    query('.bg-right', style({ transform: 'translateX(65vw)' }), { optional: true }),
+    query('.bg-top', style({ transform: 'translateY(-65vh)' }), { optional: true }),
+    query('.bg-bottom', style({ transform: 'translateY(65vh)' }), { optional: true }),
     group([
-        query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
-        query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(0)' })))
+        query('.bg-left', animate('1s ease-in-out', style({ transform: 'translateX(0)' })), { optional: true }),
+        query('.bg-right', animate('1s ease-in-out', style({ transform: 'translateX(0)' })), { optional: true }),
+        query('.bg-top', animate('1s ease-in-out', style({ transform: 'translateY(0)' })), { optional: true }),
+        query('.bg-bottom', animate('1s ease-in-out', style({ transform: 'translateY(0)' })), { optional: true })
     ])
 ];
 

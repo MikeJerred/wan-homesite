@@ -11,6 +11,8 @@ import { MenuComponent } from './menu/menu.component';
 import { SideLinkComponent } from './side-link/side-link.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
 
+import { LayoutService } from './layout.service';
+
 @NgModule({
     imports: [ CommonModule, HttpClientModule, RouterModule, InlineSVGModule ],
     declarations: [
@@ -20,12 +22,16 @@ import { SiteHeaderComponent } from './site-header/site-header.component';
         SideLinkComponent,
         SiteHeaderComponent
     ],
+    providers: [
+        LayoutService
+    ],
     exports: [
         BannerLinkComponent,
         FooterComponent,
         MenuComponent,
         SideLinkComponent,
         SiteHeaderComponent,
+
         CommonModule,
         HttpClientModule,
         FormsModule,

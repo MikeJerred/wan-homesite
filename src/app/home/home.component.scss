@@ -168,7 +168,6 @@
     }
 
     @media (max-width: breakpoint-max(sm)), (orientation: portrait) {
-        background-color: #f2f2f2;
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -178,7 +177,7 @@
             transition: all 0.3s ease-in-out;
         }
 
-        .bg-left {
+        .bg-top {
             background-image: none;
             position: absolute;
             height: 100vh;
@@ -195,7 +194,7 @@
             }
         }
 
-        .bg-right {
+        .bg-bottom {
             background-image: none;
             position: absolute;
             height: 100vh;
@@ -212,12 +211,18 @@
             }
         }
 
-        &.left-expanded .bg-right:before {
-            top: 0;
+        &.left-expanded {
+            .bg-top:before {
+                top: -3vh;
+            }
+
+            .bg-bottom:before {
+                top: -3vh;
+            }
         }
 
-        &.right-expanded .bg-right:before {
-            top: -30vh;
+        &.right-expanded .bg-bottom:before {
+            top: -25vh;
         }
 
         $left-text-width: 107px;
