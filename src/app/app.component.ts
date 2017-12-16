@@ -2,7 +2,6 @@ import { AnimationEntryMetadata, Component, OnInit } from '@angular/core';
 import { Location, PopStateEvent } from '@angular/common';
 import { NavigationStart, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
-import 'rxjs/add/operator/filter';
 
 const homeSplit: AnimationEntryMetadata = [
     query(':leave', style({ position: 'fixed', top: 0, left: 0, right: 0, 'z-index': 100 }), { optional: true }),
