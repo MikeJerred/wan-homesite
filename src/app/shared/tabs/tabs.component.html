@@ -1,0 +1,36 @@
+<div class="content" *ngIf="!isMobile">
+    <div class="navbar" id ="tabs-navbar">
+        <ul class="nav mx-auto">
+            <li *ngFor="let tab of tabs; let i = index"
+                class="nav-item clickable" [ngClass]="tab.active ? 'active' : ''"
+                (click)="selectTab(tab)"
+                pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500">
+
+                <a class="nav-link">{{tab.heading}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tabs">
+        <ng-container *ngFor="let tab of tabs">
+            <div class="tab" *ngIf="tab.active" [@tabAnimation]>
+                <ng-container *ngTemplateOutlet="tab.template"></ng-container>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<div class="mobile-content" *ngIf="isMobile">
+    <accordion [closeOthers]="true">
+        <accordion-group *ngFor="let tab of tabs">
+            <div accordion-heading>
+                {{tab.heading}}
+                <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
+                    <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
+                    <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="10"></line>
+                </svg>
+            </div>
+            <ng-container *ngTemplateOutlet="tab.template"></ng-container>
+        </accordion-group>
+    </accordion>
+</div>

@@ -12,7 +12,8 @@ import { Observable } from 'rxjs/Observable';
             state('current', style({ opacity: 1 })),
             state('next', style({ opacity: 0 })),
             transition('previous <=> current', animate('1s ease-in-out')),
-            transition('next <=> current', animate('1s ease-in-out'))
+            transition('next <=> current', animate('1s ease-in-out')),
+            transition('current => void', animate('1s ease-in-out', style({ opacity: 0 }))),
         ])
     ]
 })
@@ -23,19 +24,9 @@ export class GalleryComponent implements OnInit {
     @Input() public setIndex: Observable<number>;
 
     public currentIndex = 0;
-    private reset = {
-        previous: false,
-        current: false,
-        next: false
-    };
 
     ngOnInit() {
         this.setIndex.subscribe(value => {
-            this.reset = {
-                previous: true,
-                current: true,
-                next: true
-            };
             this.currentIndex = value;
         });
     }
@@ -72,35 +63,23 @@ export class GalleryComponent implements OnInit {
     }
 
     public getImageState(index: number): string {
-        if (index === this.currentIndex) {
-            if (this.reset.current) {
-                this.reset.current = false;
-                return 'reset';
-            }
+        if (this.currentIndex === -1)
+            return 'reset';
+
+        if (index === this.currentIndex)
             return 'current';
-        }
 
         const previousIndex = this.currentIndex === 0
             ? this.images.length - 1
             : this.currentIndex - 1;
-        if (index === previousIndex) {
-            if (this.reset.previous) {
-                this.reset.previous = false;
-                return 'reset';
-            }
+        if (index === previousIndex)
             return 'previous';
-        }
 
         const nextIndex = this.currentIndex >= this.images.length - 1
             ? 0
             : this.currentIndex + 1;
-        if (index === nextIndex) {
-            if (this.reset.next) {
-                this.reset.next = false;
-                return 'reset';
-            }
+        if (index === nextIndex)
             return 'next';
-        }
 
         return 'reset';
     }

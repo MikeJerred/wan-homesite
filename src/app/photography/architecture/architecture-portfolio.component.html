@@ -1,24 +1,33 @@
-<app-side-link name="Street" [routerLink]="['/photography', 'street']" [extend]="100" right invert></app-side-link>
+<app-side-link *ngIf="!isMobile" name="Street" [routerLink]="['/photography', 'street']" [extend]="100" right invert></app-side-link>
 
 <main class="clearfix">
     <div class="container">
         <div class="row">
-            <div class="column col-sm-6 col-xs-12">
-                <img src="/assets/photographs/architecture/1.jpg" class="clickable" (click)="currentIndex.next(0); imageModal.show()">
-                <img src="/assets/photographs/architecture/2.jpg" class="clickable" (click)="currentIndex.next(1); imageModal.show()">
+            <div class="column col-sm-6">
+                <img src="/assets/photographs/architecture/1.jpg" *ngIf="show[0]" class="clickable" (click)="currentIndex.next(0); imageModal.show()">
+                <img src="/assets/photographs/architecture/2.jpg" *ngIf="show[1]" class="clickable" (click)="currentIndex.next(1); imageModal.show()">
             </div>
-            <div class="column col-sm-6 col-xs-12">
-                <img src="/assets/photographs/architecture/3.jpg" class="clickable" (click)="currentIndex.next(2); imageModal.show()">
-                <img src="/assets/photographs/architecture/4.jpg" class="clickable" (click)="currentIndex.next(3); imageModal.show()">
+            <div class="column col-sm-6">
+                <img src="/assets/photographs/architecture/3.jpg" *ngIf="show[2]" class="clickable" (click)="currentIndex.next(2); imageModal.show()">
+                <img src="/assets/photographs/architecture/4.jpg" *ngIf="show[3]" class="clickable" (click)="currentIndex.next(3); imageModal.show()">
+            </div>
+            <div class="column col-sm-6">
+                <img src="/assets/photographs/architecture/5.jpg" *ngIf="show[4]" class="clickable" (click)="currentIndex.next(4); imageModal.show()">
+                <img src="/assets/photographs/architecture/6.jpg" *ngIf="show[5]" class="clickable" (click)="currentIndex.next(5); imageModal.show()">
+            </div>
+            <div class="column col-sm-6">
+                <img src="/assets/photographs/architecture/7.jpg" *ngIf="show[6]" class="clickable" (click)="currentIndex.next(6); imageModal.show()">
+                <img src="/assets/photographs/architecture/8.jpg" *ngIf="show[7]" class="clickable" (click)="currentIndex.next(7); imageModal.show()">
             </div>
         </div>
     </div>
-    <div class="load-more">
-        <span class="clickable">Load more</span>
+    <div class="load-more" *ngIf="!isMobile && canShowMore">
+        <span class="clickable" (click)="loadMore()">Load more</span>
     </div>
+    <app-side-link *ngIf="isMobile" name="Street" [routerLink]="['/photography', 'street']" [extend]="100" right invert></app-side-link>
 </main>
 
-<div class="modal fade" bsModal #imageModal="bs-modal">
+<div class="modal fade" bsModal #imageModal="bs-modal" (onHide)="currentIndex.next(-1)">
     <div class="close clickable" (click)="imageModal.hide()">&times;</div>
     <div class="container">
         <app-gallery (close)="imageModal.hide()" [images]="images" [setIndex]="currentIndex"></app-gallery>

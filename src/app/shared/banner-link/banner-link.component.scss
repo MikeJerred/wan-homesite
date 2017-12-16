@@ -33,11 +33,12 @@
 
     .shape {
         position: absolute;
-        bottom: 0;
         width: 500px;
         height: 230px;
         padding-top: 80px;
         padding-left: 145px;
+        background-size: contain;
+        background-repeat: no-repeat;
 
         .text {
             font-family: $font-family-serif;
@@ -49,13 +50,13 @@
         height: 180px;
 
         .shape {
-            width: 280px;
+            width: 217px;
             height: 100px;
             padding-top: 30px;
-            padding-left: 85px;
+            padding-left: 55px;
 
             .text {
-                font-size: 28px;
+                font-size: 24px;
             }
         }
     }
@@ -68,6 +69,7 @@
 
         .shape {
             left: 0;
+            top: 0;
             background-image: url(/assets/snippet-left.svg);
         }
 
@@ -84,6 +86,7 @@
 
         .shape {
             right: 0;
+            bottom: 0;
             background-image: url(/assets/snippet-right.svg);
         }
 

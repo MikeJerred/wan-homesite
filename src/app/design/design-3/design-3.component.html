@@ -30,23 +30,10 @@
     </div>
 </div>
 
-<div class="content">
-    <div class="navbar" id ="tabs-navbar">
-        <ul class="nav mx-auto">
-            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
-                <a class="nav-link">Discovery</a>
-            </li>
-            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
-                <a class="nav-link">Wireframe</a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="tab">
-        <app-design-tab-discovery *ngIf="selectedTab === 0"></app-design-tab-discovery>
-        <app-design-tab-wireframe *ngIf="selectedTab === 1"></app-design-tab-wireframe>
-    </div>
-</div>
+<app-tabs>
+    <app-tab heading="Discovery"><app-design-tab-discovery></app-design-tab-discovery></app-tab>
+    <app-tab heading="Wireframe"><app-design-tab-wireframe></app-design-tab-wireframe></app-tab>
+</app-tabs>
 
 <div class="visit-site">
     <span class="coming-soon">Coming soon</span>

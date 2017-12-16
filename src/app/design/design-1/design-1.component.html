@@ -31,60 +31,12 @@
     </div>
 </div>
 
-<div class="content" *ngIf="!isMobile">
-    <div class="navbar" id ="tabs-navbar">
-        <ul class="nav mx-auto">
-            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 0 ? 'active' : ''" (click)="selectedTab = 0">
-                <a class="nav-link">Discovery</a>
-            </li>
-            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 1 ? 'active' : ''" (click)="selectedTab = 1">
-                <a class="nav-link">Wireframe</a>
-            </li>
-            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 2 ? 'active' : ''" (click)="selectedTab = 2">
-                <a class="nav-link">Testing</a>
-            </li>
-            <li class="nav-item clickable" pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [ngClass]="selectedTab === 3 ? 'active' : ''" (click)="selectedTab = 3">
-                <a class="nav-link">Design</a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="tab">
-        <app-design-tab-discovery *ngIf="selectedTab === 0"></app-design-tab-discovery>
-        <app-design-tab-wireframe *ngIf="selectedTab === 1"></app-design-tab-wireframe>
-        <app-design-tab-testing *ngIf="selectedTab === 2"></app-design-tab-testing>
-        <app-design-tab-design *ngIf="selectedTab === 3"></app-design-tab-design>
-    </div>
-</div>
-
-<div class="content" *ngIf="isMobile">
-    <accordion [closeOthers]="true">
-        <accordion-group>
-            <div accordion-heading>
-                Discovery
-            </div>
-            <app-design-tab-discovery></app-design-tab-discovery>
-        </accordion-group>
-        <accordion-group>
-            <div accordion-heading>
-                Wireframe
-            </div>
-            <app-design-tab-wireframe></app-design-tab-wireframe>
-        </accordion-group>
-        <accordion-group>
-            <div accordion-heading>
-                Testing
-            </div>
-            <app-design-tab-testing></app-design-tab-testing>
-        </accordion-group>
-        <accordion-group>
-            <div accordion-heading>
-                Design
-            </div>
-            <app-design-tab-design></app-design-tab-design>
-        </accordion-group>
-    </accordion>
-</div>
+<app-tabs>
+    <app-tab heading="Discovery"><app-design-tab-discovery></app-design-tab-discovery></app-tab>
+    <app-tab heading="Wireframe"><app-design-tab-wireframe></app-design-tab-wireframe></app-tab>
+    <app-tab heading="Testing"><app-design-tab-testing></app-design-tab-testing></app-tab>
+    <app-tab heading="Design"><app-design-tab-design></app-design-tab-design></app-tab>
+</app-tabs>
 
 <div class="visit-site">
     <a href="https://www.buttonandwilde.com/" target="_blank">Visit Site</a>

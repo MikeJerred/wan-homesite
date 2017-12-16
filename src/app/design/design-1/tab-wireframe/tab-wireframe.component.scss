@@ -1,7 +1,23 @@
+@import 'mixins';
+
 :host {
     display: block;
     text-align: center;
     padding: 40px;
+    background-color: #333;
+    color: #fff;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
 }
 
 img {

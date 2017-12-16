@@ -38,6 +38,12 @@ main {
             bottom: 20px;
         }
 
+        span {
+            vertical-align: middle;
+            line-height: normal;
+            display: inline-block;
+        }
+
         &.box-1, &.box-4 {
             height: 600px;
             line-height: 600px;

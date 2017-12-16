@@ -44,41 +44,11 @@
     }
 }
 
-.content {
+app-tabs {
     background-color: #f2f2f2;
     position: relative;
+    display: block;
     z-index: 1;
-
-    .navbar {
-        padding-bottom: 0;
-
-        .nav-item {
-            font-family: $font-family-serif;
-            font-size: 22px;
-            height: 60px;
-            line-height: 44px;
-            width: 200px;
-            margin-left: 6px;
-            margin-right: 6px;
-            text-align: center;
-            color: #333;
-            background-color: #fff;
-            border-radius: 20px 20px 0 0;
-
-            &.active {
-                color: #fff;
-                background-color: #333;
-                box-shadow: -4px -3px 20px -4px #333;
-            }
-        }
-    }
-
-    .tab {
-        background-color: #333;
-        color: #fff;
-        position: relative;
-        overflow: hidden;
-    }
 }
 
 .visit-site {

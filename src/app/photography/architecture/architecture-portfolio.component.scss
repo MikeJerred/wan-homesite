@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 main {
     position: relative;
@@ -6,16 +7,22 @@ main {
     margin-bottom: 453px;
     background-color: #333;
     padding-top: 100px;
+    padding-bottom: 100px;
 
     .column {
         padding-left: 5px;
         padding-right: 5px;
 
-        &:first-child {
+        &:nth-child(2n+1) {
             padding-left: $grid-gutter-width/2;
         }
 
-        &:last-child {
+        &:nth-child(2n) {
+            padding-right: $grid-gutter-width/2;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-left: $grid-gutter-width/2;
             padding-right: $grid-gutter-width/2;
         }
     }
@@ -27,7 +34,7 @@ main {
 
     .load-more {
         text-align: center;
-        padding: 80px 0;
+        padding-top: 80px;
 
         > span {
             color: #f2f2f2;
@@ -36,6 +43,10 @@ main {
             border-radius: 60px;
             padding: 20px 60px;
         }
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 318px;
     }
 }
 
