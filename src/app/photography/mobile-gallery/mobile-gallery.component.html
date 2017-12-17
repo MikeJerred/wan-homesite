@@ -1,4 +1,4 @@
-<main (window:keydown)="keyPressed($event)">
+<main>
     <div class="text">{{currentIndex + 1}} / {{images?.length}}</div>
 
     <ng-container *ngFor="let image of images; index as i">
