@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 main {
     position: relative;
@@ -65,6 +66,10 @@ main {
                 border: 1px solid #333;
             }
         }
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 318px;
     }
 }
 

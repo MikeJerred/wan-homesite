@@ -6,6 +6,7 @@ import { PhotographyRoutingModule } from './photography-routing.module';
 import { ArchitecturePortfolioComponent } from './architecture/architecture-portfolio.component';
 import { StreetPortfolioComponent } from './street/street-portfolio.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { MobileGalleryComponent } from './mobile-gallery/mobile-gallery.component';
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     declarations: [
         ArchitecturePortfolioComponent,
         StreetPortfolioComponent,
-        GalleryComponent
+        GalleryComponent,
+        MobileGalleryComponent
     ]
 })
 export class PhotographyModule {}

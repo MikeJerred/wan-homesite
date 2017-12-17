@@ -5,6 +5,7 @@ import { LayoutService } from 'shared/layout.service';
 import { TabComponent } from './tab.component';
 
 export const tabAnimation: AnimationEntryMetadata = [
+    transition('void => *', []),
     transition('* <=> *', [
         group([
             query(':self', [

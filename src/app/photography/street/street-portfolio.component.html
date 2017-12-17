@@ -3,32 +3,40 @@
 <main class="clearfix">
     <div class="container">
         <div class="row">
-            <div class="column col-sm-6 col-xs-12">
-                <img src="/assets/photographs/street/1.jpg" *ngIf="show[0]" class="clickable" (click)="currentIndex.next(0); imageModal.show()">
-                <img src="/assets/photographs/street/2.jpg" *ngIf="show[1]" class="clickable" (click)="currentIndex.next(1); imageModal.show()">
-            </div>
-            <div class="column col-sm-6 col-xs-12">
-                <img src="/assets/photographs/street/3.jpg" *ngIf="show[2]" class="clickable" (click)="currentIndex.next(2); imageModal.show()">
-                <img src="/assets/photographs/street/4.jpg" *ngIf="show[3]" class="clickable" (click)="currentIndex.next(3); imageModal.show()">
+            <div class="column col-sm-6">
+                <img src="/assets/photographs/street/1.jpg" *ngIf="show[0]" class="clickable" (click)="imageClick(0, imageModal)">
+                <img src="/assets/photographs/street/2.jpg" *ngIf="show[1]" class="clickable" (click)="imageClick(1, imageModal)">
             </div>
             <div class="column col-sm-6">
-                <img src="/assets/photographs/street/5.jpg" *ngIf="show[4]" class="clickable" (click)="currentIndex.next(4); imageModal.show()">
-                <img src="/assets/photographs/street/6.jpg" *ngIf="show[5]" class="clickable" (click)="currentIndex.next(5); imageModal.show()">
+                <img src="/assets/photographs/street/3.jpg" *ngIf="show[2]" class="clickable" (click)="imageClick(2, imageModal)">
+                <img src="/assets/photographs/street/4.jpg" *ngIf="show[3]" class="clickable" (click)="imageClick(3, imageModal)">
             </div>
             <div class="column col-sm-6">
-                <img src="/assets/photographs/street/7.jpg" *ngIf="show[6]" class="clickable" (click)="currentIndex.next(6); imageModal.show()">
-                <img src="/assets/photographs/street/8.jpg" *ngIf="show[7]" class="clickable" (click)="currentIndex.next(7); imageModal.show()">
+                <img src="/assets/photographs/street/5.jpg" *ngIf="show[4]" class="clickable" (click)="imageClick(4, imageModal)">
+                <img src="/assets/photographs/street/6.jpg" *ngIf="show[5]" class="clickable" (click)="imageClick(5, imageModal)">
+            </div>
+            <div class="column col-sm-6">
+                <img src="/assets/photographs/street/7.jpg" *ngIf="show[6]" class="clickable" (click)="imageClick(6, imageModal)">
+                <img src="/assets/photographs/street/8.jpg" *ngIf="show[7]" class="clickable" (click)="imageClick(7, imageModal)">
             </div>
         </div>
+        <!-- <div class="row" *ngIf="isMobile">
+            <app-mobile-gallery [images]="images"></app-mobile-gallery>
+        </div> -->
     </div>
     <div class="load-more" *ngIf="!isMobile && canShowMore">
         <span class="clickable" (click)="loadMore()">Load more</span>
     </div>
-    <app-side-link *ngIf="isMobile" name="Street" [routerLink]="['/photography', 'street']" [extend]="100" right invert></app-side-link>
+    <app-side-link *ngIf="isMobile" name="Architecture" [routerLink]="['/photography', 'architecture']" [extend]="150" left invert></app-side-link>
 </main>
 
 <div class="modal fade" bsModal #imageModal="bs-modal" (onHide)="currentIndex.next(-1)">
-    <div class="close clickable" (click)="imageModal.hide()">&times;</div>
+    <div class="close clickable" (click)="imageModal.hide()">
+        <svg viewBox="0 0 64 64">
+            <line class="line-1" x1="4" y1="4" x2="60" y2="60" stroke-width="8" stroke-linecap="round"></line>
+            <line class="line-2" x1="60" y1="4" x2="4" y2="60" stroke-width="8" stroke-linecap="round"></line>
+        </svg>
+    </div>
     <div class="container">
         <app-gallery (close)="imageModal.hide()" [images]="images" [setIndex]="currentIndex"></app-gallery>
     </div>

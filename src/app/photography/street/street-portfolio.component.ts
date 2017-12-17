@@ -34,6 +34,13 @@ export class StreetPortfolioComponent implements OnInit {
         this.canShowMore = this.images.length > 4;
     }
 
+    public imageClick(index: number, ref: any): void {
+        if (!this.isMobile) {
+            this.currentIndex.next(index);
+            ref.show();
+        }
+    }
+
     public loadMore(): void {
         let index = this.show.findIndex(x => !x);
 
