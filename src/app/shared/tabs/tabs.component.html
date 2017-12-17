@@ -11,9 +11,9 @@
         </ul>
     </div>
 
-    <div class="tabs">
+    <div class="tabs" [style.height]="currentHeight" [@tabAnimation]="getAnimationState()">
         <ng-container *ngFor="let tab of tabs">
-            <div class="tab" *ngIf="tab.active" [@tabAnimation]>
+            <div class="tab" *ngIf="tab.active">
                 <ng-container *ngTemplateOutlet="tab.template"></ng-container>
             </div>
         </ng-container>
