@@ -6,8 +6,8 @@ import { PageScrollConfig } from 'ngx-page-scroll';
 import * as $ from 'jquery';
 
 const homeSplit: AnimationEntryMetadata = [
-    query(':leave', style({ position: 'fixed', top: 0, left: 0, right: 0, 'z-index': 100 }), { optional: true }),
-    query(':enter', style({ position: 'absolute', top: 0, left: 0, right: 0 })),
+    query(':leave', style({ position: 'fixed', top: 0, left: 0, width: '100vw', 'z-index': 100 }), { optional: true }),
+    query(':enter', style({ position: 'absolute', top: 0, left: 0, width: '100vw' })),
     query('.bg-left', style({ transform: 'translateX(0)' }), { optional: true }),
     query('.bg-right', style({ transform: 'translateX(0)' }), { optional: true }),
     query('.bg-top', style({ transform: 'translateY(0)' }), { optional: true }),
@@ -20,8 +20,8 @@ const homeSplit: AnimationEntryMetadata = [
     ])
 ];
 const homeJoin: AnimationEntryMetadata = [
-    query(':leave', style({ position: 'absolute', top: 0, left: 0, right: 0 }), { optional: true }),
-    query(':enter', style({ position: 'fixed', top: 0, left: 0, right: 0, 'z-index': 100 })),
+    query(':leave', style({ position: 'absolute', top: 0, left: 0, width: '100vw' }), { optional: true }),
+    query(':enter', style({ position: 'fixed', top: 0, left: 0, width: '100vw', 'z-index': 100 })),
     query('.bg-left', style({ transform: 'translateX(-65vw)' }), { optional: true }),
     query('.bg-right', style({ transform: 'translateX(65vw)' }), { optional: true }),
     query('.bg-top', style({ transform: 'translateY(-65vh)' }), { optional: true }),
@@ -37,9 +37,9 @@ const homeJoin: AnimationEntryMetadata = [
 const slideLeft: AnimationEntryMetadata = [
     query(
         ':leave',
-        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
+        style({ position: 'absolute', top: 0, left: 0, width: '100vw', transform: 'translateX(0)' }),
         { optional: true }),
-    query(':enter', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
+    query(':enter', style({ position: 'fixed', left: 0, width: '100vw', transform: 'translateX(100vw)', 'z-index': 100 })),
     group([
         query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
         query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
@@ -49,9 +49,9 @@ const slideLeft: AnimationEntryMetadata = [
 const slideRight: AnimationEntryMetadata = [
     query(
         ':leave',
-        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
+        style({ position: 'absolute', top: 0, left: 0, width: '100vw', transform: 'translateX(0)' }),
         { optional: true }),
-    query(':enter', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(-100vw)', 'z-index': 100 })),
+    query(':enter', style({ position: 'fixed', left: 0, width: '100vw', transform: 'translateX(-100vw)', 'z-index': 100 })),
     group([
         query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(70vw)' })), { optional: true }),
         query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),

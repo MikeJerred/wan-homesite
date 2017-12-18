@@ -1,6 +1,12 @@
 @import 'variables';
 @import 'mixins';
 
+.not-parallax {
+    position: relative;
+    z-index: 1;
+    background-color: #333;
+}
+
 main {
     position: relative;
     z-index: 1;
