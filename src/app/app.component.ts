@@ -46,44 +46,6 @@ const slideLeft: AnimationEntryMetadata = [
     ])
 ];
 
-const slideLeftBothParallax: AnimationEntryMetadata = [
-    query(':leave', style({ position: 'absolute', top: 0, left: 0, right: 0 })),
-    query('*:leave > .parallax', style({ transform: 'translateX(0)' })),
-    query('*:leave > .not-parallax', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(0)' })),
-    query('*:enter > .parallax', style({ transform: 'translateX(0)' })),
-    query('*:enter > .not-parallax', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
-    group([
-        query(':leave > .parallax', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
-        query(':leave > .not-parallax', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
-        query(':enter > .parallax', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
-        query(':enter > .not-parallax', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
-    ])
-];
-
-const slideLeftToParallax: AnimationEntryMetadata = [
-    query(
-        ':leave',
-        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
-        { optional: true }),
-    query(':enter', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
-    group([
-        query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
-        query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
-    ])
-];
-
-const slideLeftFromParallax: AnimationEntryMetadata = [
-    query(
-        ':leave',
-        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
-        { optional: true }),
-    query(':enter', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
-    group([
-        query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
-        query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
-    ])
-];
-
 const slideRight: AnimationEntryMetadata = [
     query(
         ':leave',
@@ -106,7 +68,7 @@ const slideRight: AnimationEntryMetadata = [
             transition('null => *', []),
             transition('home => *', homeSplit),
             transition('* => home', homeJoin),
-            transition('design-2 => design-1', slideLeftBothParallax),
+            transition('design-2 => design-1', slideLeft),
             transition('design-3 => design-1', slideLeft),
             transition('design-3 => design-2', slideLeft),
             transition('design-4 => design-1', slideLeft),

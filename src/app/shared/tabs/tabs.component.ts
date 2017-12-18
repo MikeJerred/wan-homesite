@@ -70,7 +70,10 @@ export class TabsComponent implements AfterContentInit {
     }
 
     public selectMobileTab(index: number): void {
-        const pageScrollInstance = PageScrollInstance.simpleInstance(this.document, '#tab' + index);
+        const pageScrollInstance = PageScrollInstance.newInstance({
+            document: this.document,
+            scrollTarget: '#tab' + index,
+            pageScrollOffset: 90 });
         setTimeout(() => this.pageScrollService.start(pageScrollInstance), 10);
     }
 

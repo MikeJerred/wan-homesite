@@ -4,7 +4,7 @@
             <li *ngFor="let tab of tabs; let i = index"
                 class="nav-item clickable" [ngClass]="tab.active ? 'active' : ''"
                 (click)="selectTab(tab)"
-                pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500">
+                pageScroll pageScrollTarget="#tabs-navbar" [pageScrollDuration]="500" [pageScrollOffset]="80">
 
                 <a class="nav-link">{{tab.heading}}</a>
             </li>

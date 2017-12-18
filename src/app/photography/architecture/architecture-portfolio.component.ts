@@ -13,7 +13,7 @@ export class ArchitecturePortfolioComponent implements OnInit {
     public images = [
         '/assets/photographs/architecture/1-high.jpg',
         '/assets/photographs/architecture/2.jpg',
-        '/assets/photographs/architecture/3.jpg',
+        '/assets/photographs/architecture/3-high.jpg',
         '/assets/photographs/architecture/4-high.jpg',
         '/assets/photographs/architecture/5-high.jpg',
         '/assets/photographs/architecture/6-high.jpg',
