@@ -2,7 +2,8 @@ import { AnimationEntryMetadata, Component, OnInit } from '@angular/core';
 import { Location, PopStateEvent } from '@angular/common';
 import { NavigationStart, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
-import { timeout } from 'q';
+import { PageScrollConfig } from 'ngx-page-scroll';
+import * as $ from 'jquery';
 
 const homeSplit: AnimationEntryMetadata = [
     query(':leave', style({ position: 'fixed', top: 0, left: 0, right: 0, 'z-index': 100 }), { optional: true }),
@@ -34,8 +35,49 @@ const homeJoin: AnimationEntryMetadata = [
 ];
 
 const slideLeft: AnimationEntryMetadata = [
-    query(':leave', style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }), { optional: true }),
-    query(':enter', style({ position: 'fixed', top: 0, left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
+    query(
+        ':leave',
+        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
+        { optional: true }),
+    query(':enter', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
+    group([
+        query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
+        query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
+    ])
+];
+
+const slideLeftBothParallax: AnimationEntryMetadata = [
+    query(':leave', style({ position: 'absolute', top: 0, left: 0, right: 0 })),
+    query('*:leave > .parallax', style({ transform: 'translateX(0)' })),
+    query('*:leave > .not-parallax', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(0)' })),
+    query('*:enter > .parallax', style({ transform: 'translateX(0)' })),
+    query('*:enter > .not-parallax', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
+    group([
+        query(':leave > .parallax', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
+        query(':leave > .not-parallax', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
+        query(':enter > .parallax', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
+        query(':enter > .not-parallax', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
+    ])
+];
+
+const slideLeftToParallax: AnimationEntryMetadata = [
+    query(
+        ':leave',
+        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
+        { optional: true }),
+    query(':enter', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
+    group([
+        query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
+        query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
+    ])
+];
+
+const slideLeftFromParallax: AnimationEntryMetadata = [
+    query(
+        ':leave',
+        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
+        { optional: true }),
+    query(':enter', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(100vw)', 'z-index': 100 })),
     group([
         query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)' })), { optional: true }),
         query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
@@ -43,8 +85,11 @@ const slideLeft: AnimationEntryMetadata = [
 ];
 
 const slideRight: AnimationEntryMetadata = [
-    query(':leave', style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }), { optional: true }),
-    query(':enter', style({ position: 'fixed', top: 0, left: 0, right: 0, transform: 'translateX(-100vw)', 'z-index': 100 })),
+    query(
+        ':leave',
+        style({ position: 'absolute', top: 0, left: 0, right: 0, transform: 'translateX(0)' }),
+        { optional: true }),
+    query(':enter', style({ position: 'fixed', left: 0, right: 0, transform: 'translateX(-100vw)', 'z-index': 100 })),
     group([
         query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(70vw)' })), { optional: true }),
         query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
@@ -61,7 +106,7 @@ const slideRight: AnimationEntryMetadata = [
             transition('null => *', []),
             transition('home => *', homeSplit),
             transition('* => home', homeJoin),
-            transition('design-2 => design-1', slideLeft),
+            transition('design-2 => design-1', slideLeftBothParallax),
             transition('design-3 => design-1', slideLeft),
             transition('design-3 => design-2', slideLeft),
             transition('design-4 => design-1', slideLeft),
@@ -73,11 +118,16 @@ const slideRight: AnimationEntryMetadata = [
     ]
 })
 export class AppComponent implements OnInit {
-
     private lastPoppedUrl: string;
-    private yScrollStack: number[] = [];
+    private previousUrl: string;
+    private scrollYValues: { [key: string]: number } = {};
 
-    constructor(private router: Router, private location: Location) {}
+    constructor(private router: Router, private location: Location) {
+        PageScrollConfig.defaultDuration = 500;
+
+        if ('scrollRestoration' in history)
+            history.scrollRestoration = 'manual';
+    }
 
     ngOnInit(): void {
         this.location.subscribe(evt => {
@@ -86,9 +136,10 @@ export class AppComponent implements OnInit {
 
         this.router.events
             .filter(evt => evt instanceof NavigationStart)
-            .filter((evt: NavigationStart) => evt.url !== this.lastPoppedUrl)
-            .subscribe(evt => {
-                this.yScrollStack.push(window.scrollY);
+            .subscribe((evt: NavigationStart) => {
+                if (this.previousUrl) {
+                    this.scrollYValues[this.previousUrl] = window.scrollY;
+                }
             });
 
         this.router.events
@@ -96,10 +147,25 @@ export class AppComponent implements OnInit {
             .subscribe((evt: NavigationEnd) => {
                 if (evt.url === this.lastPoppedUrl) {
                     this.lastPoppedUrl = undefined;
-                    window.scrollTo(0, this.yScrollStack.pop());
+
+                    // matches :enter
+                    const enterElement = $('app-root > main > ng-component').first();
+                    enterElement.css({
+                        top: -this.scrollYValues[evt.url] + 'px'
+                    });
+
+                    setTimeout(
+                        () => {
+                            enterElement.css({ top: '' });
+                            window.scrollTo(0, this.scrollYValues[evt.url]);
+                        },
+                        1000);
                 } else if (evt.url !== '/home') {
                     setTimeout(() => window.scrollTo(0, 0), 1000);
+                    console.log('Scrolling to top');
                 }
+
+                this.previousUrl = evt.url;
             });
     }
 

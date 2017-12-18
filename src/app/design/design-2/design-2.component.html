@@ -1,44 +1,46 @@
-<app-side-link *ngIf="!isMobile" name="Button & Wilde" [routerLink]="['/design', 1]" [extend]="180" left></app-side-link>
-<app-side-link *ngIf="!isMobile" name="Evicore" [routerLink]="['/design', 3]" right></app-side-link>
+<div class="not-parallax">
+    <app-side-link *ngIf="!isMobile" name="Button & Wilde" [routerLink]="['/design', 1]" [extend]="180" left></app-side-link>
+    <app-side-link *ngIf="!isMobile" name="Evicore" [routerLink]="['/design', 3]" right></app-side-link>
 
-<div class="intro">
-    <h1>M Jerred</h1>
+    <div class="intro">
+        <h1>M Jerred</h1>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h4>Background</h4>
-                <p>
-                    This project was in collaboration with the specialist .NET and Angular developer Mike Jerred to create his portfolio website.
-                </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Background</h4>
+                    <p>
+                        This project was in collaboration with the specialist .NET and Angular developer Mike Jerred to create his portfolio website.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>Challenge</h4>
+                    <p>
+                        I was in collaboration with the developer Mike Jerred to create his portfolio website. I worked closely with the developer on the page transition animations.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>Service</h4>
+                    <ul>
+                        <li>UX Design</li>
+                        <li>UI Design</li>
+                        <li>Photography </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-sm">
-                <h4>Challenge</h4>
-                <p>
-                    I was in collaboration with the developer Mike Jerred to create his portfolio website. I worked closely with the developer on the page transition animations.
-                </p>
+            <div class="row images">
+                <div class="col-sm-6"><img src="/assets/design/2/screenshot-1.png"></div>
+                <div class="col-sm-6"><img src="/assets/design/2/screenshot-2.png"></div>
             </div>
-            <div class="col-sm">
-                <h4>Service</h4>
-                <ul>
-                    <li>UX Design</li>
-                    <li>UI Design</li>
-                    <li>Photography </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row images">
-            <div class="col-sm-6"><img src="/assets/design/2/screenshot-1.png"></div>
-            <div class="col-sm-6"><img src="/assets/design/2/screenshot-2.png"></div>
         </div>
     </div>
-</div>
 
-<div class="visit-site">
-    <a href="https://mjerred.com/" target="_blank">Visit Site</a>
+    <div class="visit-site">
+        <a href="https://mjerred.com/" target="_blank">Visit Site</a>
 
-    <app-side-link *ngIf="isMobile" name="Button & Wilde" [routerLink]="['/design', 1]" [extend]="180" left></app-side-link>
-    <app-side-link *ngIf="isMobile" name="Evicore" [routerLink]="['/design', 3]" [extend]="180" right></app-side-link>
+        <app-side-link *ngIf="isMobile" name="Button & Wilde" [routerLink]="['/design', 1]" [extend]="180" left></app-side-link>
+        <app-side-link *ngIf="isMobile" name="Evicore" [routerLink]="['/design', 3]" [extend]="180" right></app-side-link>
+    </div>
 </div>
 
 <div class="parallax">

@@ -24,7 +24,7 @@
             <app-mobile-gallery [images]="images"></app-mobile-gallery>
         </div> -->
     </div>
-    <div class="load-more" *ngIf="!isMobile && canShowMore">
+    <div class="load-more" *ngIf="canShowMore">
         <span class="clickable" (click)="loadMore()">Load more</span>
     </div>
     <app-side-link *ngIf="isMobile" name="Architecture" [routerLink]="['/photography', 'architecture']" [extend]="150" left invert></app-side-link>

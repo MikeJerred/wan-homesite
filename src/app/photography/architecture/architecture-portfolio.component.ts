@@ -11,14 +11,14 @@ export class ArchitecturePortfolioComponent implements OnInit {
     public currentIndex = new Subject<number>();
     public isMobile = false;
     public images = [
-        '/assets/photographs/architecture/1.jpg',
+        '/assets/photographs/architecture/1-high.jpg',
         '/assets/photographs/architecture/2.jpg',
         '/assets/photographs/architecture/3.jpg',
-        '/assets/photographs/architecture/4.jpg',
-        '/assets/photographs/architecture/5.jpg',
-        '/assets/photographs/architecture/6.jpg',
-        '/assets/photographs/architecture/7.jpg',
-        '/assets/photographs/architecture/8.jpg'
+        '/assets/photographs/architecture/4-high.jpg',
+        '/assets/photographs/architecture/5-high.jpg',
+        '/assets/photographs/architecture/6-high.jpg',
+        '/assets/photographs/architecture/7-high.jpg',
+        '/assets/photographs/architecture/8-high.jpg'
     ];
     public canShowMore: boolean;
     public show: boolean[];

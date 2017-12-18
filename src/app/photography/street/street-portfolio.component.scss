@@ -47,6 +47,16 @@ main {
 
     @include media-breakpoint-down(sm) {
         margin-bottom: 318px;
+        padding-bottom: 50px;
+
+        .load-more {
+            margin-bottom: 60px;
+            padding-top: 60px;
+        }
+
+        app-side-link {
+            margin-top: 40px;
+        }
     }
 }
 

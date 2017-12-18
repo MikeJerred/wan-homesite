@@ -11,13 +11,13 @@ export class StreetPortfolioComponent implements OnInit {
     public currentIndex = new Subject<number>();
     public isMobile = false;
     public images = [
-        '/assets/photographs/street/1.jpg',
-        '/assets/photographs/street/2.jpg',
-        '/assets/photographs/street/3.jpg',
+        '/assets/photographs/street/1-high.jpg',
+        '/assets/photographs/street/2-high.jpg',
+        '/assets/photographs/street/3-high.jpg',
         '/assets/photographs/street/4.jpg',
-        '/assets/photographs/street/5.jpg',
-        '/assets/photographs/street/6.jpg',
-        '/assets/photographs/street/7.jpg',
+        '/assets/photographs/street/5-high.jpg',
+        '/assets/photographs/street/6-high.jpg',
+        '/assets/photographs/street/7-high.jpg',
         '/assets/photographs/street/8.jpg'
     ];
     public canShowMore: boolean;

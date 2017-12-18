@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="load-more" *ngIf="!isMobile && canShowMore">
+    <div class="load-more" *ngIf="canShowMore">
         <span class="clickable" (click)="loadMore()">Load more</span>
     </div>
     <app-side-link *ngIf="isMobile" name="Street" [routerLink]="['/photography', 'street']" [extend]="100" right invert></app-side-link>

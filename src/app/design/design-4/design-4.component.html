@@ -1,43 +1,45 @@
-<app-side-link *ngIf="!isMobile" name="Evicore" [routerLink]="['/design', 3]" left></app-side-link>
+<div class="not-parallax">
+    <app-side-link *ngIf="!isMobile" name="Evicore" [routerLink]="['/design', 3]" left></app-side-link>
 
-<div class="intro">
-    <h1>Blackhawk Intelligence</h1>
+    <div class="intro">
+        <h1>Blackhawk Intelligence</h1>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h4>Background</h4>
-                <p>
-                    The client is a leading full-service bespoke corporate investigations agency based in London. The company had a very comprehensive offering of services which the old site struggle to present the them in a structured way.
-                </p>
-            </div>
-            <div class="col-sm">
-                <h4>Challenge</h4>
-                <p>
-                    I created a new hierarchical structure to reorganise the content and made service related content more visually distinctive using different colour to represent each main service category. I also allowed contextual content on each service page to help users navigate.
-                </p>
-            </div>
-            <div class="col-sm">
-                <h4>I worked on</h4>
-                <ul>
-                    <li>UX Design</li>
-                    <li>UI Design</li>
-                    <li>Project Management</li>
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Background</h4>
+                    <p>
+                        The client is a leading full-service bespoke corporate investigations agency based in London. The company had a very comprehensive offering of services which the old site struggle to present the them in a structured way.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>Challenge</h4>
+                    <p>
+                        I created a new hierarchical structure to reorganise the content and made service related content more visually distinctive using different colour to represent each main service category. I also allowed contextual content on each service page to help users navigate.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>I worked on</h4>
+                    <ul>
+                        <li>UX Design</li>
+                        <li>UI Design</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<app-tabs>
-    <app-tab heading="Discovery" height="710px"><app-design-tab-discovery></app-design-tab-discovery></app-tab>
-    <app-tab heading="Design" height="1436px"><app-design-tab-design></app-design-tab-design></app-tab>
-</app-tabs>
+    <app-tabs>
+        <app-tab heading="Discovery" height="710px"><app-design-tab-discovery></app-design-tab-discovery></app-tab>
+        <app-tab heading="Design" height="1436px"><app-design-tab-design></app-design-tab-design></app-tab>
+    </app-tabs>
 
-<div class="visit-site">
-    <a href="http://www.blackhawkintelligence.com/" target="_blank">Visit Site</a>
+    <div class="visit-site">
+        <a href="http://www.blackhawkintelligence.com/" target="_blank">Visit Site</a>
 
-    <app-side-link *ngIf="isMobile" name="Evicore" [routerLink]="['/design', 3]" left></app-side-link>
+        <app-side-link *ngIf="isMobile" name="Evicore" [routerLink]="['/design', 3]" left></app-side-link>
+    </div>
 </div>
 
 <div class="parallax">

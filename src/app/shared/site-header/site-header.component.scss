@@ -92,7 +92,7 @@ a {
 
     &.open {
         > svg {
-            @include media-breakpoint-up(sm) {
+            @include media-breakpoint-up(md) {
                 stroke: #f2f2f2;
             }
 

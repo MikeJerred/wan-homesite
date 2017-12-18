@@ -22,8 +22,8 @@
 
 <div class="mobile-content" *ngIf="isMobile">
     <accordion [closeOthers]="true">
-        <accordion-group *ngFor="let tab of tabs">
-            <div accordion-heading>
+        <accordion-group *ngFor="let tab of tabs; let i = index" [isOpen]="i === 0">
+            <div accordion-heading [id]="'tab' + i" (click)="selectMobileTab(i)">
                 {{tab.heading}}
                 <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
                     <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>

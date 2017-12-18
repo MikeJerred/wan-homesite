@@ -1,5 +1,7 @@
-import { AfterContentInit, AnimationEntryMetadata, Component, ContentChildren, QueryList } from '@angular/core';
+import { AfterContentInit, AnimationEntryMetadata, Component, ContentChildren, Inject, QueryList } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { animate, group, query, style, transition, trigger } from '@angular/animations';
+import { PageScrollConfig, PageScrollService, PageScrollInstance } from 'ngx-page-scroll';
 
 import { LayoutService } from 'shared/layout.service';
 import { TabComponent } from './tab.component';
@@ -40,7 +42,11 @@ export class TabsComponent implements AfterContentInit {
     public previousHeight = '0';
     public currentHeight = '0';
 
-    constructor(layoutService: LayoutService) {
+    constructor(
+        private pageScrollService: PageScrollService,
+        @Inject(DOCUMENT) private document: any,
+        layoutService: LayoutService) {
+
         layoutService.isMobile$().subscribe(value => {
             this.isMobile = value;
         });
@@ -61,6 +67,11 @@ export class TabsComponent implements AfterContentInit {
 
         this.previousHeight = this.currentHeight;
         this.currentHeight = selectedTab.height;
+    }
+
+    public selectMobileTab(index: number): void {
+        const pageScrollInstance = PageScrollInstance.simpleInstance(this.document, '#tab' + index);
+        setTimeout(() => this.pageScrollService.start(pageScrollInstance), 10);
     }
 
     public getAnimationState() {
