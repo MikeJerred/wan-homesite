@@ -5,10 +5,10 @@
     position: relative;
     z-index: 1;
     background-color: #333;
-    margin-bottom: 453px;
+    //margin-bottom: 453px;
 
     @include media-breakpoint-down(sm) {
-        margin-bottom: 318px;
+        //margin-bottom: 318px;
     }
 }
 
@@ -81,8 +81,8 @@ main {
 }
 
 .parallax {
-    z-index: 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    // z-index: 0;
+    // position: fixed;
+    // width: 100%;
+    // bottom: 0;
 }

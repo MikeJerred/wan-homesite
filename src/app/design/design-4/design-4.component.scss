@@ -5,10 +5,10 @@
     position: relative;
     z-index: 1;
     background-color: #f2f2f2;
-    margin-bottom: 453px;
+    //margin-bottom: 453px;
 
     @include media-breakpoint-down(sm) {
-        margin-bottom: 318px;
+        //margin-bottom: 318px;
     }
 }
 
@@ -88,7 +88,6 @@ app-tabs {
     }
 
     @include media-breakpoint-down(sm) {
-        margin-bottom: 318px;
         padding: 60px 0;
 
         a {
@@ -105,8 +104,8 @@ app-tabs {
 
 
 .parallax {
-    z-index: 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    // z-index: 0;
+    // position: fixed;
+    // width: 100%;
+    // bottom: 0;
 }

@@ -1,6 +1,6 @@
 <header>
     <app-site-header></app-site-header>
 </header>
-<main [@routerAnimation]="getRouteTransition(outlet)">
+<main [@routerAnimation]="getRouteTransition(outlet)" (@routerAnimation.done)="animationDone($event)">
     <router-outlet #outlet="outlet"></router-outlet>
 </main>
