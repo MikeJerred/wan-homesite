@@ -5,11 +5,14 @@
     position: relative;
     z-index: 1;
     background-color: #f2f2f2;
+    margin-bottom: 453px;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 318px;
+    }
 }
 
 .intro {
-    position: relative;
-    z-index: 1;
     background-color: #f2f2f2;
     padding-top: 300px;
 
@@ -70,7 +73,6 @@
     z-index: 1;
     text-align: center;
     padding: 80px 0;
-    margin-bottom: 453px;
 
     a {
         display: block;
@@ -91,7 +93,6 @@
     }
 
     @include media-breakpoint-down(sm) {
-        margin-bottom: 318px;
         padding: 60px 0;
 
         a {
