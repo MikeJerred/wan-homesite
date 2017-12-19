@@ -1,25 +1,39 @@
 @import 'mixins';
 
 footer {
-    background-color: #f2f2f2;
-    text-align: center;
+    background-color: #fff;
     padding: 20px 0;
     font-size: 12px;
     color: #333;
 
-    a {
-        display: inline-block;
+    .top {
+        border-bottom: 1px solid #333;
+        padding: 10px 0;
+
+        .name {
+            font-size: 28px;
+            margin-right: 20px;
+        }
+
+        .email {
+            font-size: 16px;
+            font-weight: $font-weight-normal;
+        }
+
+        .social-media {
+            font-size: 18px;
+            font-family: $font-family-serif;
+            font-weight: $font-weight-normal;
+
+            > a {
+                margin-left: 10px;
+            }
+        }
     }
 
-    .logo {
-        width: 50px;
-        height: 50px;
-        margin: 20px 10px;
-        pointer-events: none;
-
-        @include media-breakpoint-down(sm) {
-            width: 35px;
-            height: 35px;
-        }
+    .bottom {
+        font-size: 10px;
+        font-weight: $font-weight-normal;
+        margin: 10px 0;
     }
 }
