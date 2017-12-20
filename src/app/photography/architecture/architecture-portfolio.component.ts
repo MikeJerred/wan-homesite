@@ -1,11 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { AnimationEntryMetadata, Component, OnInit } from '@angular/core';
+import { animate, query, style, trigger, transition } from '@angular/animations';
 import { Subject } from 'rxjs/Subject';
 
 import { LayoutService } from 'shared/layout.service';
 
+const fadeIn: AnimationEntryMetadata = [
+    transition('* <=> *', [
+        query(':enter', style({ opacity: 0 })),
+        query(':enter', animate('2s ease-in-out', style({ opacity: 1 })))
+    ])
+];
+
 @Component({
     templateUrl: './architecture-portfolio.component.html',
-    styleUrls: ['./architecture-portfolio.component.scss']
+    styleUrls: ['./architecture-portfolio.component.scss'],
+    animations: [
+        trigger('imageAnimation', fadeIn)
+    ]
 })
 export class ArchitecturePortfolioComponent implements OnInit {
     public currentIndex = new Subject<number>();
@@ -22,6 +33,9 @@ export class ArchitecturePortfolioComponent implements OnInit {
     ];
     public canShowMore: boolean;
     public show: boolean[];
+    public get showCount(): number {
+        return this.show.filter(x => !!x).length;
+    }
 
     constructor(layoutService: LayoutService) {
         layoutService.isMobile$().subscribe(value => {

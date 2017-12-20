@@ -48,18 +48,26 @@
 
         h1 {
             font-size: 28px;
+            margin-bottom: 40px;
         }
 
         h4 {
             font-size: 20px;
         }
 
-        p, ul {
+        p {
             margin-bottom: 50px;
             font-size: 16px;
         }
 
+        ul {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+
         .images {
+            margin-top: 50px;
+
             img:first-child {
                 margin-bottom: 20px;
             }
@@ -88,7 +96,8 @@
         &:hover {
             background-color: #333;
             color: #f2f2f2;
-            border-color: #f2f2f2;
+            border-color: transparent;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
         }
     }
 
@@ -98,7 +107,8 @@
         a {
             margin-bottom: 40px;
             width: 160px;
-            padding: 15px 40px;
+            padding: 10px 40px;
+            font-size: 14px;
         }
 
         app-side-link {
