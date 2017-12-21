@@ -100,15 +100,15 @@ const slideRightBothParallax: AnimationEntryMetadata = [
             transition('null => *', []),
             transition('home => *', homeSplit),
             transition('* => home', homeJoin),
-            transition('design-2 => design-1', slideLeft),
-            transition('design-3 => design-1', slideLeft),
-            transition('design-3 => design-2', slideLeft),
-            transition('design-4 => design-1', slideLeft),
-            transition('design-4 => design-2', slideLeft),
-            transition('design-4 => design-3', slideLeft),
-            transition('photography-street => photography-architecture', slideLeft),
-            transition('design-portfolio <=> photography-architecture', slideLeft),
-            transition('* => *', slideRight)
+            transition('design-2 => design-1', slideRight),
+            transition('design-3 => design-1', slideRight),
+            transition('design-3 => design-2', slideRight),
+            transition('design-4 => design-1', slideRight),
+            transition('design-4 => design-2', slideRight),
+            transition('design-4 => design-3', slideRight),
+            transition('photography-street => photography-architecture', slideRight),
+            transition('design-portfolio <=> photography-architecture', slideRight),
+            transition('* => *', slideLeft)
         ])
     ]
 })

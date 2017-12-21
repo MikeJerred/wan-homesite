@@ -70,8 +70,6 @@ app-tabs {
     padding: 80px 0;
 
     .coming-soon {
-        font-size: 20px;
-        font-weight: $font-weight-normal;
         position: relative;
         display: block;
         margin: 0 auto;
@@ -80,7 +78,7 @@ app-tabs {
         border: 1px solid #333;
         background-color: #f2f2f2;
         border-radius: 60px;
-        padding: 20px 60px;
+        padding: 32px 94px;
         transition: all 0.2s ease-in-out;
 
         .visit-site-text {
@@ -88,8 +86,8 @@ app-tabs {
             transition: opacity 0.2s ease-in-out;
             position: absolute;
             top: 0;
-            left: 190px/2 - 78px/2;
-            line-height: 42px;
+            left: 190px/2 - 61px/2;
+            line-height: 64px;
         }
 
         .coming-soon-text {
@@ -97,8 +95,8 @@ app-tabs {
             transition: opacity 0.2s ease-in-out;
             position: absolute;
             top: 0;
-            left: 190px/2 - 118px/2;
-            line-height: 42px;
+            left: 190px/2 - 93px/2;
+            line-height: 64px;
         }
 
         &:hover {

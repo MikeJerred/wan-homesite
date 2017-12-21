@@ -30,17 +30,17 @@
         </div>
         <app-side-link *ngIf="isMobile" name="Architecture" [routerLink]="['/photography', 'architecture']" [extend]="150" left invert></app-side-link>
     </main>
+</div>
 
-    <div class="modal fade" bsModal #imageModal="bs-modal" (onHide)="currentIndex.next(-1)">
-        <div class="close clickable" (click)="imageModal.hide()">
-            <svg viewBox="0 0 64 64">
-                <line class="line-1" x1="4" y1="4" x2="60" y2="60" stroke-width="6" stroke-linecap="round"></line>
-                <line class="line-2" x1="60" y1="4" x2="4" y2="60" stroke-width="6" stroke-linecap="round"></line>
-            </svg>
-        </div>
-        <div class="container">
-            <app-gallery (close)="imageModal.hide()" [images]="images" [setIndex]="currentIndex"></app-gallery>
-        </div>
+<div class="modal fade" bsModal #imageModal="bs-modal" (onHide)="currentIndex.next(-1)">
+    <div class="close clickable" (click)="imageModal.hide()">
+        <svg viewBox="0 0 64 64">
+            <line class="line-1" x1="4" y1="4" x2="60" y2="60" stroke-width="6" stroke-linecap="round"></line>
+            <line class="line-2" x1="60" y1="4" x2="4" y2="60" stroke-width="6" stroke-linecap="round"></line>
+        </svg>
+    </div>
+    <div class="container">
+        <app-gallery (close)="imageModal.hide()" [images]="images" [setIndex]="currentIndex"></app-gallery>
     </div>
 </div>
 
