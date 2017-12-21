@@ -94,16 +94,29 @@
         $list-indent: 50px;
         $list-vert-indent: 100px;
 
+        > li > a {
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease-in-out;
+        }
+
         &.left {
             top: calc(25vh + #{$list-vert-indent});
             left: calc(25vw + #{-$left-text-width/2 + $left-horiz-adjust + $list-indent});
             color: #f2f2f2;
+
+            > li > a:hover {
+                border-color: #f2f2f2;
+            }
         }
 
         &.right {
             top: calc(25vh + #{$list-vert-indent});
             left: calc(75vw + #{-$right-text-width/2 + $right-horiz-adjust + $list-indent});
             color: #333;
+
+            > li > a:hover {
+                border-color: #333;
+            }
         }
     }
 

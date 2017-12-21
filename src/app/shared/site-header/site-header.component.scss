@@ -90,10 +90,10 @@ a {
         width: 45px;
         stroke: #333;
         vertical-align: middle;
-        transition: stroke 1s ease-in-out;
+        transition: stroke 0.5s ease-in-out;
 
         .line-1, .line-2 {
-            transition: transform 1s ease-in-out;
+            transition: transform 0.5s ease-in-out;
         }
 
         .line-1 {

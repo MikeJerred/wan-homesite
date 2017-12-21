@@ -9,24 +9,60 @@ footer {
     .top {
         border-bottom: 1px solid #333;
         padding: 10px 0;
+        position: relative;
 
         .name {
+            display: inline-block;
             font-size: 28px;
             margin-right: 20px;
         }
 
         .email {
+            display: inline-block;
+            vertical-align: bottom;
             font-size: 16px;
-            font-weight: $font-weight-normal;
+            font-weight: $font-weight-light;
+
+            > a {
+                padding: 5px 0;
+                border-bottom: 1px solid transparent;
+                transition: border-color 0.3s ease-in-out;
+
+                &:hover {
+                    border-color: #333;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                float: right;
+                margin-top: 12px;
+            }
         }
 
         .social-media {
+            display: inline-block;
+            vertical-align: bottom;
+            position: absolute;
+            bottom: 10px;
+            right: 0;
             font-size: 18px;
             font-family: $font-family-serif;
             font-weight: $font-weight-normal;
 
             > a {
                 margin-left: 10px;
+                padding: 5px 0;
+                border-bottom: 1px solid transparent;
+                transition: border-color 0.3s ease-in-out;
+
+                &:hover {
+                    border-color: #333;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                position: static;
+                float: right;
             }
         }
     }
@@ -39,10 +75,5 @@ footer {
 
     @include media-breakpoint-down(sm) {
         padding-top: 20px;
-
-        .top {
-            .email {
-            }
-        }
     }
 }
