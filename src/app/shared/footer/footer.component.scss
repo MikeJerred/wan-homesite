@@ -14,6 +14,12 @@ footer {
         .name {
             display: inline-block;
             margin-right: 20px;
+
+            @include media-breakpoint-down(sm) {
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+            }
         }
 
         .email {
@@ -62,6 +68,7 @@ footer {
             @include media-breakpoint-down(sm) {
                 position: static;
                 float: right;
+                clear: both;
             }
         }
     }
