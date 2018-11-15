@@ -10,6 +10,7 @@ const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'design', loadChildren: 'design/design.module#DesignModule' },
     { path: 'photography', loadChildren: 'photography/photography.module#PhotographyModule' },
+    { path: 'blog', loadChildren: 'blog/blog.module#BlogModule' },
     { path: '**', component: PageNotFoundComponent, data: { animation: 'page-not-found' } }
 ];
 
