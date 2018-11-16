@@ -1,11 +1,11 @@
 <div class="not-parallax">
-    <app-side-link *ngIf="!isMobile && previous" [name]="previous.name" [routerLink]="previous.link" left></app-side-link>
-    <app-side-link *ngIf="!isMobile && next" [name]="next.name" [routerLink]="next.link" right></app-side-link>
+    <app-side-link *ngIf="!isMobile && !!previous" [name]="previous.name" [routerLink]="previous.link" left></app-side-link>
+    <app-side-link *ngIf="!isMobile && !!next" [name]="next.name" [routerLink]="next.link" right></app-side-link>
 
     <div class="intro">
         <h1>{{title}}</h1>
         <h5>{{duration}}</h5>
-       
+
         <div class="container">
             <div class="row">
                 <ng-content></ng-content>
@@ -14,8 +14,8 @@
     </div>
 
     <div class="visit-site">
-        <app-side-link *ngIf="isMobile && previous" [name]="previous.name" [routerLink]="previous.link" left></app-side-link>
-        <app-side-link *ngIf="isMobile && next" [name]="next.name" [routerLink]="next.link" right></app-side-link>
+        <app-side-link *ngIf="isMobile && !!previous" [name]="previous.name" [routerLink]="previous.link" left></app-side-link>
+        <app-side-link *ngIf="isMobile && !!next" [name]="next.name" [routerLink]="next.link" right></app-side-link>
     </div>
 </div>
 
