@@ -64,7 +64,7 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0"
   },
-  "browserlist": [
+  "browserslist": [
     "> 1%",
     "last 2 versions"
   ],
