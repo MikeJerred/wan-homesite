@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { InlineSVGModule } from 'ng-inline-svg';
 import { AccordionModule } from 'ngx-bootstrap';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 import { BannerLinkComponent } from './banner-link/banner-link.component';
 import { FooterComponent } from './footer/footer.component';
@@ -22,9 +22,9 @@ import { LayoutService } from './layout.service';
         CommonModule,
         HttpClientModule,
         RouterModule,
-        InlineSVGModule,
         AccordionModule,
-        NgxPageScrollModule
+        NgxPageScrollModule,
+        InlineSVGModule
     ],
     declarations: [
         BannerLinkComponent,
@@ -49,8 +49,7 @@ import { LayoutService } from './layout.service';
 
         CommonModule,
         HttpClientModule,
-        FormsModule,
-        InlineSVGModule
+        FormsModule
     ]
 })
 export class SharedModule {}

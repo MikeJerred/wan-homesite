@@ -6,10 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
     styleUrls: ['./banner-link.component.scss']
 })
 export class BannerLinkComponent implements OnInit {
-    @Input('name') name: string;
-    @Input('routerLink') routerLink: any[] | string;
-    @Input('left') left: boolean;
-    @Input('right') right: boolean;
+    @Input() public name: string;
+    @Input() public routerLink: any[] | string;
+    @Input() public left: boolean;
+    @Input() public right: boolean;
 
     public zoomed = false;
 

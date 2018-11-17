@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { LayoutService } from 'shared/layout.service';
+import { LayoutService } from '~/shared/layout.service';
 
 @Component({
     selector: 'app-blog',

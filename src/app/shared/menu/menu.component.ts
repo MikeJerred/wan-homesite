@@ -1,9 +1,9 @@
-import { AnimationEntryMetadata, Component, HostBinding } from '@angular/core';
-import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
+import { Component, HostBinding } from '@angular/core';
+import { AnimationMetadata, animate, group, query, state, style, transition, trigger } from '@angular/animations';
 
-import { LayoutService } from 'shared/layout.service';
+import { LayoutService } from '~/shared/layout.service';
 
-const menuAnimations: AnimationEntryMetadata = [
+const menuAnimations: AnimationMetadata[] = [
     transition(':leave', [
         style({ position: 'fixed', top: 0, left: 0, right: 0 }),
         query('.bg-left', style({ transform: 'translateX(0)' }), { optional: true }),

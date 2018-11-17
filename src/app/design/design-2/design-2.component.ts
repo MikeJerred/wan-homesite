@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { LayoutService } from 'shared/layout.service';
+import { LayoutService } from '~/shared/layout.service';
 
 @Component({
     providers: [],

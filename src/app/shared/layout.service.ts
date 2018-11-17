@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject, Observable, fromEvent } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 export interface ILayout {
     width: number;
@@ -15,9 +15,8 @@ export class LayoutService {
     constructor() {
         this.layout$ = new BehaviorSubject<ILayout>(this.getWindowSize());
 
-        Observable
-            .fromEvent(window, 'resize')
-            .map(() => this.getWindowSize())
+        fromEvent(window, 'resize')
+            .pipe(map(() => this.getWindowSize()))
             .subscribe(this.layout$);
     }
 
@@ -44,6 +43,6 @@ export class LayoutService {
     }
 
     public isMobile$(): Observable<boolean> {
-        return this.layout$.map(layout => layout.layout === 'xs' || layout.layout === 'sm');
+        return this.layout$.pipe(map(layout => layout.layout === 'xs' || layout.layout === 'sm'));
     }
 }

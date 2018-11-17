@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SharedModule } from 'shared/shared.module';
+import { SharedModule } from '~/shared/shared.module';
 import { Design2Component } from './design-2.component';
 // import { DesignTabDiscoveryComponent } from './tab-discovery/tab-discovery.component';
 // import { DesignTabWireframeComponent } from './tab-wireframe/tab-wireframe.component';

@@ -1,9 +1,9 @@
-import { AnimationEntryMetadata, Component } from '@angular/core';
-import { animate, group, query, style, transition, trigger } from '@angular/animations';
+import { Component } from '@angular/core';
+import { AnimationMetadata, animate, group, query, style, transition, trigger } from '@angular/animations';
 
-import { LayoutService } from 'shared/layout.service';
+import { LayoutService } from '~/shared/layout.service';
 
-export const tabAnimations: AnimationEntryMetadata = [
+export const tabAnimations: AnimationMetadata[] = [
     transition(':leave', [
         style({ position: 'absolute', top: 0, left: 0, right: 0, opacity: 1 }),
         animate('1s ease-in-out', style({ opacity: 0 }))

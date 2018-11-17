@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { LayoutService } from 'shared/layout.service';
+import { LayoutService } from '~/shared/layout.service';
 
 @Component({
     selector: 'app-side-link',
@@ -8,12 +8,12 @@ import { LayoutService } from 'shared/layout.service';
     styleUrls: ['./side-link.component.scss']
 })
 export class SideLinkComponent implements OnInit {
-    @Input('name') name: string;
-    @Input('routerLink') routerLink: any[] | string;
-    @Input('extend') extend: number;
-    @Input('left') left: boolean;
-    @Input('right') right: boolean;
-    @Input('invert') invert: boolean;
+    @Input() public name: string;
+    @Input() public routerLink: any[] | string;
+    @Input() public extend: number;
+    @Input() public left: boolean;
+    @Input() public right: boolean;
+    @Input() public invert: boolean;
 
     public expanded = false;
     public isMobile = false;

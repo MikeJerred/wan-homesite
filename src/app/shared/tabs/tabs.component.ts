@@ -1,12 +1,12 @@
-import { AfterContentInit, AnimationEntryMetadata, Component, ContentChildren, Inject, QueryList } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, Inject, QueryList } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { animate, group, query, style, transition, trigger } from '@angular/animations';
+import { AnimationMetadata, animate, group, query, style, transition, trigger } from '@angular/animations';
 import { PageScrollConfig, PageScrollService, PageScrollInstance } from 'ngx-page-scroll';
 
-import { LayoutService } from 'shared/layout.service';
+import { LayoutService } from '~/shared/layout.service';
 import { TabComponent } from './tab.component';
 
-export const tabAnimation: AnimationEntryMetadata = [
+export const tabAnimation: AnimationMetadata[] = [
     transition('void => *', []),
     transition('* <=> *', [
         group([

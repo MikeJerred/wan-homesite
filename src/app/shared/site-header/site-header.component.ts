@@ -1,5 +1,6 @@
 import { Component, HostBinding, HostListener, Inject } from '@angular/core';
 import { ActivationStart, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'app-site-header',
@@ -18,7 +19,7 @@ export class SiteHeaderComponent {
         public router: Router) {
 
         router.events
-            .filter(evt => evt instanceof ActivationStart)
+            .pipe(filter(evt => evt instanceof ActivationStart))
             .subscribe(evt => {
                 this.menuOpen = false;
             });

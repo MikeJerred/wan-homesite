@@ -1,10 +1,10 @@
-import { AnimationEntryMetadata, Component, OnInit } from '@angular/core';
-import { animate, query, style, trigger, transition } from '@angular/animations';
-import { Subject } from 'rxjs/Subject';
+import { Component, OnInit } from '@angular/core';
+import { AnimationMetadata, animate, query, style, trigger, transition } from '@angular/animations';
+import { Subject } from 'rxjs';
 
-import { LayoutService } from 'shared/layout.service';
+import { LayoutService } from '~/shared/layout.service';
 
-const fadeIn: AnimationEntryMetadata = [
+const fadeIn: AnimationMetadata[] = [
     transition('* <=> *', [
         query(':enter', style({ opacity: 0 })),
         query(':enter', animate('2s ease-in-out', style({ opacity: 1 })))

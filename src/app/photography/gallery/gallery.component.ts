@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-gallery',
@@ -18,7 +18,7 @@ import { Observable } from 'rxjs/Observable';
     ]
 })
 export class GalleryComponent implements OnInit {
-    @Output() close = new EventEmitter<boolean>();
+    @Output() public close = new EventEmitter<boolean>();
 
     @Input() public images: string[];
     @Input() public setIndex: Observable<number>;

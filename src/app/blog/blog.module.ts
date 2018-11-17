@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from 'shared/shared.module';
+import { SharedModule } from '~/shared/shared.module';
 import { BlogRoutingModule } from './blog-routing.module';
 import { BlogPortfolioComponent } from './portfolio/blog-portfolio.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 
-import { Week1SensoryMap } from './single-blog/week1-sensory-map.component';
+import { Week1SensoryMapComponent } from './single-blog/week1-sensory-map.component';
 
 @NgModule({
     imports: [
@@ -16,7 +16,7 @@ import { Week1SensoryMap } from './single-blog/week1-sensory-map.component';
         BlogPortfolioComponent,
         SingleBlogComponent,
 
-        Week1SensoryMap
+        Week1SensoryMapComponent
     ]
 })
 export class BlogModule {}

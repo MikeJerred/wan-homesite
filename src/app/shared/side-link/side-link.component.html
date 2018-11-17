@@ -5,7 +5,7 @@
     (mouseenter)="expanded = true"
     (mouseleave)="expanded = isMobile || false">
 
-    <div class="arrow" inlineSVG="/assets/arrow.svg"></div>
+    <div class="arrow" [inlineSVG]="'/assets/arrow.svg'"></div>
     <span class="text">{{name}}</span>
 
     <div class="sidebar-border" [style.width]="expanded ? (81 + extend) + 'px' : '81px'"></div>
