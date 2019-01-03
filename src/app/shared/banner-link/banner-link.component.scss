@@ -93,4 +93,10 @@
             color: #fff;
         }
     }
+
+    &.image-3 {
+        &:before {
+            background-image: url(/assets/bottom-banner-3.jpg);
+        }
+    }
 }

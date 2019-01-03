@@ -37,6 +37,11 @@ main {
         font-family: $font-family-serif;
         font-size: 36px;
         position: relative;
+        height: 400px;
+        line-height: 400px;
+        background-color: #333;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
 
         &:before {
             content: '';
@@ -45,6 +50,7 @@ main {
             left: 20px;
             right: 20px;
             bottom: 20px;
+            border: 1px solid #fff;
         }
 
         span {
@@ -54,20 +60,7 @@ main {
             width: 85%;
         }
 
-        &.box-1, &.box-4 {
-            height: 600px;
-            line-height: 600px;
-            background-color: #333;
-            color: #fff;
-
-            &:before {
-                border: 1px solid #fff;
-            }
-        }
-
-        &.box-2, &.box-3 {
-            height: 400px;
-            line-height: 400px;
+        &:hover {
             background-color: #fff;
             color: #333;
 
