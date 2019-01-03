@@ -4,17 +4,12 @@
 
     <div class="intro">
         <h1>{{title}}</h1>
-            
-                    <h5>{{duration}}</h5>  
-                    <h5>{{team}}</h5>
-        
 
-                
-                
-          
+        <h5>{{duration}}</h5>
+        <h5>{{team}}</h5>
+
         <div class="container">
             <div class="row">
-                    
                 <ng-content></ng-content>
             </div>
         </div>
@@ -27,5 +22,6 @@
 </div>
 
 <div class="parallax">
+    <app-banner-link name="Blogs" [routerLink]="['/blog']" right image3></app-banner-link>
     <app-footer></app-footer>
 </div>
