@@ -9,6 +9,7 @@ import { Week3Component } from './single-blog/week3-ux-of-conversation.component
 import { Week4Component } from './single-blog/week4-ux-of-conversation.component';
 import { Week5Component } from './single-blog/week5-ux-of-space.component';
 import { Week6Component } from './single-blog/week6-ux-of-space.component';
+import { Week7Component } from './single-blog/week7-ux-of-time.component';
 
 const routes: Routes = [
     { path: '', component: BlogPortfolioComponent, data: { animation: 'design-portfolio' } },
@@ -18,7 +19,8 @@ const routes: Routes = [
     { path: '3', component: Week3Component },
     { path: '4', component: Week4Component },
     { path: '5', component: Week5Component },
-    { path: '6', component: Week6Component }
+    { path: '6', component: Week6Component },
+    { path: '7', component: Week7Component }
 ];
 
 @NgModule({
