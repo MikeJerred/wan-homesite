@@ -10,6 +10,7 @@ export class BannerLinkComponent implements OnInit {
     @Input() public routerLink: any[] | string;
     @Input() public left: boolean;
     @Input() public right: boolean;
+    @Input() public image3: boolean;
 
     public zoomed = false;
 
@@ -19,6 +20,9 @@ export class BannerLinkComponent implements OnInit {
 
         if (<any>this.right === '')
             this.right = true;
+
+        if (<any>this.image3 === '')
+            this.image3 = true;
 
         if (this.left && this.right)
             throw new Error('Banner Link cannot be both \'left\' and \'right\'');

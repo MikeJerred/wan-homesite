@@ -15,11 +15,11 @@ import { Component } from '@angular/core';
             <img style="width:100%" src="/assets/blog/space/space4.jpg">
         </div>
     </div>
-        
+
     <div class="row justify-content-center">
         <div class="col-9">
                 <h4>Experimentation part 2</h4>
-        
+
                 <p>For the 3D model, we recreated a two-story floorplan of the physical space and made improvements from the feedback we had: </p>
                 <ul>
                 <li>We used plasticine instead of coffee spray to reduce chart junks because it is easier to manipulate without leaving any unwanted trace. </li>
@@ -37,11 +37,11 @@ import { Component } from '@angular/core';
             <figcaption>Credit: Yuhan Mao</figcaption>
         </div>
     </div>
-    
+
     <div class="row justify-content-center">
         <div class="col-9">
                 <p>Our digital intervention was encouraged by John’s suggestion regarding the recent Starbucks racist scandal. Despite Starbucks billing itself as ‘a third place between work and home’, it wasn’t as open and welcoming to all as the marketing message suggested. The two young black males who were the victims of this unfortunate event did nothing wrong but sitting in a Starbucks shop waiting for their business partner to turn up. The staff called the police just because of their race.</p>
-                
+
                 <p>This reminded me of our reading from the first week - ‘Justice, A.I., and Escape from the Matrix of Domination’. Costanza-Chock who is a non-binary, transgender, femme presenting person who was brutally embarrassed by the security system and the airport staff due to her gender. Discrimination is a complex issue within our society, it exists in people’s mind consciously or subconsciously. It is the unconscious thoughts that lead us to behaviours without considering the consequences. Thus, the discrimination in a person’s mind extend to the systems and algorithms we create. As crazy as it might sound, situations like this happen all the time all around us. Our further research revealed other issues with discriminations such as breastfeeding in public, and interracial couples.</p>
 
                 <p>The unfortunate experience of Costanza-Chock inspired me to create a similar but more extreme scenario where people are treated ridiculously based on some common reasons for discrimination. When the subconscious thoughts were brought to conscious behaviours or even rules within the society, we hope to incite the viewers’ opinions through this bazaar exaggeration set in our Starbucks model. Please see below the video demonstration. </p>
@@ -58,7 +58,7 @@ import { Component } from '@angular/core';
     <div class="row justify-content-center">
         <div class="col-9">
                 <h4>What we learnt</h4>
-        
+
                 <p>Through this project, we used design as a magnifying glass to examine the problem. Design thinking allowed us to jump out of the Starbucks model we created initially and create something that covers a larger issue.</p>
 
                 <p>Although the stop motion test wasn’t as successful as we wished, we know a longer shooting time is required if we want to keep each screen consistent.</p>
@@ -72,10 +72,10 @@ import { Component } from '@angular/core';
 
                 <h3>Reference list</h3>
                 <p>Costanza-Chock S (2018) <i>Design Justice, A.I., and Escape from the Matrix of Domination</i>. Available at: hhttps://jods.mitpress.mit.edu/pub/costanza-chock (Accessed date: 30th Oct 2018).</p>
-        
+
         </div>
     </div>
-       
+
 
 </div>
 </app-blog>

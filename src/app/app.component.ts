@@ -43,7 +43,8 @@ const before: AnimationMetadata[] = [
         }))
 ];
 
-const homeSplit = before.concat([
+const homeSplit = [
+    ...before,
     query(':enter', style({ 'z-index': 500 })),
     query(':leave', style({ 'z-index': 1000 })),
     query('.bg-left', style({ transform: 'translateX(0)' }), { optional: true }),
@@ -56,8 +57,10 @@ const homeSplit = before.concat([
         query('.bg-top', animate('1s ease-in-out', style({ transform: 'translateY(-65vh)' })), { optional: true }),
         query('.bg-bottom', animate('1s ease-in-out', style({ transform: 'translateY(65vh)' })), { optional: true })
     ])
-]);
-const homeJoin = before.concat([
+];
+
+const homeJoin = [
+    ...before,
     query('.bg-left', style({ transform: 'translateX(-65vw)' }), { optional: true }),
     query('.bg-right', style({ transform: 'translateX(65vw)' }), { optional: true }),
     query('.bg-top', style({ transform: 'translateY(-65vh)' }), { optional: true }),
@@ -68,9 +71,10 @@ const homeJoin = before.concat([
         query('.bg-top', animate('1s ease-in-out', style({ transform: 'translateY(0)' })), { optional: true }),
         query('.bg-bottom', animate('1s ease-in-out', style({ transform: 'translateY(0)' })), { optional: true })
     ])
-]);
+];
 
-const slideLeft = before.concat([
+const slideLeft = [
+    ...before,
     query(':enter', style({ transform: 'translateX(100vw)' })),
     query(':leave', animateChild()),
     group([
@@ -78,9 +82,10 @@ const slideLeft = before.concat([
         query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(-70vw)'})))
     ]),
     query(':enter', animateChild())
-]);
+];
 
-const slideRight = before.concat([
+const slideRight = [
+    ...before,
     query(':enter', style({ transform: 'translateX(-100vw)' })),
     query(':leave', animateChild()),
     group([
@@ -88,7 +93,7 @@ const slideRight = before.concat([
         query(':leave', animate('1s ease-in-out', style({ transform: 'translateX(70vw)' })))
     ]),
     query(':enter', animateChild())
-]);
+];
 
 @Component({
     selector: 'app-root',
