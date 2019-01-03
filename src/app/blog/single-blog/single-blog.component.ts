@@ -15,10 +15,13 @@ export class SingleBlogComponent {
     public duration: string;
 
     @Input()
-    public next: { name: string, link: any[] };
+    public team: string;
 
     @Input()
-    public previous: { name: string, link: any[] };
+    public next: { name: string, link: any[], extend?: number };
+
+    @Input()
+    public previous: { name: string, link: any[], extend?: number };
 
     public isMobile = false;
 
