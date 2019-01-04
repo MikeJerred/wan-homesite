@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     styleUrls: ['./shared.scss'],
     template: `
-<app-blog title="The UX of Time Part 2" duration="Project duration: 5th November - 16th November, 2018" team="Team: Constance Ip, Daniela Navaes, Deepika Grover, Nat Di Pasquale, Wan Li" [previous]="{ name: 'foo', link: ['blog', 1] }" [next]="{ name: 'bar', link: ['blog', 2] }">
+<app-blog title="The UX of Time Part 2" duration="Project duration: 5th November - 16th November, 2018" team="Team: Constance Ip, Daniela Navaes, Deepika Grover, Nat Di Pasquale, Wan Li" [previous]="{ name: 'The UX of Time Part 1', link: ['/blog', 7], extend: 230 }" [next]="{ name: 'bar', link: ['blog', 2] }">
 
 <div class="col-12">
 
@@ -18,9 +18,9 @@ import { Component } from '@angular/core';
         
     <div class="row justify-content-center">
         <div class="col-9">
-                <h4>Research</h4>
+                <h4>Experimentation</h4>
         
-                <p>In the brainstorm session, we used territory map to help us discover some ideas individually before we derived a shared interest within the team. We categorised our ideas in the following five groups psychological, biological, socio-cultural, economics, environmental and voted for the one that interested us the most. The idea stood out was time as a currency. Time is something everybody consumes every day, in a way it’s like a currency, you spend time in order to get something else in return. But the difference is that once it’s gone you can’t get it back and it will never stop passing.</p>
+                <p>In the first research, most participants mentioned they would spend the last moments of their lives being with people they care. When it comes to our daily routines in the second research, we spend a lot of time with and on our smartphones. What can we say about the quality of the time spent on those devices? How much of that time is spend doing something that is considered “valuable”? When we want to measure how much time people spend communicating with others in a smartphone environment, that behaviour comes down to communicating with people via instant messaging or video/voice calling. We were curious of how much time people spend on their phone for such activities, thus our timekeeper was created for this purpose. Please see below an image of our timekeeper.</p>
                 
         </div>
     </div>
@@ -62,4 +62,4 @@ import { Component } from '@angular/core';
 </app-blog>
 `
 })
-export class Week7Component {}
+export class Week8Component {}
