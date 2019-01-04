@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AnimationMetadata, animate, group, query, style, transition, trigger } from '@angular/animations';
+import { AnimationMetadata, animate, style, transition } from '@angular/animations';
 
 import { LayoutService } from '~/shared/layout.service';
 
@@ -15,11 +15,10 @@ export const tabAnimations: AnimationMetadata[] = [
 ];
 
 @Component({
-    providers: [],
-    templateUrl: './design-4.component.html',
-    styleUrls: ['./design-4.component.scss']
+    templateUrl: './design-button-wilde.component.html',
+    styleUrls: ['./design-button-wilde.component.scss']
 })
-export class Design4Component {
+export class DesignButtonWildeComponent {
     public selectedTab = 0;
     public isMobile = false;
 

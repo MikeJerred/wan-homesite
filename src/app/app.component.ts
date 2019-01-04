@@ -75,7 +75,7 @@ const homeJoin = [
 
 const slideLeft = [
     ...before,
-    query(':enter', style({ transform: 'translateX(100vw)' })),
+    query(':enter', style({ transform: 'translateX(100%)' })),
     query(':leave', animateChild()),
     group([
         query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
@@ -86,7 +86,7 @@ const slideLeft = [
 
 const slideRight = [
     ...before,
-    query(':enter', style({ transform: 'translateX(-100vw)' })),
+    query(':enter', style({ transform: 'translateX(-100%)' })),
     query(':leave', animateChild()),
     group([
         query(':enter', animate('1s ease-in-out', style({ transform: 'translateX(0)' }))),
@@ -94,6 +94,39 @@ const slideRight = [
     ]),
     query(':enter', animateChild())
 ];
+
+const designRegex = /^design\/(\d+)$/;
+const blogRegex = /^blog\/(\d+)$/;
+
+function getDirection(fromState: string, toState: string): 'left' | 'right' | null {
+    if (blogRegex.test(fromState) && designRegex.test(toState))
+        return 'left';
+
+    if (designRegex.test(fromState) && blogRegex.test(toState))
+        return 'right';
+
+    if (blogRegex.test(fromState) && blogRegex.test(toState))
+        return blogRegex.exec(fromState)[1] > blogRegex.exec(toState)[1]
+            ? 'right'
+            : 'left';
+
+    if (designRegex.test(fromState) && designRegex.test(toState))
+        return designRegex.exec(fromState)[1] > designRegex.exec(toState)[1]
+            ? 'right'
+            : 'left';
+
+    if (blogRegex.test(fromState) || designRegex.test(fromState))
+        return 'right';
+
+    if (blogRegex.test(toState) || designRegex.test(toState))
+        return 'left';
+
+    return null;
+}
+
+export function isDirectionRight(fromState: string, toState: string): boolean {
+    return getDirection(fromState, toState) === 'right';
+}
 
 @Component({
     selector: 'app-root',
@@ -105,18 +138,13 @@ const slideRight = [
             transition('null <=> *', []),
             transition('home => *', homeSplit),
             transition('* => home', homeJoin),
-            transition('design-5 => design-1', slideRight),
-            transition('design-2 => design-1', slideRight),
-            transition('design-2 => design-5', slideRight),
-            transition('design-3 => design-1', slideRight),
-            transition('design-3 => design-5', slideRight),
-            transition('design-3 => design-2', slideRight),
-            transition('design-4 => design-1', slideRight),
-            transition('design-4 => design-5', slideRight),
-            transition('design-4 => design-2', slideRight),
-            transition('design-4 => design-3', slideRight),
             transition('photography-street => photography-architecture', slideRight),
-            transition('design-portfolio <=> photography-architecture', slideRight),
+            transition('photography-street => design-portfolio', slideRight),
+            transition('photography-architecture => design-portfolio', slideRight),
+            transition('photography-street => blog-portfolio', slideRight),
+            transition('photography-architecture => blog-portfolio', slideRight),
+            transition('design-portfolio => blog-portfolio', slideRight),
+            transition(isDirectionRight, slideRight),
             transition('* => *', slideLeft)
         ])
     ]
@@ -179,8 +207,22 @@ export class AppComponent implements OnInit {
         if (outlet && outlet.isActivated && outlet.activatedRoute
             && outlet.activatedRoute.snapshot && outlet.activatedRoute.snapshot.url) {
 
+            const path = outlet.activatedRoute.pathFromRoot.length > 0
+                ? outlet.activatedRoute.pathFromRoot
+                    .map(route => route.snapshot.url.length > 0
+                        ? route.snapshot.url
+                            .map(segment => segment.path)
+                            .filter(segment => !!segment)
+                            .reduce((acc, next) => `${acc}/${next}`)
+                        : null)
+                    .filter(url => !!url)
+                    .reduce((acc, next) => `${acc}/${next}`)
+                : null;
+
+            const animation = outlet.activatedRouteData['animation'] || path || 'home';
+
             return {
-                value: outlet.activatedRouteData['animation'] || 'null',
+                value: animation || 'null',
                 params: {
                     enterScroll: this.previousTrigger === 'popstate'
                         ? this.scrollYValues[this.nextUrl] || 0
