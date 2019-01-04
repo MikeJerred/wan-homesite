@@ -3,14 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { SharedModule } from '~/shared/shared.module';
-import { Design1Component } from './design-1.component';
+import { DesignButtonWildeComponent } from './design-button-wilde.component';
 import { DesignTabDiscoveryComponent } from './tab-discovery/tab-discovery.component';
 import { DesignTabWireframeComponent } from './tab-wireframe/tab-wireframe.component';
 import { DesignTabTestingComponent } from './tab-testing/tab-testing.component';
 import { DesignTabDesignComponent } from './tab-design/tab-design.component';
 
 const routes: Routes = [
-    { path: '1', component: Design1Component, data: { animation: 'design-1' } }
+    { path: '1', component: DesignButtonWildeComponent }
 ];
 
 @NgModule({
@@ -21,7 +21,7 @@ const routes: Routes = [
         SharedModule
     ],
     declarations: [
-        Design1Component,
+        DesignButtonWildeComponent,
         DesignTabDiscoveryComponent,
         DesignTabWireframeComponent,
         DesignTabTestingComponent,
@@ -29,4 +29,4 @@ const routes: Routes = [
     ],
     exports: [ RouterModule ]
 })
-export class Design1Module {}
+export class DesignButtonWildeModule {}

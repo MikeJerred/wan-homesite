@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AnimationMetadata, animate, group, query, style, transition, trigger } from '@angular/animations';
+import { AnimationMetadata, animate, style, transition } from '@angular/animations';
 
 import { LayoutService } from '~/shared/layout.service';
 
@@ -15,10 +15,11 @@ export const tabAnimations: AnimationMetadata[] = [
 ];
 
 @Component({
-    templateUrl: './design-1.component.html',
-    styleUrls: ['./design-1.component.scss']
+    providers: [],
+    templateUrl: './design-blackhawk.component.html',
+    styleUrls: ['./design-blackhawk.component.scss']
 })
-export class Design1Component {
+export class DesignBlackhawkComponent {
     public selectedTab = 0;
     public isMobile = false;
 

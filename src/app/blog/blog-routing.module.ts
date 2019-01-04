@@ -11,7 +11,7 @@ import { Week5Component } from './single-blog/week5-ux-of-space.component';
 import { Week6Component } from './single-blog/week6-ux-of-space.component';
 
 const routes: Routes = [
-    { path: '', component: BlogPortfolioComponent, data: { animation: 'design-portfolio' } },
+    { path: '', component: BlogPortfolioComponent, data: { animation: 'blog-portfolio' } },
 
     { path: '1', component: Week1SensoryMapComponent },
     { path: '2', component: Week2Component },

@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Design1Module } from './design-1/design-1.module';
-import { Design2Module } from './design-2/design-2.module';
-import { Design3Module } from './design-3/design-3.module';
-import { Design4Module } from './design-4/design-4.module';
-import { Design5Module } from './design-5/design-5.module';
+import { DesignButtonWildeModule } from './design-button-wilde/design-button-wilde.module';
+import { DesignNestedShapesModule } from './design-nested-shapes/design-nested-shapes.module';
+import { DesignMjerredModule } from './design-mjerred/design-mjerred.module';
+import { DesignBlackhawkModule } from './design-blackhawk/design-blackhawk.module';
 import { DesignPortfolioComponent } from './portfolio/design-portfolio.component';
 
 const routes: Routes = [
@@ -14,11 +13,10 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
-        Design1Module,
-        Design2Module,
-        Design3Module,
-        Design4Module,
-        Design5Module,
+        DesignButtonWildeModule,
+        DesignNestedShapesModule,
+        DesignMjerredModule,
+        DesignBlackhawkModule,
         RouterModule.forChild(routes)
     ],
     exports: [ RouterModule ]
