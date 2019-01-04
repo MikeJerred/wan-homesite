@@ -13,7 +13,7 @@ import { Week7Component } from './single-blog/week7-ux-of-time.component';
 import { Week8Component } from './single-blog/week8-ux-of-time.component';
 
 const routes: Routes = [
-    { path: '', component: BlogPortfolioComponent, data: { animation: 'design-portfolio' } },
+    { path: '', component: BlogPortfolioComponent, data: { animation: 'blog-portfolio' } },
 
     { path: '1', component: Week1SensoryMapComponent },
     { path: '2', component: Week2Component },

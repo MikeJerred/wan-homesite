@@ -4,10 +4,10 @@ import { LayoutService } from '~/shared/layout.service';
 
 @Component({
     providers: [],
-    templateUrl: './design-2.component.html',
-    styleUrls: ['./design-2.component.scss']
+    templateUrl: './design-mjerred.component.html',
+    styleUrls: ['./design-mjerred.component.scss']
 })
-export class Design2Component {
+export class DesignMjerredComponent {
     public selectedTab = 0;
     public isMobile = false;
 

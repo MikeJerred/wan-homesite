@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AnimationMetadata, animate, group, query, style, transition, trigger } from '@angular/animations';
+import { AnimationMetadata, animate, style, transition } from '@angular/animations';
 
 import { LayoutService } from '~/shared/layout.service';
 
@@ -16,10 +16,10 @@ export const tabAnimations: AnimationMetadata[] = [
 
 @Component({
     providers: [],
-    templateUrl: './design-3.component.html',
-    styleUrls: ['./design-3.component.scss']
+    templateUrl: './design-evicore.component.html',
+    styleUrls: ['./design-evicore.component.scss']
 })
-export class Design3Component {
+export class DesignEvicoreComponent {
     public selectedTab = 0;
     public isMobile = false;
 

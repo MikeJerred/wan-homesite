@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { SharedModule } from '~/shared/shared.module';
-import { Design4Component } from './design-4.component';
+import { DesignEvicoreComponent } from './design-evicore.component';
 import { DesignTabDiscoveryComponent } from './tab-discovery/tab-discovery.component';
-import { DesignTabDesignComponent } from './tab-design/tab-design.component';
+import { DesignTabWireframeComponent } from './tab-wireframe/tab-wireframe.component';
 
 const routes: Routes = [
-    { path: '4', component: Design4Component, data: { animation: 'design-4' } }
+    { path: 'evicore', component: DesignEvicoreComponent }
 ];
 
 @NgModule({
@@ -18,10 +18,10 @@ const routes: Routes = [
         NgxPageScrollModule
     ],
     declarations: [
-        Design4Component,
+        DesignEvicoreComponent,
         DesignTabDiscoveryComponent,
-        DesignTabDesignComponent
+        DesignTabWireframeComponent
     ],
     exports: [ RouterModule ]
 })
-export class Design4Module {}
+export class DesignEvicoreModule {}

@@ -4,10 +4,10 @@ import { LayoutService } from '~/shared/layout.service';
 
 @Component({
     providers: [],
-    templateUrl: './design-5.component.html',
-    styleUrls: ['./design-5.component.scss']
+    templateUrl: './design-nested-shapes.component.html',
+    styleUrls: ['./design-nested-shapes.component.scss']
 })
-export class Design5Component {
+export class DesignNestedShapesComponent {
     public selectedTab = 0;
     public isMobile = false;
 
