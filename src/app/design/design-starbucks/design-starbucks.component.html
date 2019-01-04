@@ -1,0 +1,49 @@
+<div class="not-parallax">
+    <app-side-link *ngIf="!isMobile" name="Blackhawk Intelligence" [extend]="220" [routerLink]="['/design', 4]" left></app-side-link>
+
+    <div class="intro">
+        <h1>The UX of Urban Space</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Background</h4>
+                    <p>
+                        The brief was to observe and map human behaviours in order to create a 3D physical model of an urban space, and to demonstrate digital intervention in the physical space by augmenting the model with technologies.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>Challenge</h4>
+                    <p>
+                        It was an interesting challenge to analyse a large amount of data and find noticeable patterns to present in the model. Influenced by the Starbucks racist scandal, the 3D model was aimed at creating an exaggerated experience where the viewers are provoked into reflecting upon the affair and discrimination as an issue on a larger scale.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>My Contribution</h4>
+                    <ul>
+                        <li>Interviews</li>
+                        <li>Observation</li>
+                        <li>Prototyping</li>
+                        <li>Sound Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-tabs>
+        <app-tab heading="Research" height="1096px"><app-tab-research></app-tab-research></app-tab>
+        <app-tab heading="Prototype" height="1096px"><app-tab-prototype></app-tab-prototype></app-tab>
+        <app-tab heading="Design" height="568px"><app-tab-design></app-tab-design></app-tab>
+        <app-tab heading="Demonstration" height="839px"><app-tab-demonstration></app-tab-demonstration></app-tab>
+    </app-tabs>
+
+    <div class="visit-site">
+        <app-side-link *ngIf="isMobile" name="Blackhawk Intelligence" [extend]="220" [routerLink]="['/design', 4]" left></app-side-link>
+    </div>
+</div>
+
+<div class="parallax">
+    <app-banner-link name="Photography" [routerLink]="['/photography']" right></app-banner-link>
+    <app-footer></app-footer>
+</div>
