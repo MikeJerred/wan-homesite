@@ -1,6 +1,5 @@
 <div class="not-parallax">
-    <app-side-link *ngIf="!isMobile" name="MJerred" [routerLink]="['/design', 3]" left></app-side-link>
-    <app-side-link *ngIf="!isMobile" name="The UX of Urban Space" [extend]="220" [routerLink]="['/design', 5]" right></app-side-link>
+    <app-side-link *ngIf="!isMobile" name="MJerred" [routerLink]="['/design', 6]" left></app-side-link>
 
     <div class="intro">
         <h1>Blackhawk Intelligence</h1>
@@ -39,12 +38,11 @@
     <div class="visit-site">
         <a href="http://www.blackhawkintelligence.com/" target="_blank" rel="noopener">Visit Site</a>
 
-        <app-side-link *ngIf="isMobile" name="MJerred" [routerLink]="['/design', 3]" [extend]="180" left></app-side-link>
-        <app-side-link *ngIf="isMobile" name="The UX of Urban Space" [routerLink]="['/design', 5]" [extend]="220" right></app-side-link>
+        <app-side-link *ngIf="isMobile" name="MJerred" [routerLink]="['/design', 6]" [extend]="180" left></app-side-link>
     </div>
 </div>
 
 <div class="parallax">
-    <app-banner-link name="Photography" [routerLink]="['/photography']" right></app-banner-link>
+    <app-banner-link name="Design" [routerLink]="['/design']" left></app-banner-link>
     <app-footer></app-footer>
 </div>

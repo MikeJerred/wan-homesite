@@ -9,7 +9,7 @@ import { DesignMjerredComponent } from './design-mjerred.component';
 // import { DesignTabDesignComponent } from './tab-design/tab-design.component';
 
 const routes: Routes = [
-    { path: 'mjerred', component: DesignMjerredComponent }
+    { path: '6', component: DesignMjerredComponent }
 ];
 
 @NgModule({
