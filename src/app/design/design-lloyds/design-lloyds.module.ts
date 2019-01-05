@@ -3,14 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { SharedModule } from '~/shared/shared.module';
-import { DesignStarbucksComponent } from './design-starbucks.component';
+import { DesignLloydsComponent } from './design-lloyds.component';
 import { TabResearchComponent } from './tab-research/tab-research.component';
-import { TabPrototypeComponent } from './tab-prototype/tab-prototype.component';
+import { TabWireframeComponent } from './tab-wireframe/tab-wireframe.component';
 import { TabDesignComponent } from './tab-design/tab-design.component';
-import { TabDemonstrationComponent } from './tab-demonstration/tab-demonstration.component';
 
 const routes: Routes = [
-    { path: '3', component: DesignStarbucksComponent }
+    { path: '2', component: DesignLloydsComponent }
 ];
 
 @NgModule({
@@ -21,12 +20,11 @@ const routes: Routes = [
         SharedModule
     ],
     declarations: [
-        DesignStarbucksComponent,
+        DesignLloydsComponent,
         TabResearchComponent,
-        TabPrototypeComponent,
-        TabDesignComponent,
-        TabDemonstrationComponent
+        TabWireframeComponent,
+        TabDesignComponent
     ],
     exports: [ RouterModule ]
 })
-export class DesignStarbucksModule {}
+export class DesignLloydsModule {}

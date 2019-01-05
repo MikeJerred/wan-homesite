@@ -1,0 +1,115 @@
+@import 'variables';
+@import 'mixins';
+
+.not-parallax {
+    position: relative;
+    z-index: 1;
+    background-color: #f2f2f2;
+    //margin-bottom: 453px;
+
+    @include media-breakpoint-down(sm) {
+        //margin-bottom: 318px;
+    }
+}
+
+.intro {
+    background-color: #f2f2f2;
+    padding-top: 300px;
+    padding-bottom: 50px;
+
+    h1 {
+        text-align: center;
+        font-size: 72px;
+        margin-bottom: 80px;
+        color: #333;
+    }
+
+    h4 {
+        color: #333;
+        border-bottom: 1px solid #333;
+        padding-bottom: 40px;
+    }
+
+    p, ul {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 100px;
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        ul {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+    }
+}
+
+app-tabs {
+    background-color: #f2f2f2;
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.visit-site {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 80px 0;
+
+    a {
+        display: block;
+        margin: 0 auto;
+        width: 190px;
+        color: #333;
+        border: 1px solid #333;
+        background-color: #f2f2f2;
+        border-radius: 60px;
+        padding: 20px 60px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #333;
+            color: #f2f2f2;
+            border-color: transparent;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 60px 0;
+
+        a {
+            margin-bottom: 40px;
+            width: 160px;
+            padding: 10px 40px;
+            font-size: 14px;
+        }
+
+        app-side-link {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.parallax {
+    // z-index: 0;
+    // position: fixed;
+    // width: 100%;
+    // bottom: 0;
+}
