@@ -8,7 +8,7 @@ import { DesignTabDiscoveryComponent } from './tab-discovery/tab-discovery.compo
 import { DesignTabDesignComponent } from './tab-design/tab-design.component';
 
 const routes: Routes = [
-    { path: '4', component: DesignBlackhawkComponent }
+    { path: 'blackhawk', component: DesignBlackhawkComponent }
 ];
 
 @NgModule({

@@ -1,7 +1,13 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2>INSERT VIDEO</h2>
+            <iframe src="https://www.youtube.com/embed/fvb5ttyUuJ4"
+                #iframe
+                width="100%"
+                [attr.height]="0.5625 * iframe.clientWidth + 'px'"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
     <div class="row">
