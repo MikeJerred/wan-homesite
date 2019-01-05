@@ -3,13 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     styleUrls: ['./shared.scss'],
     template: `
-<app-blog
-    title="The UX of Urban Space Part 2"
-    duration="Project duration: 22nd October - 2nd November, 2018"
-    team="Team: George Darbyshire, Ivy Wong, Wan Li, Patrick Bull, Yuhan Mao"
-    [previous]="{ name: 'foo', link: ['/blog', 5] }"
-    [next]="null"
->
+<app-blog title="The UX of Urban Space Part 2" duration="Project duration: 22nd October - 2nd November, 2018" team="Team: George Darbyshire, Ivy Wong, Wan Li, Patrick Bull, Yuhan Mao" [previous]="{ name: 'The UX of Conversation Part 1', link: ['/blog', 5], extend: 300  }" [next]="{ name: 'The UX of Time Part 1', link: ['/blog', 7], extend: 230 }">
 
 <div class="col-12">
 
