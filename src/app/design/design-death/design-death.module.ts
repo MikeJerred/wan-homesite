@@ -10,7 +10,7 @@ import { TabDesignComponent } from './tab-design/tab-design.component';
 import { TabDemonstrationComponent } from './tab-demonstration/tab-demonstration.component';
 
 const routes: Routes = [
-    { path: '6', component: DesignDeathComponent }
+    { path: '4', component: DesignDeathComponent }
 ];
 
 @NgModule({

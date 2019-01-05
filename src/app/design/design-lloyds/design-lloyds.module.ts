@@ -9,7 +9,7 @@ import { TabWireframeComponent } from './tab-wireframe/tab-wireframe.component';
 import { TabDesignComponent } from './tab-design/tab-design.component';
 
 const routes: Routes = [
-    { path: '7', component: DesignLloydsComponent }
+    { path: '2', component: DesignLloydsComponent }
 ];
 
 @NgModule({
