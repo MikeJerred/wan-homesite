@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     styleUrls: ['./shared.scss'],
     template: `
-<app-blog title="The UX of Urban Space Part 1" duration="Project duration: 22nd October - 2nd November, 2018" team="Team: George Darbyshire, Ivy Wong, Wan Li, Patrick Bull, Yuhan Mao"[previous]="{ name: 'The UX of Conversation Part 3', link: ['/blog', 4], extend: 270 }" [next]="{ name: 'The UX of Urban Space Part 2', link: ['/blog', 6], extend: 270 }">
+<app-blog title="The UX of Urban Space Part 1" duration="Project duration: 22nd October - 2nd November, 2018" team="Team: George Darbyshire, Ivy Wong, Wan Li, Patrick Bull, Yuhan Mao"[previous]="{ name: 'The UX of Conversation Part 3', link: ['/blog', 4], extend: 300 }" [next]="{ name: 'The UX of Urban Space Part 2', link: ['/blog', 6], extend: 300 }">
 
 <div class="col-12">
 
@@ -26,8 +26,23 @@ import { Component } from '@angular/core';
                 
                 <p>We put all the data in one spreadsheet and applied the AEIOU analysis framework. Some patterns were closer to our assumptions than others, morning was a peak time for office workers just buying coffee and leaving whereas lunchtime had more families and friends. From the sitting plan we drew, most families preferred to sit downstairs on the big sofa area. Other noticeable patterns including several visitors who came to use the toilet without any purchase throughout the day, and visitors who just came in to use the space to eat their own food during lunchtime. The total head count for the day was around 500 people, we scaled the numbers down proportionally in our model.</p>
 
-                <p> Sketches of floorplan, upstairs and downstairs. </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <img style="width:100%" src="/assets/blog/space/floorplan2.jpg">
+            <figcaption>Floorplan and seating arrangements of the upstairs.</figcaption>
+        </div>
+        <div class="col-sm-6">
+            <img style="width:100%" src="/assets/blog/space/floorplan1.jpg">
+            <figcaption>Floorplan and seating arrangements of the downstairs.</figcaption>
+        </div>
+    </div>
+               
         
+    <div class="row justify-content-center">
+        <div class="col-9">
                 <h4>Experimentation part 1</h4>
         
                 <p>In the first model, we focused on showing the sitting arrangements of different groups, the duration and people’s behaviour when they were in the shop. Please see below some images of our making process.</p>

@@ -106,12 +106,12 @@ function getDirection(fromState: string, toState: string): 'left' | 'right' | nu
         return 'right';
 
     if (blogRegex.test(fromState) && blogRegex.test(toState))
-        return blogRegex.exec(fromState)[1] > blogRegex.exec(toState)[1]
+        return +blogRegex.exec(fromState)[1] > +blogRegex.exec(toState)[1]
             ? 'right'
             : 'left';
 
     if (designRegex.test(fromState) && designRegex.test(toState))
-        return designRegex.exec(fromState)[1] > designRegex.exec(toState)[1]
+        return +designRegex.exec(fromState)[1] > +designRegex.exec(toState)[1]
             ? 'right'
             : 'left';
 

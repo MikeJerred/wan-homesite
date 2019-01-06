@@ -13,6 +13,8 @@ import { Week5Component } from './single-blog/week5-ux-of-space.component';
 import { Week6Component } from './single-blog/week6-ux-of-space.component';
 import { Week7Component } from './single-blog/week7-ux-of-time.component';
 import { Week8Component } from './single-blog/week8-ux-of-time.component';
+import { Week9Component } from './single-blog/week9-ux-of-death.component';
+import { Week10Component } from './single-blog/week10-ux-of-death.component';
 @NgModule({
     imports: [
         SharedModule,
@@ -30,6 +32,8 @@ import { Week8Component } from './single-blog/week8-ux-of-time.component';
         Week6Component,
         Week7Component,
         Week8Component,
+        Week9Component,
+        Week10Component,
     ]
 })
 export class BlogModule {}
