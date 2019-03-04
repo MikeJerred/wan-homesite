@@ -71,34 +71,9 @@ main {
     }
 
     @include media-breakpoint-down(sm) {
-
         .column {
             padding-left: $grid-gutter-width/2;
             padding-right: $grid-gutter-width/2;
-        }
-
-        .box {
-            &.box-1, &.box-3 {
-                height: 400px;
-                line-height: 400px;
-                background-color: #333;
-                color: #fff;
-
-                &:before {
-                    border: 1px solid #fff;
-                }
-            }
-
-            &.box-2, &.box-4 {
-                height: 400px;
-                line-height: 400px;
-                background-color: #fff;
-                color: #333;
-
-                &:before {
-                    border: 1px solid #333;
-                }
-            }
         }
     }
 }
