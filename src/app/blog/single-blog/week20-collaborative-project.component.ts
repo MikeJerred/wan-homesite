@@ -65,7 +65,10 @@ import { Component } from '@angular/core';
                 <p>We conferred with Tessanna after we finished the model. She gave us great suggestions which we were able to evaluate against our prototype. For instance, she reminded us the effect of seasons on plants. We thought our installation could be a great opportunity to showcase plants that are not currently in season. She also mentioned that plants can be quite different in the day and during the night. We incorporated this in our video later by showing light and shade changes inside of the installation with the effect of sun light, and how it looked from the outside during the night with lights coming out from inside of the installation.</p>
 
                 <p>She also suggested a few amazing books to us:
-                The Hidden Geometry of Flowers: Living Rhythms, Form and Number by Keith Critchlow and The Scent Trail: An Olfactory Odyssey by Celia Lyttelton</p>                
+                The Hidden Geometry of Flowers: Living Rhythms, Form and Number by Keith Critchlow and The Scent Trail: An Olfactory Odyssey by Celia Lyttelton</p>          
+                
+                <img style="width:100%" src="/assets/blog/collaborative4/transcript.png">
+                <figcaption>The transcription of our interview with Tessanna.</figcaption>
 
                 <h4>Collaborative and / or Independent Professional Working</h4>
 
