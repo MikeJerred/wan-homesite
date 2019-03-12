@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     styleUrls: ['./shared.scss'],
     template: `
-<app-blog title="Week 18 - Collaborative project" duration="Project duration: 8th Feburary - 13th March, 2019" team="Team: Reina Yuan, Wan Li" [previous]="{ name: 'The UX of Death Part 1', link: ['/blog', 9], extend: 250 }" >
+<app-blog title="Week 18 - Collaborative project" duration="Project duration: 8th Feburary - 13th March, 2019" team="Team: Reina Yuan, Wan Li" [previous]="{ name: 'Week 17 - Collaborative project', link: ['/blog', 17], extend: 300 }" [next]="{ name: 'Week 19 - Collaborative project', link: ['/blog', 19], extend: 300 }" >
 
 <div class="col-12">
 
@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
                 <figcaption>Our notes on initial ideas and questions, as well as research methods.</figcaption>
 
                 <img style="width:100%" src="/assets/blog/collaborative2/notes2.jpg">
-                <figcaption>Some sketches on our initial ideas, eg. the one on middle left shows a concept piggybacked on a game called Plants vs Zombies. Players must use the correct plant to kill the virus or disease it's effective at. In this way, people can easily learn the medicinal use of each plant.</figcaption>
+                <figcaption>Some sketches on our initial ideas, eg. the one on bottom left shows a concept where the movement of plants could be translated into sound and dance moves.</figcaption>
 
                 <p>We planned to use the following research methods to collect information during our visit:</p>
                 <ul>
@@ -131,7 +131,8 @@ import { Component } from '@angular/core';
 
             </carousel>
                 
-
+            <h4>Collaborative and / or Independent Professional Working</h4>
+            <p>I came up with several initial ideas which formed the basis of our later discussion. We both did the interviews and sensory map together.</p>
 
         </div>
     </div>

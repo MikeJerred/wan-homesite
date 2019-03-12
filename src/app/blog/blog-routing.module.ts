@@ -19,7 +19,8 @@ import { Week10Component } from './single-blog/week10-ux-of-death.component';
 import { Week17Component } from './single-blog/week17-collaborative-project.component';
 import { Week18Component } from './single-blog/week18-collaborative-project.component';
 import { Week19Component } from './single-blog/week19-collaborative-project.component';
-
+import { Week20Component } from './single-blog/week20-collaborative-project.component';
+import { Week21Component } from './single-blog/week21-collaborative-project.component';
 const routes: Routes = [
     { path: '', component: UnitMenuComponent, data: { animation: 'blog-portfolio' } },
     { path: 'unit-1', component: Unit1MenuComponent },
@@ -39,6 +40,8 @@ const routes: Routes = [
     { path: '17', component: Week17Component },
     { path: '18', component: Week18Component },
     { path: '19', component: Week19Component },
+    { path: '20', component: Week20Component },
+    { path: '21', component: Week21Component },
 ];
 
 @NgModule({
