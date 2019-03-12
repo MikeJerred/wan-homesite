@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     styleUrls: ['./shared.scss'],
     template: `
-<app-blog title="Week 19 - Collaborative project" duration="Project duration: 8th Feburary - 13th March, 2019" team="Team: Reina Yuan, Wan Li" [previous]="{ name: 'The UX of Death Part 1', link: ['/blog', 9], extend: 250 }" >
+<app-blog title="Week 19 - Collaborative project" duration="Project duration: 8th Feburary - 13th March, 2019" team="Team: Reina Yuan, Wan Li" [previous]="{ name: 'Week 18 - Collaborative project', link: ['/blog', 18], extend: 300 }" [next]="{ name: 'Week 20 - Collaborative project', link: ['/blog', 20], extend: 300 }" >
 
 <div class="col-12">
 
@@ -15,6 +15,11 @@ import { Component } from '@angular/core';
                 <p>After the visit, we came up with a few new ideas.</p>
 
                 <carousel [noPause]="false" [interval]="0">
+
+                    <slide>
+                        <img src="/assets/blog/collaborative3/idea3.jpg" alt="first slide" style="display: block; width: 100%;">
+                        <div class="carousel-caption">Looking at the world through the lens of a plant where the viewer can see how the plant grew from seed to fruit, and how it's been used by human. Ideally, the growth fhe plant life cycle can be in sync with human life cycle but depending on which plant we choose.</div>
+                    </slide>
                     <slide>
                         <img src="/assets/blog/collaborative3/idea1.jpg" alt="first slide" style="display: block; width: 100%;">
                         <div class="carousel-caption">A game machine always displays a random plant with its medicinal use and other information as the user pushes the trigger.</div>
@@ -25,13 +30,10 @@ import { Component } from '@angular/core';
                         <div class="carousel-caption">A black box where the user can't see the plants but can touch and smell.</div>
                     </slide>
 
-                    <slide>
-                        <img src="/assets/blog/collaborative3/idea3.jpg" alt="first slide" style="display: block; width: 100%;">
-                        <div class="carousel-caption">Looking at the world through the lens of a plant where the viewer can see how the plant grew from seed to fruit, and how it's been used by human. Ideally, the growth fhe plant life cycle can be in sync with human life cycle but depending on which plant we choose.</div>
-                    </slide>
+              
                 </carousel>
 
-                <p class="carousel-margin-2">We presented these ideas in our round table at the class, below are some of the feedbacks we had on each idea:</p>
+                <p class="carousel-margin-3">We presented these ideas in our round table at the class, below are some of the feedbacks we had on each idea:</p>
                 <ul>
                 <li>The tiger machine idea might be intriguing but not enough for people to find out the real garden.</li>
                 <li>Do we have any target user?</li>
@@ -43,7 +45,7 @@ import { Component } from '@angular/core';
 
                 <h4>Collaboration with the expert</h4>
 
-                <p>We planned to speak to our collaborator <a href="http://www.tessanna-insite.co.uk/cv.html#">Tessanna Hoare</a> (a professional gardener and artist) and ask her a list of questions we prepared before we develop more ideas. Unfortunately, she was busy preparing for an exhibition and had to arrange a time with her for the following week. From this, we learnt that we should have made the plan with her more in advance as collaborators who are outside of the university environment often have busy schedules. The earlier we planned and set a time for the discussion the more likely we would be able to achieve it.</p>
+                <p>We planned to speak to our collaborator <a href="http://www.tessanna-insite.co.uk/cv.html#">Tessanna Hoare</a> (a professional gardener and artist) and ask her a list of questions we prepared before we develop more ideas. But she wasn't available during that week. Our plan might have been more productive if we had had input from our expert at an earlier stage. In retrospect, collaborators often have busy schedules and we realize that well scheduled, forward planning is essential.</p>
 
                 <h4>Prototype development & reflection</h4>
 
@@ -71,7 +73,7 @@ import { Component } from '@angular/core';
 
                 <h5>Idea 2</h5>
 
-                <p>A physical installation allows the audience to step inside of a particular plant, the installation is divided into 5 stages representing life cycle of the plant. The viewer will experience each stage of the plant life cycle in terms of its texture through touch, living condition through lighting and its medicinal use through sound. Also, the sound tells a narrative of how human life cycle is intertwined with plant life cycle.</p>
+                <p>A physical installation allows the audience to step inside of a particular plant, the installation is divided into 5 stages representing life cycle of the plant. The viewer will experience each stage of the plant life cycle in terms of its texture through touch, living condition through lighting and its medicinal use through sound. We wanted to use the sound to tell a narrative of how human life cycle is intertwined with plant life cycle. At the seed stage, viewers will hear a story where a child just planted the seed, the character grows as the plant grows and will talk about how he used the plant at each stage of his life from beginning to the end.</p>
 
                 <img src="/assets/blog/collaborative3/idea5.jpg" alt="first slide" style="display: block; width: 100%;">
 
@@ -85,7 +87,7 @@ import { Component } from '@angular/core';
 
                 <img src="/assets/blog/collaborative3/plan.jpg" alt="first slide" style="display: block; width: 100%;">
 
-                <p>We used the 5 stages of a plant life cycle as the basis of our installation. After some literature review, we chose hawthorn as the representing plant. However, this installation could be used as a framework to represent any plant that the garden desires. The installation is supposed to be a taurus shaped tunnel that allows people to go inside and experience the texture and colour of the plant at each stage of its life cycle.</p>
+                <p>We used the 5 stages of a plant life cycle as the basis of our installation. After some literature review, we chose hawthorn as the representing plant because it has great medicinal value at almost every stage of its life cycle. However, this installation could be used as a framework to represent any plant that the garden desires. The installation is supposed to be a taurus shaped tunnel that allows people to go inside and experience the texture and colour of the plant at each stage of its life cycle.</p>
 
                 <img src="/assets/blog/collaborative3/location.jpg" alt="first slide" style="display: block; width: 100%;">
 
@@ -93,8 +95,11 @@ import { Component } from '@angular/core';
 
                 <h5>Reflection</h5>
 
-                <p>The final design is intended to be a real life size installation that allows people to walk inside. It is crucial for us to make a clear demonstration in our presentation to the client. We might need to create a short video or images to show the final result to supplement the prototype.</p>
+                <p>After discussion with Alaistair and between ourselves, we decided to develop this idea further as it had more potential. The final design is intended to be a real life size installation that allows people to walk inside. It is crucial for us to make a clear demonstration in our presentation to the client. We might need to create a short video or images to show the final result to supplement the prototype.</p>
 
+                <h4>Collaborative and / or Independent Professional Working</h4>
+
+                <p>I came up with more ideas which Reina and I developed them further togther.</p>
 
 
 

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     styleUrls: ['./shared.scss'],
     template: `
-<app-blog title="Week 17 - Collaborative project" duration="Project duration: 8th Feburary - 13th March, 2019" team="Team: Reina Yuan, Wan Li" [previous]="{ name: 'The UX of Death Part 1', link: ['/blog', 9], extend: 250 }" >
+<app-blog title="Week 17 - Collaborative project" duration="Project duration: 8th Feburary - 13th March, 2019" team="Team: Reina Yuan, Wan Li" [next]="{ name: 'Week 18 - Collaborative project', link: ['/blog', 18], extend: 300 }" >
 
 <div class="col-12">
 
