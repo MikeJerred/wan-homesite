@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
     <div class="row justify-content-center">
         <div class="col-9">
         
-                <p>This week we started the new collaborative project, in the class we discussed the pros and cons of collaboration. We organised the points in positive and negative, but many aspects sit in between for instance, a multicultural background of a group can be an advantage or a disadvantage at the same time. I find the most beneficial aspects of collaborative work is that through effective communication and inspiration from each other better ideas can be generated than working alone, and efficiency can be improved if everyone’s strength is utilised.</p>
+                <p>This week we started the new collaborative project, in the class we discussed the pros and cons of collaboration. We organised the points in positive and negative, but many aspects sit in between for instance, a multicultural background of a group can be an advantage or a disadvantage at the same time. I find the most beneficial aspects of collaborative work is that through effective communication and inspiration better ideas can be generated than working alone, and efficiency can be improved if everyone’s strength is utilised.</p>
 
                 <img style="width:100%" src="/assets/blog/collaborative1/collaboration.jpg">
                 <figcaption>A summary of our group discussion on collaboration.</figcaption>
