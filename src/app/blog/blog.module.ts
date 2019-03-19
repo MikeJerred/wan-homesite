@@ -19,6 +19,7 @@ import { Week7Component } from './single-blog/week7-ux-of-time.component';
 import { Week8Component } from './single-blog/week8-ux-of-time.component';
 import { Week9Component } from './single-blog/week9-ux-of-death.component';
 import { Week10Component } from './single-blog/week10-ux-of-death.component';
+import { Week14Component } from './single-blog/week14-macro-ux.component';
 import { Week17Component } from './single-blog/week17-collaborative-project.component';
 import { Week18Component } from './single-blog/week18-collaborative-project.component';
 import { Week19Component } from './single-blog/week19-collaborative-project.component';
@@ -47,6 +48,7 @@ import { Week21Component } from './single-blog/week21-collaborative-project.comp
         Week8Component,
         Week9Component,
         Week10Component,
+        Week14Component,
         Week17Component,
         Week18Component,
         Week19Component,

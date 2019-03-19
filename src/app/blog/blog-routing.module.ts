@@ -16,6 +16,7 @@ import { Week7Component } from './single-blog/week7-ux-of-time.component';
 import { Week8Component } from './single-blog/week8-ux-of-time.component';
 import { Week9Component } from './single-blog/week9-ux-of-death.component';
 import { Week10Component } from './single-blog/week10-ux-of-death.component';
+import { Week14Component } from './single-blog/week14-macro-ux.component';
 import { Week17Component } from './single-blog/week17-collaborative-project.component';
 import { Week18Component } from './single-blog/week18-collaborative-project.component';
 import { Week19Component } from './single-blog/week19-collaborative-project.component';
@@ -37,6 +38,7 @@ const routes: Routes = [
     { path: '8', component: Week8Component },
     { path: '9', component: Week9Component },
     { path: '10', component: Week10Component },
+    { path: '14', component: Week14Component },
     { path: '17', component: Week17Component },
     { path: '18', component: Week18Component },
     { path: '19', component: Week19Component },
