@@ -20,11 +20,24 @@ import { Week8Component } from './single-blog/week8-ux-of-time.component';
 import { Week9Component } from './single-blog/week9-ux-of-death.component';
 import { Week10Component } from './single-blog/week10-ux-of-death.component';
 import { Week14Component } from './single-blog/week14-macro-ux.component';
+import { Week15Component } from './single-blog/week15-macro-ux.component';
+import { Week16Component } from './single-blog/week16-macro-ux.component';
 import { Week17Component } from './single-blog/week17-collaborative-project.component';
+import { Week17Component2 } from './single-blog/week17-macro-ux.component';
 import { Week18Component } from './single-blog/week18-collaborative-project.component';
+import { Week18Component2 } from './single-blog/week18-macro-ux.component';
 import { Week19Component } from './single-blog/week19-collaborative-project.component';
+import { Week19Component2 } from './single-blog/week19-macro-ux.component';
 import { Week20Component } from './single-blog/week20-collaborative-project.component';
+import { Week20Component2 } from './single-blog/week20-macro-ux.component';
 import { Week21Component } from './single-blog/week21-collaborative-project.component';
+import { Week21Component2 } from './single-blog/week21-macro-ux.component';
+import { Week22Component } from './single-blog/week22-macro-ux.component';
+import { Week23Component } from './single-blog/week23-macro-ux.component';
+
+
+
+
 @NgModule({
     imports: [
         SharedModule,
@@ -49,11 +62,20 @@ import { Week21Component } from './single-blog/week21-collaborative-project.comp
         Week9Component,
         Week10Component,
         Week14Component,
+        Week15Component,
+        Week16Component,
         Week17Component,
+        Week17Component2,
         Week18Component,
+        Week18Component2,
         Week19Component,
+        Week19Component2,
         Week20Component,
+        Week20Component2,
         Week21Component,
+        Week21Component2,
+        Week22Component,
+        Week23Component,
     ]
 })
 export class BlogModule {}

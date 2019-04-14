@@ -96,7 +96,7 @@ const slideRight = [
 ];
 
 const designRegex = /^design\/(\d+)$/;
-const blogRegex = /^blog\/(\d+)$/;
+const blogRegex = /^blog\/(\d+)(\.\d+)?$/;
 
 function getDirection(fromState: string, toState: string): 'left' | 'right' | null {
     if (blogRegex.test(fromState) && designRegex.test(toState))
@@ -105,10 +105,15 @@ function getDirection(fromState: string, toState: string): 'left' | 'right' | nu
     if (designRegex.test(fromState) && blogRegex.test(toState))
         return 'right';
 
-    if (blogRegex.test(fromState) && blogRegex.test(toState))
-        return +blogRegex.exec(fromState)[1] > +blogRegex.exec(toState)[1]
-            ? 'right'
-            : 'left';
+    if (blogRegex.test(fromState) && blogRegex.test(toState)) {
+        const from = blogRegex.exec(fromState);
+        const to = blogRegex.exec(toState);
+        return +from[1] > +to[1] ? 'right'
+            : +from[1] < +to[1] ? 'left'
+            : +from[2] > +to[2] ? 'right'
+            : +from[2] < +to[2] ? 'left'
+            : null;
+    }
 
     if (designRegex.test(fromState) && designRegex.test(toState))
         return +designRegex.exec(fromState)[1] > +designRegex.exec(toState)[1]
