@@ -31,7 +31,6 @@ import { Component } from '@angular/core';
 
             <h4>Experience prototype</h4>
 
-            <p>In the meantime, we had another thought in relation to menstruation. In general, a proportion of the male in our society are still ashamed or disgusted by talking about female menstrual cycles or anything related. This term is about macro UX, so we wanted to establish the link between individual sleep and the wider environment, the society view on female menstrual cycle related topics. Therefore, we wanted to create an experience to demonstrate how the macro environment (lunar cycle) modulates female sleep during menstruation, how bad sleep affects their lives during menstruation, and potentially change the still prevalent stigma about premenstrual and menstrual women and reduce the sexism and negative attitudes towards women.</p>
 
         </div>
     </div>
@@ -39,14 +38,21 @@ import { Component } from '@angular/core';
     <div class="row">
         <div class="col-sm-6">
             <img style="width:100%" src="/assets/blog/macro3/sketch1.jpg">
+            <figcaption>Our initial sketches attempted to create a feedback loop (Dubberly and Pangaro, 2015).</figcaption>
         </div>
         <div class="col-sm-6">
             <img style="width:100%" src="/assets/blog/macro3/sketch2.jpeg">
+            <figcaption>The sketch indicates how the glass installation could look like.</figcaption>
         </div>
     </div>
 
     <div class="row justify-content-center">
         <div class="col-9">
+
+            <p>In the meantime, we had another thought in relation to menstruation. In general, a proportion of the male in our society are still ashamed or disgusted by talking about female menstrual cycles or anything related. This term is about macro UX, so we wanted to establish the link between individual sleep and the wider environment, the society view on female menstrual cycle related topics. Therefore, we wanted to create an experience to demonstrate how the macro environment (lunar cycle) modulates female sleep during menstruation, how bad sleep affects their lives during menstruation, and potentially change the still prevalent stigma about premenstrual and menstrual women and reduce the sexism and negative attitudes towards women.</p>
+
+            <img style="width:100%" src="/assets/blog/macro3/model5.jpg">
+            <figcaption>A quick expirement on how our design could be materialsed as a model.</figcaption>
 
             <p>After a few iterations we decided to create a glass installation that sends a signal to the public when menstruating female are having a hard time to fall asleep. In the top right sketch, it shows the installation has a sculpture of a sleeping women on top of the glass container. The container is hollow inside so viewers can walk inside to see the sculpture from underneath. The container will release water on the outside when the connected menstruating female can’t fall asleep. The viewers can interact with the connected female by touching the walls, the area changes colour when a touch is sensed, and it sends out a support signal to the menstruating female through an object. We wanted to create something that is almost like a feedback loop between the viewers and the menstruating female, so that others in the world understand their pain and frustration from bad menstrual sleep, and they can feel support from the viewers.</p>
 
@@ -55,7 +61,7 @@ import { Component } from '@angular/core';
 
     <div class="row">
         <div class="col-sm-6">
-            <img style="width:100%" src="/assets/blog/macro3/model3.JPG">
+            <img style="width:100%" src="/assets/blog/macro3/model3.jpg">
         </div>
         <div class="col-sm-6">
             <img style="width:100%" src="/assets/blog/macro3/model4.jpg">

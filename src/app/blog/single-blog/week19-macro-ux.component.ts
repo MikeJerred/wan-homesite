@@ -73,6 +73,10 @@ import { Component } from '@angular/core';
 
             <h4>Practical review</h4>
 
+            <img style="width:100%" src="/assets/blog/macro4/netflix.jpg">
+
+            <p>I accidentally came across “Period. End of sentence” on Netflix, a documentary about Indian women fight the stigma surrounding menstruation and started by manufacturing sanitary pads. We watched it together to gather insights and inspiration. It was appalling to see what is deemed as bare necessity in this society, is in fact what people need to fight for in a different societal and cultural environment. The documentary reinforced our idea opening a discussion to change this still prevalent stigma but ensure it’s more related to menstrual sleep.</p>
+
             <p>We also did two practical reviews that are more relevant to our current direction, the first is the newly released  period emoji created as a new method of de-stigmatization and to allow young people to feel less embarrassed with having a dialogue on menstruation, which we feel could be an interesting area to pursue as many of our participants talked about how their periods were the worst in their teen years and felt they couldn’t talk to anyone about it. The other is a zine created by Soofiya a London based graphic designer who created the Bloodyhell zine to try to shift the discourse encompassing the taboo of menstruation using stories, illustrations & more from a wide variety of women. As an addition we interviewed Soofiya and got her opinions and experiences in designing in this area and how she felt we could take our experience further whether it’s with a device or an app service.</p>
 
         </div>
