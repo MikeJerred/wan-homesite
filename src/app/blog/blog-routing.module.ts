@@ -17,11 +17,24 @@ import { Week8Component } from './single-blog/week8-ux-of-time.component';
 import { Week9Component } from './single-blog/week9-ux-of-death.component';
 import { Week10Component } from './single-blog/week10-ux-of-death.component';
 import { Week14Component } from './single-blog/week14-macro-ux.component';
+import { Week15Component } from './single-blog/week15-macro-ux.component';
+import { Week16Component } from './single-blog/week16-macro-ux.component';
 import { Week17Component } from './single-blog/week17-collaborative-project.component';
+import { Week17Component2 } from './single-blog/week17-macro-ux.component';
 import { Week18Component } from './single-blog/week18-collaborative-project.component';
+import { Week18Component2 } from './single-blog/week18-macro-ux.component';
 import { Week19Component } from './single-blog/week19-collaborative-project.component';
+import { Week19Component2 } from './single-blog/week19-macro-ux.component';
 import { Week20Component } from './single-blog/week20-collaborative-project.component';
+import { Week20Component2 } from './single-blog/week20-macro-ux.component';
 import { Week21Component } from './single-blog/week21-collaborative-project.component';
+import { Week21Component2 } from './single-blog/week21-macro-ux.component';
+import { Week22Component } from './single-blog/week22-macro-ux.component';
+import { Week23Component } from './single-blog/week23-macro-ux.component';
+
+
+
+
 const routes: Routes = [
     { path: '', component: UnitMenuComponent, data: { animation: 'blog-portfolio' } },
     { path: 'unit-1', component: Unit1MenuComponent },
@@ -39,11 +52,21 @@ const routes: Routes = [
     { path: '9', component: Week9Component },
     { path: '10', component: Week10Component },
     { path: '14', component: Week14Component },
+    { path: '15', component: Week15Component },
+    { path: '16', component: Week16Component },
     { path: '17', component: Week17Component },
+    { path: '17.2', component: Week17Component2 },
     { path: '18', component: Week18Component },
+    { path: '18.2', component: Week18Component2 },
     { path: '19', component: Week19Component },
+    { path: '19.2', component: Week19Component2 },
     { path: '20', component: Week20Component },
+    { path: '20.2', component: Week20Component2 },
     { path: '21', component: Week21Component },
+    { path: '21.2', component: Week21Component2 },
+    { path: '22', component: Week22Component },
+    { path: '23', component: Week23Component },
+
 ];
 
 @NgModule({

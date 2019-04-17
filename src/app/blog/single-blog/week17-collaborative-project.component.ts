@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
                 <img style="width:100%" src="/assets/blog/collaborative1/collaboration.jpg">
                 <figcaption>A summary of our group discussion on collaboration.</figcaption>
 
-                <p>We were asked to consider what do we bring to our team as an individual. I am an individual with interdisciplinary and open mindset, I come up with conceptual ideas through being empathetic with users and understanding the context where it’s situated in. I try to be pragmatic and adoptive when working with different people so that everyone’s strength can be utilised. However, it’s beneficial to work on different aspects of a project in order to acquire new skills. I hope my research could be more thorough and rigorous in my future work.</p>
+                <p>We were asked to consider what do we bring to our team as an individual. I am an individual with interdisciplinary and open mindset, I come up with conceptual ideas through being empathetic with users and understanding the situational context. I try to be pragmatic and adaptive when working with different people so that everyone’s strength can be utilised. However, it’s beneficial to work on different aspects of a project in order to acquire new skills. I hope my research could be more thorough and rigorous in my future work.</p>
 
                 <img style="width:100%" src="/assets/blog/collaborative1/mynotes.jpg">
                 <figcaption>What do I bring to the team?</figcaption>
