@@ -7,6 +7,7 @@ import { UnitMenuComponent } from './unit-menu/unit-menu.component';
 import { Unit1MenuComponent } from './unit-1/unit1-menu.component';
 import { Unit2MenuComponent } from './unit-2/unit2-menu.component';
 import { Unit3MenuComponent } from './unit-3/unit3-menu.component';
+import { Unit4MenuComponent } from './unit-4/unit4-menu.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 
 import { Week1SensoryMapComponent } from './single-blog/week1-sensory-map.component';
@@ -34,7 +35,14 @@ import { Week21Component } from './single-blog/week21-collaborative-project.comp
 import { Week21Component2 } from './single-blog/week21-macro-ux.component';
 import { Week22Component } from './single-blog/week22-macro-ux.component';
 import { Week23Component } from './single-blog/week23-macro-ux.component';
-
+import { Week24Component } from './single-blog/week24-micro-ux.component';
+import { Week25Component } from './single-blog/week25-micro-ux.component';
+import { Week26Component } from './single-blog/week26-micro-ux.component';
+import { Week27Component } from './single-blog/week27-micro-ux.component';
+import { Week28Component } from './single-blog/week28-micro-ux.component';
+import { Week29Component } from './single-blog/week29-micro-ux.component';
+import { Week30Component } from './single-blog/week30-micro-ux.component';
+import { Week31Component } from './single-blog/week31-micro-ux.component';
 
 
 
@@ -50,6 +58,7 @@ import { Week23Component } from './single-blog/week23-macro-ux.component';
         Unit1MenuComponent,
         Unit2MenuComponent,
         Unit3MenuComponent,
+        Unit4MenuComponent,
 
         Week1SensoryMapComponent,
         Week2Component,
@@ -76,6 +85,14 @@ import { Week23Component } from './single-blog/week23-macro-ux.component';
         Week21Component2,
         Week22Component,
         Week23Component,
+        Week24Component,
+        Week25Component,
+        Week26Component,
+        Week27Component,
+        Week28Component,
+        Week29Component,
+        Week30Component,
+        Week31Component,
     ]
 })
 export class BlogModule {}

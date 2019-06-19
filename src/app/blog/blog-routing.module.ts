@@ -5,6 +5,7 @@ import { UnitMenuComponent } from './unit-menu/unit-menu.component';
 import { Unit1MenuComponent } from './unit-1/unit1-menu.component';
 import { Unit2MenuComponent } from './unit-2/unit2-menu.component';
 import { Unit3MenuComponent } from './unit-3/unit3-menu.component';
+import { Unit4MenuComponent } from './unit-4/unit4-menu.component';
 
 import { Week1SensoryMapComponent } from './single-blog/week1-sensory-map.component';
 import { Week2Component } from './single-blog/week2-ux-of-conversation.component';
@@ -31,6 +32,14 @@ import { Week21Component } from './single-blog/week21-collaborative-project.comp
 import { Week21Component2 } from './single-blog/week21-macro-ux.component';
 import { Week22Component } from './single-blog/week22-macro-ux.component';
 import { Week23Component } from './single-blog/week23-macro-ux.component';
+import { Week24Component } from './single-blog/week24-micro-ux.component';
+import { Week25Component } from './single-blog/week25-micro-ux.component';
+import { Week26Component } from './single-blog/week26-micro-ux.component';
+import { Week27Component } from './single-blog/week27-micro-ux.component';
+import { Week28Component } from './single-blog/week28-micro-ux.component';
+import { Week29Component } from './single-blog/week29-micro-ux.component';
+import { Week30Component } from './single-blog/week30-micro-ux.component';
+import { Week31Component } from './single-blog/week31-micro-ux.component';
 
 
 
@@ -40,6 +49,7 @@ const routes: Routes = [
     { path: 'unit-1', component: Unit1MenuComponent },
     { path: 'unit-2', component: Unit2MenuComponent },
     { path: 'unit-3', component: Unit3MenuComponent },
+    { path: 'unit-4', component: Unit4MenuComponent },
 
     { path: '1', component: Week1SensoryMapComponent },
     { path: '2', component: Week2Component },
@@ -66,6 +76,14 @@ const routes: Routes = [
     { path: '21.2', component: Week21Component2 },
     { path: '22', component: Week22Component },
     { path: '23', component: Week23Component },
+    { path: '24', component: Week24Component },
+    { path: '25', component: Week25Component },
+    { path: '26', component: Week26Component },
+    { path: '27', component: Week27Component },
+    { path: '28', component: Week28Component },
+    { path: '29', component: Week29Component },
+    { path: '30', component: Week30Component },
+    { path: '31', component: Week31Component },
 
 ];
 
