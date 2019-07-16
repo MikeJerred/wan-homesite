@@ -33,16 +33,19 @@
     </div>
 
     <app-tabs>
-        <app-tab heading="Discovery" height="1091px"><app-design-tab-discovery></app-design-tab-discovery></app-tab>
-        <app-tab heading="Wireframe" height="1193px"><app-design-tab-wireframe></app-design-tab-wireframe></app-tab>
+        <app-tab heading="Research" height="1091px"><app-design-tab-discovery></app-design-tab-discovery></app-tab>
+        <app-tab heading="Prototype" height="1193px"><app-design-tab-wireframe></app-design-tab-wireframe></app-tab>
         <app-tab heading="Testing" height="668px"><app-design-tab-testing></app-design-tab-testing></app-tab>
         <app-tab heading="Design" height="839px"><app-design-tab-design></app-design-tab-design></app-tab>
     </app-tabs>
 
     <div class="visit-site">
-        <p>Project at Appnova. All brands featured own the respective copyright of the projects presented.
+            <a href="http://buttonandwilde.com/" target="_blank" rel="noopener">Visit Site</a>
 
-            </p>
+        
+        <p class="copyright">Project at Appnova. All brands featured own the respective copyright of the projects presented.</p>
+
+        
 
         <app-side-link *ngIf="isMobile" name="Nested Shapes" [extend]="180" [routerLink]="['/design', 2]" right></app-side-link>
     </div>
