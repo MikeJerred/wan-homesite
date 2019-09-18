@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 
 import { SharedModule } from '~/shared/shared.module';
 import { DesignRoutingModule } from './design-routing.module';
-import { DesignPortfolioComponent } from './portfolio/design-portfolio.component';
+import { UxComponent } from './ux/ux.component';
+import { UiComponent } from './ui/ui.component';
 
 @NgModule({
     imports: [
@@ -10,7 +11,8 @@ import { DesignPortfolioComponent } from './portfolio/design-portfolio.component
         DesignRoutingModule
     ],
     declarations: [
-        DesignPortfolioComponent
+        UxComponent,
+        UiComponent
     ]
 })
 export class DesignModule {}
