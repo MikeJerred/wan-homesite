@@ -144,11 +144,15 @@ export function isDirectionRight(fromState: string, toState: string): boolean {
             transition('home => *', homeSplit),
             transition('* => home', homeJoin),
             transition('photography-street => photography-architecture', slideRight),
-            transition('photography-street => design-portfolio', slideRight),
-            transition('photography-architecture => design-portfolio', slideRight),
+            transition('photography-street => design-portfolio-ux', slideRight),
+            transition('photography-street => design-portfolio-ui', slideRight),
+            transition('photography-architecture => design-portfolio-ux', slideRight),
+            transition('photography-architecture => design-portfolio-ui', slideRight),
             transition('photography-street => blog-portfolio', slideRight),
             transition('photography-architecture => blog-portfolio', slideRight),
-            transition('design-portfolio => blog-portfolio', slideRight),
+            transition('design-portfolio-ux => blog-portfolio', slideRight),
+            transition('design-portfolio-ui => blog-portfolio', slideRight),
+            transition('design-portfolio-ui => design-portfolio-ux', slideRight),
             transition(isDirectionRight, slideRight),
             transition('* => *', slideLeft)
         ])

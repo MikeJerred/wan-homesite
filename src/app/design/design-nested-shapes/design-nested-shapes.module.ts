@@ -9,7 +9,7 @@ import { DesignNestedShapesComponent } from './design-nested-shapes.component';
 // import { DesignTabDesignComponent } from './tab-design/tab-design.component';
 
 const routes: Routes = [
-    { path: '5', component: DesignNestedShapesComponent }
+    { path: '8', component: DesignNestedShapesComponent }
 ];
 
 @NgModule({

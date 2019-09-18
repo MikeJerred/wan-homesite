@@ -13,8 +13,8 @@ import { UxComponent } from './ux/ux.component';
 import { UiComponent } from './ui/ui.component';
 
 const routes: Routes = [
-    { path: 'ux', component: UxComponent, data: { animation: 'design-portfolio' } },
-    { path: 'ui', component: UiComponent, data: { animation: 'design-portfolio' } }
+    { path: 'ux', component: UxComponent, data: { animation: 'design-portfolio-ux' } },
+    { path: 'ui', component: UiComponent, data: { animation: 'design-portfolio-ui' } }
 ];
 
 @NgModule({

@@ -11,7 +11,7 @@ import { TabTestingComponent } from './tab-testing/tab-testing.component';
 import { TabDemonstrationComponent } from './tab-demonstration/tab-demonstration.component';
 
 const routes: Routes = [
-    { path: '8', component: DesignSleepComponent }
+    { path: '3', component: DesignSleepComponent }
 ];
 
 @NgModule({
