@@ -101,6 +101,9 @@
 
         .text {
             left: 105px;
+            @media (max-width: 600px){
+                left: 75px;
+            }
         }
 
         .sidebar-border {
@@ -123,6 +126,9 @@
 
         .text {
             right: 105px;
+            @media (max-width: 600px){
+                right: 75px;
+            }
         }
 
         .sidebar-border {

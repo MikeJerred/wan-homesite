@@ -1,34 +1,34 @@
 <main>
-    <div class="bg-shape" [ngClass]="isMobile ? 'bg-top' : 'bg-left'">
-        <h1 class="left">
-            Design
-            <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
-                <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
-                <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="10"></line>
-            </svg>
-        </h1>
-        <div class="shape left"></div>
-        <ul class="list left">
-            <li><a [routerLink]="['/design', 1]">Button &amp; Wilde</a></li>
-            <li><a [routerLink]="['/design', 2]">Lloyd's Register HEC</a></li>
-            <li><a [routerLink]="['/design', 3]">The UX of Urban Space</a></li>
-            <li><a [routerLink]="['/design', 4]">The UX of Death</a></li>
-            <li><a [routerLink]="['/design', 5]">Nested Shapes</a></li>
-        </ul>
-    </div>
-
-    <div class="bg-shape" [ngClass]="isMobile ? 'bg-bottom' : 'bg-right'">
-        <h1 class="right">
-            Photography
-            <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
-                <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
-                <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="10"></line>
-            </svg>
-        </h1>
-        <div class="shape right"></div>
-        <ul class="list right">
-            <li><a [routerLink]="['/photography', 'architecture']">Architecture</a></li>
-            <li><a [routerLink]="['/photography', 'street']">Street</a></li>
-        </ul>
-    </div>
+        <div class="bg-shape" [ngClass]="isMobile ? 'bg-top' : 'bg-left'">
+                <h1 class="left" [ngClass]="isLeftExpanded ? 'expanded' : ''" (click)="toggleLeft()">
+                    UX Design
+                    <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
+                        <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
+                        <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="10"></line>
+                    </svg>
+                </h1>
+                <div class="shape left" [ngClass]="isLeftExpanded ? 'expanded' : ''"></div>
+                <ul class="list left" [ngClass]="isLeftExpanded ? 'expanded' : ''">
+                    <li><a [routerLink]="['/design', 1]">Button &amp; Wilde</a></li>
+                    <li><a [routerLink]="['/design', 2]">Lloyd's Register HEC</a></li>
+                    <li><a [routerLink]="['/design', 8]">Empowering Menstrual Sleep</a></li>
+                    <li><a [routerLink]="['/design', 4]">A New Beginning</a></li>
+                </ul>
+            </div>
+        
+            <div class="bg-shape" [ngClass]="isMobile ? 'bg-bottom' : 'bg-right'">
+                    <h1 class="right" [ngClass]="isRightExpanded ? 'expanded' : ''" (click)="toggleRight()">
+                        UI Design
+                        <svg class="symbol" width="100px" height="100px" viewBox="0 0 100 100">
+                            <line x1="0" y1="50" x2="100" y2="50" stroke-width="10"></line>
+                            <line class="vertical" x1="50" y1="0" x2="50" y2="100" stroke-width="10"></line>
+                        </svg>
+                    </h1>
+                    <div class="shape right" [ngClass]="isRightExpanded ? 'expanded' : ''"></div>
+                    <ul class="list right" [ngClass]="isRightExpanded ? 'expanded' : ''">
+                            <li><a [routerLink]="['/design', 6]">MJerred</a></li>
+                            <li><a [routerLink]="['/design', 7]">Blackhawk Intelligence</a></li>
+                            <li><a [routerLink]="['/design', 5]">Nested Shapes</a></li>
+                    </ul>
+                </div>
 </main>

@@ -8,10 +8,13 @@ import { DesignBlackhawkModule } from './design-blackhawk/design-blackhawk.modul
 import { DesignStarbucksModule } from './design-starbucks/design-starbucks.module';
 import { DesignDeathModule } from './design-death/design-death.module';
 import { DesignLloydsModule } from './design-lloyds/design-lloyds.module';
-import { DesignPortfolioComponent } from './portfolio/design-portfolio.component';
+import { DesignSleepModule } from './design-sleep/design-sleep.module';
+import { UxComponent } from './ux/ux.component';
+import { UiComponent } from './ui/ui.component';
 
 const routes: Routes = [
-    { path: '', component: DesignPortfolioComponent, data: { animation: 'design-portfolio' } }
+    { path: 'ux', component: UxComponent, data: { animation: 'design-portfolio' } },
+    { path: 'ui', component: UiComponent, data: { animation: 'design-portfolio' } }
 ];
 
 @NgModule({
@@ -23,6 +26,7 @@ const routes: Routes = [
         DesignStarbucksModule,
         DesignDeathModule,
         DesignLloydsModule,
+        DesignSleepModule,
         RouterModule.forChild(routes)
     ],
     exports: [ RouterModule ]
