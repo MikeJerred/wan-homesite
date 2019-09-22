@@ -1,0 +1,111 @@
+@import 'variables';
+@import 'mixins';
+
+.not-parallax {
+    position: relative;
+    z-index: 1;
+    background-color: #f2f2f2;
+    //margin-bottom: 453px;
+
+    @include media-breakpoint-down(sm) {
+        //margin-bottom: 318px;
+    }
+}
+
+main {
+    background-color: #f2f2f2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .column {
+        padding-left: 5px;
+        padding-right: 5px;
+
+        &:first-child {
+            padding-left: $grid-gutter-width/2;
+        }
+
+        &:last-child {
+            padding-right: $grid-gutter-width/2;
+        }
+    }
+
+    .box {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: $font-family-serif;
+        font-size: 36px;
+        position: relative;
+        height: 400px;
+        line-height: 400px;
+        background-color: #333;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid #fff;
+        }
+
+        span {
+            vertical-align: middle;
+            line-height: normal;
+            display: inline-block;
+            width: 85%;
+        }
+
+        &:hover {
+            background-color: #fff;
+            color: #333;
+
+            &:before {
+                border: 1px solid #333;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+
+        .column {
+            padding-left: $grid-gutter-width/2;
+            padding-right: $grid-gutter-width/2;
+        }
+
+        .box {
+            &.box-1, &.box-3 {
+                height: 400px;
+                line-height: 400px;
+                background-color: #333;
+                color: #fff;
+
+                &:before {
+                    border: 1px solid #fff;
+                }
+            }
+
+            &.box-2, &.box-4 {
+                height: 400px;
+                line-height: 400px;
+                background-color: #fff;
+                color: #333;
+
+                &:before {
+                    border: 1px solid #333;
+                }
+            }
+        }
+    }
+}
+
+.parallax {
+    //z-index: 0;
+    //position: fixed;
+    //width: 100%;
+    //bottom: 0;
+}

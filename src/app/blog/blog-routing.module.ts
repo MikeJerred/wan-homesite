@@ -6,6 +6,7 @@ import { Unit1MenuComponent } from './unit-1/unit1-menu.component';
 import { Unit2MenuComponent } from './unit-2/unit2-menu.component';
 import { Unit3MenuComponent } from './unit-3/unit3-menu.component';
 import { Unit4MenuComponent } from './unit-4/unit4-menu.component';
+import { FmpMenuComponent } from './fmp/fmp-menu.component';
 
 import { Week1SensoryMapComponent } from './single-blog/week1-sensory-map.component';
 import { Week2Component } from './single-blog/week2-ux-of-conversation.component';
@@ -40,6 +41,10 @@ import { Week28Component } from './single-blog/week28-micro-ux.component';
 import { Week29Component } from './single-blog/week29-micro-ux.component';
 import { Week30Component } from './single-blog/week30-micro-ux.component';
 import { Week31Component } from './single-blog/week31-micro-ux.component';
+import { Fmp1Component } from './single-blog/fmp1.component';
+import { Fmp2Component } from './single-blog/fmp2.component';
+import { Fmp3Component } from './single-blog/fmp3.component';
+import { Fmp4Component } from './single-blog/fmp4.component';
 
 
 
@@ -50,6 +55,7 @@ const routes: Routes = [
     { path: 'unit-2', component: Unit2MenuComponent },
     { path: 'unit-3', component: Unit3MenuComponent },
     { path: 'unit-4', component: Unit4MenuComponent },
+    { path: 'fmp', component: FmpMenuComponent },
 
     { path: '1', component: Week1SensoryMapComponent },
     { path: '2', component: Week2Component },
@@ -84,6 +90,10 @@ const routes: Routes = [
     { path: '29', component: Week29Component },
     { path: '30', component: Week30Component },
     { path: '31', component: Week31Component },
+    { path: '32', component: Fmp1Component },
+    { path: '33', component: Fmp2Component },
+    { path: '34', component: Fmp3Component },
+    { path: '35', component: Fmp4Component },
 
 ];
 

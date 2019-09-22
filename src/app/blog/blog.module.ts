@@ -8,6 +8,7 @@ import { Unit1MenuComponent } from './unit-1/unit1-menu.component';
 import { Unit2MenuComponent } from './unit-2/unit2-menu.component';
 import { Unit3MenuComponent } from './unit-3/unit3-menu.component';
 import { Unit4MenuComponent } from './unit-4/unit4-menu.component';
+import { FmpMenuComponent } from './fmp/fmp-menu.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 
 import { Week1SensoryMapComponent } from './single-blog/week1-sensory-map.component';
@@ -43,6 +44,10 @@ import { Week28Component } from './single-blog/week28-micro-ux.component';
 import { Week29Component } from './single-blog/week29-micro-ux.component';
 import { Week30Component } from './single-blog/week30-micro-ux.component';
 import { Week31Component } from './single-blog/week31-micro-ux.component';
+import { Fmp1Component } from './single-blog/fmp1.component';
+import { Fmp2Component } from './single-blog/fmp2.component';
+import { Fmp3Component } from './single-blog/fmp3.component';
+import { Fmp4Component } from './single-blog/fmp4.component';
 
 
 
@@ -59,6 +64,7 @@ import { Week31Component } from './single-blog/week31-micro-ux.component';
         Unit2MenuComponent,
         Unit3MenuComponent,
         Unit4MenuComponent,
+        FmpMenuComponent,
 
         Week1SensoryMapComponent,
         Week2Component,
@@ -93,6 +99,10 @@ import { Week31Component } from './single-blog/week31-micro-ux.component';
         Week29Component,
         Week30Component,
         Week31Component,
+        Fmp1Component,
+        Fmp2Component,
+        Fmp3Component,
+        Fmp4Component,
     ]
 })
 export class BlogModule {}

@@ -10,7 +10,7 @@ import { TabDesignComponent } from './tab-design/tab-design.component';
 import { TabDemonstrationComponent } from './tab-demonstration/tab-demonstration.component';
 
 const routes: Routes = [
-    { path: '3', component: DesignStarbucksComponent }
+    { path: 'disabled', component: DesignStarbucksComponent }
 ];
 
 @NgModule({
