@@ -26,6 +26,26 @@ h5 {
     padding-top: 15px;
 }
 
+audio {
+width: 100%;
+
+}
+
+.table {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+ 
+    > .row {
+        text-align: left;
+
+        > div {
+            padding: 15px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    }
+}
+
 figcaption {
     font-weight: 400;
     margin-top: 20px;
@@ -42,7 +62,10 @@ figcaption {
 ul li {
     font-size: 20px;
     list-style-type: disc;
-    list-style-position: inside;
+}
+
+ol li {
+    font-size: 20px;
 }
 
 a {

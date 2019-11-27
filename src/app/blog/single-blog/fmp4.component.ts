@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     styleUrls: ['./shared.scss'],
     template: `
-<app-blog title="Technical exploration" [previous]="{ name: 'Field research method brainstorming', link: ['/blog', 34], extend: 350 }" >
+<app-blog title="Technical exploration" [previous]="{ name: 'Field research method brainstorming', link: ['/blog', 34], extend: 350 }" [next]="{ name: 'Research plan', link: ['/blog', 36], extend: 200 }" >
 
 <div class="col-12">
 
