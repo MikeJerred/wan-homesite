@@ -1,0 +1,51 @@
+<div class="not-parallax">
+    <app-side-link *ngIf="!isMobile" name="MJerred" [routerLink]="['/design', 6]" left></app-side-link>
+    <app-side-link *ngIf="!isMobile" name="Nested Shapes" [extend]="180" [routerLink]="['/design', 8]" [extend]="180" right></app-side-link>
+
+
+    <div class="intro">
+        <h1>Burlington Magazine</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Background</h4>
+                    <p>
+                        The Burlington Magazine is the world's leading monthly publication devoted to the fine and decorative arts. The brief was to redesign the website for Burlington Magazine and add a new branch called Burlington Contemporary with a modern look and feel.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>Challenge</h4>
+                    <p>
+                        I was responsible for createing the new information architecture and wireframes for both Burlington Magazine and Burlington Contemporary.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>My Contribution</h4>
+                    <ul>
+                        <li>Information architecture</li>
+                        <li>Wireframing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-tabs>
+        <app-tab heading="Sitemap" height="710px"><app-design-tab-discovery></app-design-tab-discovery></app-tab>
+        <app-tab heading="Wireframing" height="1830px"><app-design-tab-design></app-design-tab-design></app-tab>
+    </app-tabs>
+
+    <div class="visit-site">
+        <p class="copyright">Project at Keepthinking Ltd. All brands featured own the respective copyright of the projects presented.</p>
+
+        <app-side-link *ngIf="isMobile" name="MJerred" [routerLink]="['/design', 6]" [extend]="80" left></app-side-link>
+        <app-side-link *ngIf="isMobile" name="Nested Shapes"  [routerLink]="['/design', 5]" [extend]="130" right></app-side-link>
+
+    </div>
+</div>
+
+<div class="parallax">
+        <app-banner-link name="UX Design" [routerLink]="['/design/ux']" left></app-banner-link>
+    <app-footer></app-footer>
+</div>

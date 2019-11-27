@@ -1,0 +1,54 @@
+<div class="not-parallax">
+  
+
+    <div class="intro">
+        <h1>Student trajectory app</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Background</h4>
+                    <p>
+                        Masters students at LCC are required to self-evaluate their competency in several categories according to the design competency system. The categories include core skills, such as visualization, and meta competencies such as synthesis. The aim of the project is to replace the current manual process with a mobile app in order to reach a wider audience.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>Challenge</h4>
+                    <p>
+                        In collaboration with the MA UX course leader at LCC and two other students, we used research methods such as participatory design workshop to gather requirements from students. We created a system that not only shows the individual’s competency level over time, but also provides evidence by linking them to corresponding project work. 
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>My Contribution</h4>
+                    <ul>
+                        <li>Workshop facilitation</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>Data Visualisation</li>
+                        <li>UI Design</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-tabs>
+        <app-tab heading="Research" height="720px"><app-tab-research></app-tab-research></app-tab>
+        <app-tab heading="Wireframing" height="680px"><app-tab-design></app-tab-design></app-tab>
+        <app-tab heading="UI Design" height="970px"><app-tab-testing></app-tab-testing></app-tab>
+    
+    </app-tabs>
+
+    <div class="visit-site">
+        <p>MA project at LCC in collaboration with course leader</p>
+
+        <app-side-link *ngIf="isMobile" name="Lloyd's Register Foundation HEC" [extend]="260" [routerLink]="['/design', 2]" left></app-side-link>
+        <app-side-link *ngIf="isMobile" name="A new beginning" [extend]="180" [routerLink]="['/design', 4]" right></app-side-link>
+    </div>
+</div>
+
+<div class="parallax">
+        <app-banner-link name="UI Design" [routerLink]="['/design/ui']" right></app-banner-link>
+    <app-footer></app-footer>
+</div>

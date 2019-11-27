@@ -9,6 +9,9 @@ import { DesignStarbucksModule } from './design-starbucks/design-starbucks.modul
 import { DesignDeathModule } from './design-death/design-death.module';
 import { DesignLloydsModule } from './design-lloyds/design-lloyds.module';
 import { DesignSleepModule } from './design-sleep/design-sleep.module';
+import { DesignTrajectoryModule } from './design-trajectory/design-trajectory.module';
+import { DesignBurlingtonModule } from './design-burlington/design-burlington.module';
+import { DesignSoundModule } from './design-sound/design-sound.module';
 import { UxComponent } from './ux/ux.component';
 import { UiComponent } from './ui/ui.component';
 
@@ -27,6 +30,9 @@ const routes: Routes = [
         DesignDeathModule,
         DesignLloydsModule,
         DesignSleepModule,
+        DesignTrajectoryModule,
+        DesignBurlingtonModule,
+        DesignSoundModule,
         RouterModule.forChild(routes)
     ],
     exports: [ RouterModule ]

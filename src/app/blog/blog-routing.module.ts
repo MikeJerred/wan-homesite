@@ -45,6 +45,19 @@ import { Fmp1Component } from './single-blog/fmp1.component';
 import { Fmp2Component } from './single-blog/fmp2.component';
 import { Fmp3Component } from './single-blog/fmp3.component';
 import { Fmp4Component } from './single-blog/fmp4.component';
+import { Fmp5Component } from './single-blog/fmp5.component';
+import { Fmp6Component } from './single-blog/fmp6.component';
+import { Fmp7Component } from './single-blog/fmp7.component';
+import { Fmp8Component } from './single-blog/fmp8.component';
+import { Fmp9Component } from './single-blog/fmp9.component';
+import { Fmp10Component } from './single-blog/fmp10.component';
+import { Fmp11Component } from './single-blog/fmp11.component';
+import { Fmp12Component } from './single-blog/fmp12.component';
+import { Fmp13Component } from './single-blog/fmp13.component';
+import { Fmp14Component } from './single-blog/fmp14.component';
+import { Fmp15Component } from './single-blog/fmp15.component';
+import { Fmp16Component } from './single-blog/fmp16.component';
+
 
 
 
@@ -94,6 +107,19 @@ const routes: Routes = [
     { path: '33', component: Fmp2Component },
     { path: '34', component: Fmp3Component },
     { path: '35', component: Fmp4Component },
+    { path: '36', component: Fmp5Component },
+    { path: '37', component: Fmp6Component },
+    { path: '38', component: Fmp7Component },
+    { path: '39', component: Fmp8Component },
+    { path: '40', component: Fmp9Component },
+    { path: '41', component: Fmp10Component },
+    { path: '42', component: Fmp11Component },
+    { path: '43', component: Fmp12Component },
+    { path: '44', component: Fmp13Component },
+    { path: '45', component: Fmp14Component },
+    { path: '46', component: Fmp15Component },
+    { path: '47', component: Fmp16Component },
+
 
 ];
 

@@ -48,6 +48,18 @@ import { Fmp1Component } from './single-blog/fmp1.component';
 import { Fmp2Component } from './single-blog/fmp2.component';
 import { Fmp3Component } from './single-blog/fmp3.component';
 import { Fmp4Component } from './single-blog/fmp4.component';
+import { Fmp5Component } from './single-blog/fmp5.component';
+import { Fmp6Component } from './single-blog/fmp6.component';
+import { Fmp7Component } from './single-blog/fmp7.component';
+import { Fmp8Component } from './single-blog/fmp8.component';
+import { Fmp9Component } from './single-blog/fmp9.component';
+import { Fmp10Component } from './single-blog/fmp10.component';
+import { Fmp11Component } from './single-blog/fmp11.component';
+import { Fmp12Component } from './single-blog/fmp12.component';
+import { Fmp13Component } from './single-blog/fmp13.component';
+import { Fmp14Component } from './single-blog/fmp14.component';
+import { Fmp15Component } from './single-blog/fmp15.component';
+import { Fmp16Component } from './single-blog/fmp16.component';
 
 
 
@@ -103,6 +115,19 @@ import { Fmp4Component } from './single-blog/fmp4.component';
         Fmp2Component,
         Fmp3Component,
         Fmp4Component,
+        Fmp5Component,
+        Fmp6Component,
+        Fmp7Component,
+        Fmp8Component,
+        Fmp9Component,
+        Fmp10Component,
+        Fmp11Component,
+        Fmp12Component,
+        Fmp13Component,
+        Fmp14Component,
+        Fmp15Component,
+        Fmp16Component,
+  
     ]
 })
 export class BlogModule {}

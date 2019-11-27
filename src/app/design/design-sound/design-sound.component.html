@@ -1,0 +1,54 @@
+<div class="not-parallax">
+  
+
+    <div class="intro">
+        <h1>Sound, textile and emotion</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Background</h4>
+                    <p>
+                        We perceive and understand the world around us through our sensory system, and it plays a significant role in our emotional processing, learning, and interpretation beyond perception. The aim of this project is to investigate how the acoustic environment and wearable textiles can be combined to influence an individual's emotional experience. This is the final research project of my MA study.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>Challenge</h4>
+                    <p>
+                        In this project, an experimental research method was applied to decipher peoples' emotional association with different combinations of soundscapes and textiles. The main finding was that participants subconciously tried to integrate their perceptions of sound and texture into a single, coherent mental image. In most cases, the soundscape provided an overall spatial context and the textile would later be placed within that context, but how well these could be integrated depended on their past life experience. If the two perceptions could be integrated cohesively, the participant’s emotions could be influenced by the mental image they had constructed, if not then they often felt annoyance or confusion.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h4>My Contribution</h4>
+                    <ul>
+                        <li>Research through experiments</li>
+                        <li>Design synthesis</li>
+                        <li>Literature review</li>
+                        <li>Data Visualisation</li>
+                      
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-tabs>
+        <app-tab heading="Research" height="730px"><app-tab-research></app-tab-research></app-tab>
+        <app-tab heading="Analysis" height="680px"><app-tab-design></app-tab-design></app-tab>
+        
+    
+    </app-tabs>
+
+    <div class="visit-site">
+        <p>MA research project at LCC</p>
+
+        <app-side-link *ngIf="isMobile" name="Lloyd's Register Foundation HEC" [extend]="260" [routerLink]="['/design', 2]" left></app-side-link>
+        <app-side-link *ngIf="isMobile" name="A new beginning" [extend]="180" [routerLink]="['/design', 4]" right></app-side-link>
+    </div>
+</div>
+
+<div class="parallax">
+        <app-banner-link name="UI Design" [routerLink]="['/design/ui']" right></app-banner-link>
+    <app-footer></app-footer>
+</div>

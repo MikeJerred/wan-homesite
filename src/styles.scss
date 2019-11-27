@@ -10,9 +10,14 @@ body {
 :focus { outline: none; }
 
 ul {
-    margin: 0;
+    margin: 0 0 0 20px;
     padding: 0;
     list-style: none;
+}
+
+ol {
+    margin: 0 0 0 20px;
+    padding: 0;
 }
 
 .clickable:hover {
@@ -34,4 +39,24 @@ h1, h2, h3, h4, h5, h6 {
 
 ng-component {
     display: block;
+}
+
+.carousel-control-prev {
+    left: -15%;
+}
+
+.carousel-control-next {
+    right: -15%;
+}
+
+.carousel-indicators {
+    bottom: -20px;
+
+    li {
+        background-color: rgba($gray-900, 0.5);
+    }
+
+    .active {
+        background-color: $gray-900;
+    }
 }
