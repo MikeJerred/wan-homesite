@@ -27,7 +27,7 @@
     "compression": "^1.7.1",
     "core-js": "^2.5.4",
     "express": "^4.16.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "ng-inline-svg": "^8.1.0",
     "ngx-bootstrap": "^3.0.1",
     "ngx-page-scroll": "^5.0.0",
